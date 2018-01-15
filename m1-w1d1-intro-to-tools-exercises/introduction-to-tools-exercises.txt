@@ -16,7 +16,8 @@ clutter found in real projects.
 ----
 1.  To begin, open your terminal, and enter the following command to change 
     directory to the exercise folder.
-----test
+
+
 
 $ cd ~/workspace/exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
 
@@ -29,7 +30,7 @@ actual command from other text in Unix documentation.
 2.  What does the ~ (tilde) character in the above command to change directory 
     refer to?
 ----
-
+Home directory
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on 
@@ -38,7 +39,7 @@ actual command from other text in Unix documentation.
 ----
 
 $ pwd
-<type or copy-paste the result here>
+/Users/bdewitt/brandondewitt-java-exercises/m1-w1d1-intro-to-tools-exercises
 
 The present working directory displayed should match the directory you changed 
 to in Exercise 1.  Note, the two may not match at the very beginning if you
@@ -54,7 +55,12 @@ changes directory, and the "pwd" command reflects this.
 ----
 
 $ ls -la
-<type or copy-paste the result here>
+
+drwxr-xr-x  5 bdewitt  staff   170 Jan 15 15:35 .
+drwxr-xr-x  5 bdewitt  staff   170 Jan 15 15:34 ..
+-rw-r--r--@ 1 bdewitt  staff  6148 Jan 15 15:35 .DS_Store
+-rw-r--r--  1 bdewitt  staff  8435 Jan 15 15:46 introduction-to-tools-exercises.txt
+drwxr-xr-x  5 bdewitt  staff   170 Jan 15 15:28 java-helloworld
 
 
 ----
@@ -62,14 +68,17 @@ $ ls -la
     Exercise 4 represent?
 ----
 
-<type or copy-paste your answer here>
+Current folder and parent folder
 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
     directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+.DS_Store (hidden)
+introduction-to-tools-exercises.txt
+
+
 
 
 ----
@@ -77,8 +86,8 @@ $ ls -la
     the directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
-
+java-helloworld
+(technically also . which is the current directory and .. which is the parent diretory)
 
 ----
 8.  pom.xml is a Maven build file. You will learn more about Maven in later 
