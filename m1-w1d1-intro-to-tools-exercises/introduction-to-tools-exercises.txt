@@ -16,7 +16,7 @@ clutter found in real projects.
 ----
 1.  To begin, open your terminal, and enter the following command to change 
     directory to the exercise folder.
-----
+----test
 
 $ cd ~/workspace/exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
 
