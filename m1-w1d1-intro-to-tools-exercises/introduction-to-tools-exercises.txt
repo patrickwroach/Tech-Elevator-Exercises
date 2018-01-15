@@ -16,7 +16,7 @@ clutter found in real projects.
 ----
 1.  To begin, open your terminal, and enter the following command to change 
     directory to the exercise folder.
-----test
+----
 
 $ cd ~/workspace/exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
 
@@ -29,7 +29,7 @@ actual command from other text in Unix documentation.
 2.  What does the ~ (tilde) character in the above command to change directory 
     refer to?
 ----
-
+ Home
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on 
