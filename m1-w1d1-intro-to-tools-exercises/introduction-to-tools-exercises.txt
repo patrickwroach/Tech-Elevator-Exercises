@@ -55,7 +55,7 @@ changes directory, and the "pwd" command reflects this.
 
 $ ls -la
 <type or copy-paste the result here>
-
+sdsdfsdfsda
 
 ----
 5.  What do the "." and ".." folders displayed in the directory listing in
