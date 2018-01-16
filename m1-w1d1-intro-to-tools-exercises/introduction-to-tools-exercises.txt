@@ -87,7 +87,7 @@ introduction-to-tools-exercises.txt
 ----
 
 java-helloworld
-(technically also . which is the current directory and .. which is the parent diretory)
+(technically also . which is the current directory and .. which is the parent directory)
 
 ----
 8.  pom.xml is a Maven build file. You will learn more about Maven in later 
