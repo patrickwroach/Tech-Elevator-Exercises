@@ -254,7 +254,15 @@ $ git commit -m "feature completion"
 
 
 $ git push
-<type or copy-paste the result here>
+
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (17/17), 2.60 KiB | 1.30 MiB/s, done.
+Total 17 (delta 7), reused 0 (delta 0)
+To https://bitbucket.org/te-cbus-cohort-4/brandondewitt-java-exercises
+   6509ae4..d08a40e  master -> master
+
 
 
 ----
@@ -265,8 +273,13 @@ $ rm Helloworld.java.copy
 
 The "rm" parameter is the name of the file to be deleted.
 
-$ <enter command to list all files and folders in order to confirm the file deletion>
-<type or copy-paste the result here>
+$ ls -la
+total 8
+drwxr-xr-x  3 bdewitt  staff  102 Jan 15 20:34 .
+drwxr-xr-x  3 bdewitt  staff  102 Jan 15 15:28 ..
+-rw-r--r--  1 bdewitt  staff  141 Jan 15 15:28 Helloworld.java
+Techs-MacBook-Air:techelevator bdewitt$ 
+
 
 
 ----
@@ -287,8 +300,8 @@ command line when that seems natural.
 
 Regardless of the option you chose, check your new location.
 
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+$ pwd
+/Users/bdewitt/brandondewitt-java-exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
 
 
 ----
@@ -297,9 +310,9 @@ $ <enter command to display present working directory>
 ----
 
 $ mkdir docs
-$ <enter the command to change directory to "docs" using a relative path>
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+$ cd docs/
+$ pwd
+/Users/bdewitt/brandondewitt-java-exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld/docs
 
 ----
 19. Create a new file name "readme.txt" using Visual Studio Code, and add the text
