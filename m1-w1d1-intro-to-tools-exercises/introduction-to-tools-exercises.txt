@@ -132,13 +132,25 @@ You are encouraged to make "less" part of your standard command line toolkit.
 Did you remember to save "m1-introduction-to-tools-exercise.txt"?
 
 $ git status
-<type or copy-paste the result here>
+
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../introduction-to-tools-exercises.txt
 
 $ git add .
-<type or copy-paste the result here>
+(nothing changed, good news is no news)
+Techs-MacBook-Air:java-helloworld bdewitt$ 
 
 $ git commit -m "Good stopping point"
-<type or copy-paste the result here>
+
+[master 13432e9] Good stopping point
+ 1 file changed, 17 insertions(+), 8 deletions(-)
 
 Note, you do not need to push this commit up to BitBucket. The typical Git 
 workflow is to many small commits to your local repo, with pushes up to 
@@ -150,17 +162,17 @@ BitBucket when a feature, fix, or in this case, assignment is finished.
     Show your present working directory after the change.
 ----
 
-$ cd src/main/java/com/techelevator
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
 
+$ cd src/main/java/com/techelevator
+$ pwd
+/Users/bdewitt/brandondewitt-java-exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld/src/main/java/com/techelevator
 
 ----
 11. Does the change directory command in Exercise 9 use a relative, or absolute
     path?
 ----
-
-<type your answer here>
+(I think you mean exercise 10, not 9)
+relative
 
 
 ----
@@ -169,7 +181,11 @@ $ <enter command to display present working directory>
 ----
 
 $ <enter command to list all files and folders including dot-files and dot-folders>
-<type or copy-paste the result here>
+ls -la
+total 15
+drwxr-xr-x  3 bdewitt  staff  102 Jan 15 15:28 .
+drwxr-xr-x  3 bdewitt  staff  102 Jan 15 15:28 ..
+-rw-r--r--  1 bdewitt  staff  141 Jan 15 15:28 Helloworld.java
 
 
 ----
@@ -183,9 +199,12 @@ $ cp Helloworld.java Helloworld.java.backup
 The "cp" parameters are the name of the source file followed by the name of the 
 destination file. 
 
-$ <enter command to list all files and folders in order to confirm the creation of the backup file>
-<type or copy-paste the result here>
-
+$ ls -la
+total 16
+drwxr-xr-x  4 bdewitt  staff  136 Jan 15 20:17 .
+drwxr-xr-x  3 bdewitt  staff  102 Jan 15 15:28 ..
+-rw-r--r--  1 bdewitt  staff  141 Jan 15 15:28 Helloworld.java
+-rw-r--r--  1 bdewitt  staff  141 Jan 15 20:17 Helloworld.java.backup
 
 ----    
 14. Rename "Helloworld.java.backup" to "Helloworld.java.copy" using the move 
@@ -197,8 +216,12 @@ $ mv Helloworld.java.backup Helloworld.java.copy
 The "mv" parameters are the existing name of the file followed by the new name 
 of the file. 
 
-$ <enter command to list all files and folders in order to confirm the renaming of the file>
-<type or copy-paste the result here>
+$ ls -la
+total 16
+drwxr-xr-x  4 bdewitt  staff  136 Jan 15 20:22 .
+drwxr-xr-x  3 bdewitt  staff  102 Jan 15 15:28 ..
+-rw-r--r--  1 bdewitt  staff  141 Jan 15 15:28 Helloworld.java
+-rw-r--r--  1 bdewitt  staff  141 Jan 15 20:17 Helloworld.java.copy
 
 
 ----
@@ -206,14 +229,29 @@ $ <enter command to list all files and folders in order to confirm the renaming 
     checkin to the local repository, but also push it up to BitBucket. 
 ----
 
-$ <enter the Git command to display status>
-<type or copy-paste the result here>
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
 
-$ <enter the Git command to "stage" all changes>
-<type or copy-paste the result here>
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
 
-$ <enter the Git command to save all "staged" changes>
-<type or copy-paste the result here>
+	Helloworld.java.copy
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git add -A
+Techs-MacBook-Air:techelevator bdewitt$ 
+(nothing changed, good news is no news)
+
+$ git commit -m "feature completion"
+
+[master 1aaf0a4] feature completion
+ 1 file changed, 9 insertions(+)
+ create mode 100644 m1-w1d1-intro-to-tools-exercises/java-helloworld/src/main/java/com/techelevator/Helloworld.java.copy
+
 
 $ git push
 <type or copy-paste the result here>
