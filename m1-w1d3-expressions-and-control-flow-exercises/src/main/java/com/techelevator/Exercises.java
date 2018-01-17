@@ -193,10 +193,18 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
+	int max = 0;
 		
-		int max = (a > b) ? a : b;
-		
-		return (max >= 10 && max <= 20) ? max : 0; 
+		if ((a >= 10 && a <=20) && (b >= 10 && b <=20)){
+		  max = (a > b) ? a : b;
+		}
+		if ((a >= 10 && a <=20) && (b < 10 || b >20)){
+		  max = a;
+		}
+		if ((a < 10 || a >20) && (b >= 10 && b <=20)){
+		  max = b;
+		}
+		return max;
 		
 	}
 
@@ -403,9 +411,9 @@ public class Exercises {
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
 		if (isAsleep) return false;
 		if (isMom) return true;
+		
 		return (!isMorning);
-		
-		
+			
 		
 	}
 
@@ -419,7 +427,12 @@ public class Exercises {
 	 teaParty(20, 6) → 2
 	 */
 	public int teaParty(int tea, int candy) {
-		return 0;
+		
+		
+		if (tea < 5 || candy < 5) return 0;
+		if ((tea >= candy * 2) || (candy >= tea * 2)) return 2;
+		return 1;
+		
 	}
 
 	/*
@@ -429,7 +442,8 @@ public class Exercises {
 	 twoAsOne(3, 2, 2) → false
 	 */
 	public boolean twoAsOne(int a, int b, int c) {
-		return false;
+		
+		return (a + b == c) || (b + c == a) || (a + c == b);
 	}
 
 	/*
@@ -440,7 +454,8 @@ public class Exercises {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
-		return false;
+
+		return (bOk) ? (c > b) : ((b > a) && (c > b));
 	}
 
 	/*
@@ -452,7 +467,9 @@ public class Exercises {
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-		return false;
+		
+		return (equalOk) ? (a <= b && b <= c) : (a < b && b < c);
+		
 	}
 
 	/*
@@ -463,7 +480,14 @@ public class Exercises {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
-		return 0;
+		int sum = a+b+c;
+		
+		if (a == b) sum = c;
+		if (a == c) sum = b;
+		if (b == c) sum = a;
+		if (a == b && b == c) sum =0;
+	
+		return sum;
 	}
 
 	/*
@@ -477,7 +501,25 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		return 0;
+		
+		int a2 = a;
+		int b2 = b;
+		int c2 = c;
+		
+		if (a == 13) {
+			a2 = 0;
+			b2 = 0;
+		}
+		if (b == 13) {
+			b2 = 0;
+			c2 = 0;
+		}
+		
+		if (c == 13) {
+			c2 = 0;
+		}
+		
+		return a2 + b2 + c2;
 	}
 
 }
