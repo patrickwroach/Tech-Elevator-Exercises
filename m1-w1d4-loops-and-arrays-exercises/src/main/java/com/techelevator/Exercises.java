@@ -22,8 +22,11 @@ public class Exercises {
 	 sameFirstLast([1, 2, 1]) → true
 	 */
 	public boolean sameFirstLast(int[] nums) {
-		
+		if (nums.length > 1) {
 		return (nums[0]==nums[nums.length-1]);
+		}
+		
+		return false;
 	}
 
 	/*
@@ -53,7 +56,16 @@ public class Exercises {
 	 sum3([7, 0, 0]) → 7
 	 */
 	public int sum3(int[] nums) {
-		return nums[0] + nums[1] + nums[2];
+//		Simple Solution: return nums[0] + nums[1] + nums[2];
+		
+//		More scalable solution follows:
+		
+		int sum = 0;
+		
+		for (int i = 0; i < nums.length; i++) {
+			sum+=nums[i];
+		}
+		return sum;
 	}
 
 	/*
@@ -65,7 +77,17 @@ public class Exercises {
 	 */
 	public int[] rotateLeft3(int[] nums) {
 		
-		return new int[] {nums[1], nums[2], nums[0]};
+//		Simple Solution: return new int[] {nums[1], nums[2], nums[0]};  
+		
+//		More scalable solution follows:
+		
+		int temp = nums[0];
+		
+		for (int i = 0; i < nums.length-1; i++) { 	//For loop to cover all but last number to avoid out of range exception
+			nums[i] = nums[i+1];
+		}
+		nums[nums.length-1] = temp; 				//swap first and last number
+		return nums;
 	}
 
 	/*
@@ -76,7 +98,23 @@ public class Exercises {
 	 reverse3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] reverse3(int[] nums) {
-		return new int[] {nums[2], nums[1], nums[0]};
+//		Simple Solution : return new int[] {nums[2], nums[1], nums[0]};
+		
+//		More scalable solution follows:
+		
+		int temp = nums[0];
+		int first = 0;
+		int last = nums.length -1;
+											//Simple Swap
+		while (first < last) {				//Will start from opposite ends of the array swapping numbers until it gets to the middle
+			temp = nums[first];				//First number goes into a temp holder
+			nums[first] = nums[last];       //First gets last value
+			nums[last] = temp;              //Last gets the old first value
+			first++;                        //First and Last place increment and decrement
+			last--;
+		}
+		return nums;
+	
 	}
 
 	/*
@@ -87,8 +125,16 @@ public class Exercises {
 	 maxEnd3([2, 11, 3]) → [3, 3, 3]
 	 */
 	public int[] maxEnd3(int[] nums) {
-		int max = Math.max(nums[0], nums[2]);
-		return new int[] {max, max, max};
+//		Simple Solution : 	int max = Math.max(nums[0], nums[2]);
+//							return new int[] {max, max, max};
+//		More scalable solution follows:
+		
+		int max = Math.max(nums[0], nums[nums.length-1]);
+		
+		for (int i =0; i < nums.length; i++) {
+			nums[i] = max;
+		}
+		return nums;
 	}
 
 	/*
@@ -112,7 +158,11 @@ public class Exercises {
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
 	public int[] middleWay(int[] a, int[] b) {
-		return new int[] {a[1], b[1]};
+//		Simple Solution: return new int[] {a[1], b[1]};
+	
+//		(Barely) More Scalable Solution follow:
+				
+		return new int[] {a[a.length/2], b[b.length/2]};
 	}
 
 	/*
@@ -140,6 +190,7 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13]) → 6
 	 */
 	public int sum13(int[] nums) {
+		
 		int sum = 0;
 		for (int i =0; i < nums.length; i++) {
 			if (nums[i] == 13 && i < nums.length) {
@@ -187,8 +238,8 @@ public class Exercises {
 	 */
 	public boolean sum28(int[] nums) {
 		int sum = 0;
-		for (int i = 0; i<nums.length;i++) {
-			if (nums[i] == 2 ) sum +=2;
+		for (int i = 0; i <nums.length; i++) {
+			if (nums[i] == 2 ) sum +=nums[i];
 		}
 		return (sum == 8);
 	}

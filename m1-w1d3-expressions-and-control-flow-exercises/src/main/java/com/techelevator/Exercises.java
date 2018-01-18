@@ -462,7 +462,7 @@ public class Exercises {
     public int luckySum(int a, int b, int c) {
 
         if (c == 13) {
-        		c = 0;
+        	c = 0;
         }
         if (b == 13) {
             b = 0;
