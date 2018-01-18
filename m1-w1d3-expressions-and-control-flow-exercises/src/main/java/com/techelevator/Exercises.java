@@ -239,9 +239,8 @@ public class Exercises {
      caughtSpeeding(65, true) → 0
      */
     public int caughtSpeeding(int speed, boolean isBirthday) {
-        int bday = 0;
-
-        if (isBirthday) bday = 5;
+        
+        int bday = (isBirthday) ? 5 : 0;
 
         if (speed <= 60 + bday) return 0;
         if (speed <= 80 + bday) return 1;
@@ -467,27 +466,9 @@ public class Exercises {
      luckySum(13, 13, 3) → 0
      */
     public int luckySum(int a, int b, int c) {
-//
-//        int tempA = a;
-//        int tempB = b;
-//        int tempC = c;
-//
-//        if (a == 13) {
-//            tempA = 0;
-//            tempB = 0;
-//        }
-//        if (b == 13) {
-//            tempB = 0;
-//            tempC = 0;
-//        }
-//
-//        if (c == 13) {
-//            tempC = 0;
-//        }
-//
-//        return tempA + tempB + tempC;
+
         if (c == 13) {
-        	c = 0;
+        		c = 0;
         }
         if (b == 13) {
             b = 0;
