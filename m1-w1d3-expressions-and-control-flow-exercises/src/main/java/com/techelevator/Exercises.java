@@ -276,7 +276,6 @@ public class Exercises {
         } else {
             alarm = (day == 0 || day == 6) ? "10:00" : "7:00";
         }
-
         return alarm;
     }
 
@@ -288,7 +287,6 @@ public class Exercises {
      in1To10(11, true) → true
      */
     public boolean in1To10(int n, boolean outsideMode) {
-
 
         return (outsideMode) ? (n <= 1 || n >= 10) : (n >= 1 && n <= 10);
     }
@@ -302,7 +300,6 @@ public class Exercises {
      specialEleven(24) → false
      */
     public boolean specialEleven(int n) {
-
 
         return (n % 11 == 0 || n % 11 == 1);
     }
@@ -366,8 +363,6 @@ public class Exercises {
     public int teenSum(int a, int b) {
 
         return ((a >= 13 && a <= 19) || (b >= 13 && b <= 19)) ? 19 : a + b;
-
-
     }
 
     /*
@@ -451,7 +446,6 @@ public class Exercises {
         if (a == c) return b;
         if (b == c) return a;
 
-
         return a + b + c;
     }
 
@@ -479,7 +473,6 @@ public class Exercises {
             b = 0;
         }
         return a + b + c;
-
     }
 
 }
