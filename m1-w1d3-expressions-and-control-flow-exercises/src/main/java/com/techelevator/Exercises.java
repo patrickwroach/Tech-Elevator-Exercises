@@ -180,9 +180,9 @@ public class Exercises {
      */
     public int max1020(int a, int b) {
 
-        int tempA = (a >= 10 && a <= 20) ? a : 0;
-        int tempB = (b >= 10 && b <= 20) ? b : 0;
-        return Math.max(tempA, tempB);
+        a = (a >= 10 && a <= 20) ? a : 0;
+        b = (b >= 10 && b <= 20) ? b : 0;
+        return Math.max(a, b);
     }
 
     /*
@@ -467,25 +467,38 @@ public class Exercises {
      luckySum(13, 13, 3) → 0
      */
     public int luckySum(int a, int b, int c) {
-
-        int tempA = a;
-        int tempB = b;
-        int tempC = c;
-
-        if (a == 13) {
-            tempA = 0;
-            tempB = 0;
+//
+//        int tempA = a;
+//        int tempB = b;
+//        int tempC = c;
+//
+//        if (a == 13) {
+//            tempA = 0;
+//            tempB = 0;
+//        }
+//        if (b == 13) {
+//            tempB = 0;
+//            tempC = 0;
+//        }
+//
+//        if (c == 13) {
+//            tempC = 0;
+//        }
+//
+//        return tempA + tempB + tempC;
+        if (c == 13) {
+        	c = 0;
         }
         if (b == 13) {
-            tempB = 0;
-            tempC = 0;
+            b = 0;
+            c = 0;
         }
-
-        if (c == 13) {
-            tempC = 0;
+        if (a == 13) {
+            a = 0;
+            b = 0;
         }
+        return a + b + c;
 
-        return tempA + tempB + tempC;
     }
 
 }
