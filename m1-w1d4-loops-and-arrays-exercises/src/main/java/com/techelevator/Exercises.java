@@ -87,6 +87,7 @@ public class Exercises {
 			nums[i] = nums[i+1];
 		}
 		nums[nums.length-1] = temp; 				//swap first and last number
+		return null;
 	}
 
 	/*
