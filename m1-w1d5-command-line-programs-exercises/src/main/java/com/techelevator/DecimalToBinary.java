@@ -1,5 +1,7 @@
 package com.techelevator;
 
+import java.util.*;
+
 /*
 Write a command line program which prompts the user for a series of decimal integer values  
 and displays each decimal value as itself and its binary equivalent
@@ -17,7 +19,17 @@ Please enter in a series of decimal values (separated by spaces): 460 8218 1 313
 public class DecimalToBinary {
 
 	public static void main(String[] args) {
-
+		Scanner in = new Scanner (System.in);
+		System.out.println("Please enter in a series of decimal values (separated by spaces): ");
+		
+		String input = in.nextLine();
+		String[] numbers = input.split(" ");
+		for (int i = 0; i < numbers.length; i++) {
+			int decimalValue = Integer.parseInt(numbers[i]);
+			String binaryValue = Integer.toBinaryString(decimalValue);
+			
+			System.out.println(decimalValue + " in binary is " + binaryValue);
+		}
 	}
 
 }
