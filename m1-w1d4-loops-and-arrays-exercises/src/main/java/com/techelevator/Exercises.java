@@ -64,7 +64,14 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
-		
+//		int[] output = new int[3];
+//		int temp = nums[0];
+//		
+//		for (int i = 0; i < nums.length-1; i++) {
+//			output[i] = nums[i+1];
+//		}
+//		output[output.length-1] = temp;
+//		return output;
 		return new int[] {nums[1], nums[2], nums[0]};
 	}
 

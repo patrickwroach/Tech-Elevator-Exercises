@@ -1,11 +1,23 @@
+import java.util.*;
 public class playground {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
-        System.out.println(less20(38));
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter the amount of the bill: ");
+        String value = input.nextLine();
+        double billAmount = Double.parseDouble(value);
+
+        System.out.print("Please enter the amount tendered: ");
+        value = input.nextLine();
+        double tenderedAmount = Double.parseDouble(value);
+
+        double changeDue = tenderedAmount - billAmount;
+
+        System.out.println("The change required is " + changeDue);
+
     }
 
-    public static boolean less20(int n) {
 
-        return ( (n+2) % 20 == 0 || (n+1) % 20 == 0);
-    }
 }
