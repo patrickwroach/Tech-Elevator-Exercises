@@ -1,4 +1,5 @@
 package com.techelevator;
+
 import java.util.Scanner;
 /*
  The foot to meter conversion formula is:
@@ -18,23 +19,37 @@ import java.util.Scanner;
 
 public class LinearConvert {
 
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		System.out.print("Please enter the length: ");
-		String input = in.nextLine();
-		int measurement = Integer.parseInt(input);
-		System.out.print("Is the measurement in (m)eters, or (f)eet?");
-		String feetOrMeters = in.nextLine().toLowerCase();
-		switch (feetOrMeters) {
-			case "m": System.out.println(measurement+ "m is " + (int) (measurement * 3.2808399) + "f.");
-			break;
-			case "f": System.out.println(measurement+ "f is " + (int) (measurement * .3048) + "m.");
-			break;
-			default: System.out.println("Please enter a valid measurement next time.");
-				
-		}
-		
-		
-	}
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int convertedMeasurement = 0;
+        String convertedScale = "";
+        String feetOrMeters = "";
+        int measurement = 0;
+
+        do {
+            System.out.print("Please enter the length: ");                      //Get input from user, parse to an int
+            String input = in.nextLine();                                       //and convert to lowercase to save me
+            measurement = Integer.parseInt(input);                              //code and headaches.
+            System.out.print("Is the measurement in (m)eters, or (f)eet?");
+            feetOrMeters = in.nextLine().toLowerCase();
+
+
+            switch (feetOrMeters) {
+                case "m":
+                    convertedMeasurement = (int) (measurement * 3.2808399);
+                    convertedScale = "f.";
+                    break;
+                case "f":
+                    convertedMeasurement = (int) (measurement * .3048);
+                    convertedScale = "m.";
+                    break;
+                default:
+                    System.out.println("Please enter a valid measurement next time.");
+
+            }
+        } while (!feetOrMeters.equals("f") && !feetOrMeters.equals("m"));       //Run the loop until I get f or m.
+        System.out.println(measurement + "" + feetOrMeters + " is " + convertedMeasurement + convertedScale);
+
+    }
 
 }

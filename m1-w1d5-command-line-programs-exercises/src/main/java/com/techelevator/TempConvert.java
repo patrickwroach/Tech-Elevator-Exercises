@@ -25,36 +25,35 @@ public class TempConvert {
 
     public static void main(String[] args) {
         int convertedTemp = 0;
-        char convertedMeasurement = 'C';
-        String celciusOrFarenheit = "A";
+        String convertedMeasurement = "";
+        String celciusOrFarenheit = "";
         int temperature = 0;
         Scanner in = new Scanner(System.in);
 
-        while (celciusOrFarenheit != "C" || celciusOrFarenheit != "F") {
-        System.out.print("Please enter the temperature: ");
+        do {
+            System.out.print("Please enter the temperature: ");
 
 
             String input = in.nextLine();                                               //Get input from the user, convert to
             temperature = Integer.parseInt(input);                                      //int from string and ask C/F with
             System.out.print("Is the temperature in (C)elcius, or (F)arenheit?");       //to Upper Case to save me some lines of
             celciusOrFarenheit = in.nextLine().toUpperCase();                           //code and headaches.
-        }
 
-        switch (celciusOrFarenheit) {
-            case "C":
-                convertedTemp = (int) (temperature * 1.8 + 32);
-                convertedMeasurement = 'F';
-                break;
-            case "F":
-                convertedTemp = (int) ((temperature - 32) / 1.8);
-                convertedMeasurement = 'C';
-                break;
-            default:
-                System.out.println("Please enter a valid temperature next time.");
-                System.exit(0);
 
-        }
-        System.out.println(temperature + "" + celciusOrFarenheit + " is " + convertedTemp + convertedMeasurement + ".");
+            switch (celciusOrFarenheit) {
+                case "C":
+                    convertedTemp = (int) (temperature * 1.8 + 32);
+                    convertedMeasurement = "F.";
+                    break;
+                case "F":
+                    convertedTemp = (int) ((temperature - 32) / 1.8);
+                    convertedMeasurement = "C.";
+                    break;
+                default:
+                    System.out.println("Please enter a valid temperature.");
+            }
 
+        } while (!celciusOrFarenheit.equals("F") && !celciusOrFarenheit.equals("C"));   //Run the loop until I get F or C.
+        System.out.println(temperature + "" + celciusOrFarenheit + " is " + convertedTemp + convertedMeasurement);
     }
 }
