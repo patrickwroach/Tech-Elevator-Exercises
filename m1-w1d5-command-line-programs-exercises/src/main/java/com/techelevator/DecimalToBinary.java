@@ -23,10 +23,10 @@ public class DecimalToBinary {
 		System.out.print("Please enter in a series of decimal values (separated by spaces): ");
 		
 		String input = in.nextLine();
-		String[] numbers = input.split(" ");
+		String[] numbers = input.split(" ");							//Create a string array of numbers delineated at the " ".
 		for (int i = 0; i < numbers.length; i++) {
-			int decimalValue = Integer.parseInt(numbers[i]);
-			String binaryValue = Integer.toBinaryString(decimalValue);
+			int decimalValue = Integer.parseInt(numbers[i]);				//Convert strings to ints.
+			String binaryValue = Integer.toBinaryString(decimalValue);		//Found a built in function for Integer to convert to decimals.  Brian said this was fine.
 			
 			System.out.println(decimalValue + " in binary is " + binaryValue);
 		}

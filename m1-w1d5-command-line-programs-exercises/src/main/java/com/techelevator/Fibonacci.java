@@ -28,11 +28,11 @@ public class Fibonacci {
         int userNumber = Integer.parseInt(input);
 
 
-//        System.out.print("0, 1");
-        while (fib <= userNumber) {
-            System.out.print(fib + ", ");
+        while (fib <= userNumber) {                     //Run loop until I get to the user inputted number
+            if (fib == 0) System.out.print(fib);        //Get rid of the hanging commas.
+            System.out.print(", " + fib);               //Rest of the numbers
 
-            n1 = n2;
+            n1 = n2;                                    //Math
             n2 = fib;
             fib = n1 + n2;
         }
