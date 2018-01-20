@@ -1,4 +1,5 @@
 package com.techelevator;
+
 import java.util.*;
 
 /*
@@ -22,25 +23,38 @@ import java.util.*;
  */
 public class TempConvert {
 
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		System.out.println("Please enter the temperature: ");
-		
-		String input = in.nextLine();
-		int temperature = Integer.parseInt(input);
-		System.out.print("Is the temperature in (C)elcius, or (F)arenheit?");
-		String celciusOrFarenheit = in.nextLine().toUpperCase();
-		
-		switch (celciusOrFarenheit) {
-		case "C": System.out.println(temperature+ "C is " + (int) (temperature * 1.8 + 32) + "F.");
-		break;
-		case "F": System.out.println(temperature+ "F is " + (int) ((temperature - 32) / 1.8) + "C.");
-		break;
-		default: System.out.println("Please enter a valid temperature next time.");
-			
-	}
-		
+    public static void main(String[] args) {
+        int convertedTemp = 0;
+        char convertedMeasurement = 'C';
+        String celciusOrFarenheit = "A";
+        int temperature = 0;
+        Scanner in = new Scanner(System.in);
 
-	}
+        while (celciusOrFarenheit != "C" || celciusOrFarenheit != "F") {
+        System.out.print("Please enter the temperature: ");
 
+
+            String input = in.nextLine();                                               //Get input from the user, convert to
+            temperature = Integer.parseInt(input);                                      //int from string and ask C/F with
+            System.out.print("Is the temperature in (C)elcius, or (F)arenheit?");       //to Upper Case to save me some lines of
+            celciusOrFarenheit = in.nextLine().toUpperCase();                           //code and headaches.
+        }
+
+        switch (celciusOrFarenheit) {
+            case "C":
+                convertedTemp = (int) (temperature * 1.8 + 32);
+                convertedMeasurement = 'F';
+                break;
+            case "F":
+                convertedTemp = (int) ((temperature - 32) / 1.8);
+                convertedMeasurement = 'C';
+                break;
+            default:
+                System.out.println("Please enter a valid temperature next time.");
+                System.exit(0);
+
+        }
+        System.out.println(temperature + "" + celciusOrFarenheit + " is " + convertedTemp + convertedMeasurement + ".");
+
+    }
 }
