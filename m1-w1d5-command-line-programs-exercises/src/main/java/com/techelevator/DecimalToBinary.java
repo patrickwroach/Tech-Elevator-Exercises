@@ -20,7 +20,7 @@ public class DecimalToBinary {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner (System.in);
-		System.out.println("Please enter in a series of decimal values (separated by spaces): ");
+		System.out.print("Please enter in a series of decimal values (separated by spaces): ");
 		
 		String input = in.nextLine();
 		String[] numbers = input.split(" ");
