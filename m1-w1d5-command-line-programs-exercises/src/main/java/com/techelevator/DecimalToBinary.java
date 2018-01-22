@@ -19,17 +19,26 @@ Please enter in a series of decimal values (separated by spaces): 460 8218 1 313
 public class DecimalToBinary {
 
 	public static void main(String[] args) {
-		Scanner in = new Scanner (System.in);
+		Scanner in = new Scanner(System.in);
 		System.out.print("Please enter in a series of decimal values (separated by spaces): ");
-		
+
 		String input = in.nextLine();
-		String[] numbers = input.split(" ");							//Create a string array of numbers delineated at the " ".
+		String[] numbers = input.split(" ");                            //Create a string array of numbers delineated at the " ".
 		for (int i = 0; i < numbers.length; i++) {
-			int decimalValue = Integer.parseInt(numbers[i]);				//Convert strings to ints.
-			String binaryValue = Integer.toBinaryString(decimalValue);		//Found a built in function for Integer to convert to decimals.  Brian said this was fine.
-			
+			int decimalValue = Integer.parseInt(numbers[i]);                //Convert strings to ints.
+//			String binaryValue = Integer.toBinaryString(decimalValue);		//Found a built in function for Integer to convert to decimals.  Brian said this was fine.
+			String binaryValue = toBinary(decimalValue);					//But if it wasn't right, here's a function I wrote to do it.
 			System.out.println(decimalValue + " in binary is " + binaryValue);
 		}
 	}
 
+
+	public static String toBinary(int decimal) {
+		String binaryOutput = "";
+		while (decimal > 0) {								//Continue loop until we get to 0, chopping off as we go.
+			binaryOutput = (decimal % 2) + binaryOutput;   //modulo 2 will either get us a 1 or 0.  Add to result to the front of the String
+			decimal = decimal / 2;							//now change the number to what modulo 2 got us to
+		}
+		return binaryOutput;
+	}
 }
