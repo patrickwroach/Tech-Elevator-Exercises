@@ -22,7 +22,11 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"] 
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		ArrayList<String> output = new ArrayList<String>();
+		for (String fruit : stringArray) {
+			output.add(fruit);
+		}
+		return output;
 	}
 	
 	/*
@@ -32,7 +36,12 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
-		return null;
+		String[] output = new String[stringList.size()];
+
+		for (int i = 0; i < stringList.size(); i++ ){
+			output[i] = stringList.get(i);
+		}
+		return output;
 	}
 	
 	/*
@@ -43,7 +52,14 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+
+		ArrayList<String> output = new ArrayList<String>();
+
+		for (int i = 0; i < stringArray.length; i++){
+			if (stringArray[i].length() != 4) output.add(stringArray[i]);
+		}
+
+		return output;
 	}
 
 
@@ -56,7 +72,18 @@ public class Exercises {
 		-> ["way", "the", "all", "jingle", "bells", "jingle", "bells", "jingle"]
 	 */
 	public List<String> reverseList(List<String> stringList) {
-		return null;
+		Stack<String> output = new Stack<String>();
+		List<String> solution = new ArrayList<String>();
+
+		for (int i = 0; i < stringList.size();i++){
+			output.push(stringList.get(i));
+		}
+		while (!output.isEmpty()){
+			solution.add(output.pop());
+
+		}
+
+		return solution;
 	}
 
 	/*
@@ -66,7 +93,12 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-		return null;
+		List<Double> output = new ArrayList<Double>();
+
+		for (int i = 0;i < intArray.length; i++){
+			output.add ( ((double) (intArray[i]) / 2) );
+		}
+		return output;
 	}
 	
 	/*
@@ -76,7 +108,13 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 64362
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+
+		int max = -1;
+
+		for (int i = 0; i < integerList.size(); i++){
+			if (integerList.get(i) > max ) max = integerList.get(i);
+		}
+		return max;
 	}
 	
 	/*
@@ -86,7 +124,13 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]  
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+
+		List<Integer> output = new ArrayList<Integer>();
+
+		for (int i =0; i < integerArray.length; i++){
+			if (integerArray[i] % 2 == 1) output.add(integerArray[i]);
+		}
+		return output;
 	}
 	
 	/* 
@@ -97,7 +141,14 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
-		return false;
+		int count =0;
+
+		for (int i = 0; i < integerList.size(); i++) {
+			if (intToFind == integerList.get(i)) count++;
+		}
+
+
+		return (count >= 2);
 	}
 	
 	/*
@@ -113,7 +164,15 @@ public class Exercises {
 	 HINT: To convert an integer x to a string you can call x.toString() in your code (e.g. if x = 1 then x.ToString() equals "1")
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+		List<String> output = new ArrayList<String>();
+
+		for (int i =0; i < integerArray.length; i++){
+			if (integerArray[i] % 3 == 0 && integerArray[i] % 5 == 0) output.add("FizzBuzz");
+			else if (integerArray[i] % 3 == 0) output.add("Fizz");
+			else if (integerArray[i] % 5 == 0) output.add("Buzz");
+			else output.add(integerArray[i].toString());
+		}
+		return output;
 	}
 
 	/*
@@ -123,7 +182,17 @@ public class Exercises {
 	 distinctValues( ["jingle", "bells", "jingle", "bells", "jingle", "all", "the", "way"] ) -> ["jingle", "bells", "all", "the", "way"]
 	 */
 	public List<String> distinctValues(List<String> stringList) {
-		return null;
+		Set<String> noDupes = new HashSet<String>();
+		List<String> output = new ArrayList<String>();
+
+		for (String words : stringList){
+			noDupes.add(words);
+		}
+
+		for (String words : noDupes){
+			output.add(words);
+		}
+		return output;
 	}
 
 	/*
@@ -134,7 +203,21 @@ public class Exercises {
 	 interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
-		return null;
+		List<Integer> output = new ArrayList<Integer>();
+
+		List<Integer> shortList = (listOne.size() <= listTwo.size()) ? listOne : listTwo;
+		List<Integer> longList = (listOne.size() <= listTwo.size()) ? listTwo : listOne;
+
+		for (int numbers : shortList){
+			output.add(listOne.get(numbers));
+			listOne.remove(numbers);
+			output.add(listTwo.get(numbers));
+			listTwo.remove(numbers);
+		}
+		for (int numbers : longList){
+			output.add(longList.get(numbers));
+		}
+		return output;
 	}
 
 	/*
