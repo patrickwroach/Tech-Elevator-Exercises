@@ -27,7 +27,7 @@ public class DecimalToBinary {
 		for (int i = 0; i < numbers.length; i++) {
 			int decimalValue = Integer.parseInt(numbers[i]);                //Convert strings to ints.
 //			String binaryValue = Integer.toBinaryString(decimalValue);		//Found a built in function for Integer to convert to decimals.  Brian said this was fine.
-			String binaryValue = toBinary(decimalValue);					//But if it wasn't right, here's a function I wrote to do it.
+			String binaryValue = toBinary(decimalValue);					//Buuuut if it wasn't fine, here's a function I wrote to do it.
 			System.out.println(decimalValue + " in binary is " + binaryValue);
 		}
 	}
