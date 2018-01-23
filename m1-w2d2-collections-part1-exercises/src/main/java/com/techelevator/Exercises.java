@@ -1,13 +1,6 @@
 package com.techelevator;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 public class Exercises {
 
@@ -172,6 +165,13 @@ public class Exercises {
 			else if (integerArray[i] % 5 == 0) output.add("Buzz");
 			else output.add(integerArray[i].toString());
 		}
+
+//		for (int nums : integerArray){
+//			if (nums % 3 == 0 && nums % 5 == 0) output.add("FizzBuzz");
+//			if (nums % 3 == 0) output.add("Fizz");
+//			if (nums %  % 5 == 0) output.add("Buzz"););
+//			output.add.()
+//		}
 		return output;
 	}
 
@@ -203,22 +203,24 @@ public class Exercises {
 	 interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
-		List<Integer> output = new ArrayList<Integer>();
 
+		List<Integer> output = new ArrayList<Integer>();
 		List<Integer> shortList = (listOne.size() <= listTwo.size()) ? listOne : listTwo;
 		List<Integer> longList = (listOne.size() <= listTwo.size()) ? listTwo : listOne;
 
-		for (int numbers : shortList){
-			output.add(listOne.get(numbers));
-			listOne.remove(numbers);
-			output.add(listTwo.get(numbers));
-			listTwo.remove(numbers);
+
+		for (int i = 0; i < shortList.size(); i++) {
+
+			output.add(listOne.get(i));
+			output.add(listTwo.get(i));
+
 		}
-		for (int numbers : longList){
-			output.add(longList.get(numbers));
+		for (int i = shortList.size(); i < longList.size(); i++) {
+			output.add(longList.get(i));
 		}
 		return output;
 	}
+
 
 	/*
 	 Given a list of Integers representing seat numbers, group them into ranges 1-10, 11-20, and 21-30.
@@ -230,7 +232,28 @@ public class Exercises {
 	 boardingGate( [0, -1, 44, 31, 17, 7, 27, 16, 26, 6] ) -> [7, 6, 17, 16, 27, 26]
 	 */
 	public List<Integer> boardingGate(List<Integer> seatNumberList) {
-		return null;
+		Queue<Integer> range110 = new LinkedList<>();
+		Queue<Integer> range1120 = new LinkedList<>();;
+		Queue<Integer> range2130 = new LinkedList<>();;
+		List<Integer> output = new ArrayList<>();
+
+		for (int seats : seatNumberList){
+			if (seats >= 1 && seats <= 10) range110.offer(seats);
+			if (seats >= 11 && seats <= 20) range1120.offer(seats);
+			if (seats >= 21 && seats <= 30) range2130.offer(seats);
+		}
+
+		for (int seats : range110){
+			output.add(seats);
+		}
+		for (int seats : range1120){
+			output.add(seats);
+		}
+		for (int seats : range2130){
+			output.add(seats);
+		}
+
+		return output;
 	}
 
 }
