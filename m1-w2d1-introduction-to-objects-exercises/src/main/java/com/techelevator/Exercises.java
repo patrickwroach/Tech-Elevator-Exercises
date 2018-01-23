@@ -257,11 +257,13 @@ public class Exercises {
      stringTimes("Hi", 1) → "Hi"
      */
     public String stringTimes(String str, int n) {
+
         String output = "";
 
         for (int i = 0; i < n; i++) {
             output += str;
         }
+
         return output;
     }
 
@@ -273,12 +275,14 @@ public class Exercises {
      frontTimes("Abc", 3) → "AbcAbcAbc"
      */
     public String frontTimes(String str, int n) {
+
         String output = "";
         String front = (str.length() < 3) ? str : str.substring(0, 3);
 
         for (int i = 0; i < n; i++) {
             output += front;
         }
+
         return output;
     }
 
@@ -289,10 +293,13 @@ public class Exercises {
      countXX("xxxx") →
      */
     public int countXX(String str) {
+
         int count = 0;
+
         for (int i = 0; i < str.length() - 1; i++) {
             if (str.substring(i, i + 2).equals("xx")) count++;
         }
+
         return count;
     }
 
@@ -305,8 +312,10 @@ public class Exercises {
     public boolean doubleX(String str) {
 
         int xSpot = str.indexOf("x");
+
         if (xSpot < str.length() - 1)
             return (str.charAt(xSpot + 1) == 'x');
+
         return false;
     }
 
@@ -317,10 +326,13 @@ public class Exercises {
      stringBits("Heeololeo") → "Hello"
      */
     public String stringBits(String str) {
+
         String output = "";
+
         for (int i = 0; i < str.length(); i += 2) {
             output += str.charAt(i);
         }
+
         return output;
     }
 
@@ -331,10 +343,13 @@ public class Exercises {
      stringSplosion("ab") → "aab"
      */
     public String stringSplosion(String str) {
+
         String output = "";
+
         for (int i = 0; i < str.length(); i++) {
             output += str.substring(0, i + 1);
         }
+
         return output;
     }
 
@@ -346,15 +361,17 @@ public class Exercises {
      last2("axxxaaxx") → 2
      */
     public int last2(String str) {
-        if (str.length() <= 2) return 0;
-        String check = str.substring(str.length() - 2, str.length());
         int count = 0;
 
-        for (int i = 0; i < str.length() - 1; i++) {
+        if (str.length() <= 2) return 0;
+
+        String check = str.substring(str.length() - 2, str.length());
+
+        for (int i = 0; i < str.length() - 2; i++) {
             if (str.substring(i, i + 2).equals(check)) count++;
         }
-        return count - 1;
 
+        return count;
 
     }
 
@@ -366,19 +383,18 @@ public class Exercises {
      stringX("xabxxxcdx") → "xabcdx"
      */
     public String stringX(String str) {
+
         if (str.length() < 2) return str;
 
+        String[] noX = str.substring(1, str.length() - 1).split("x");  //break off the x's
+        String output = "";
 
-        String output = str.substring(1, str.length() - 1);
-        String[] noX = output.split("x");
-        String output2 = "";
-
-        output2 += str.charAt(0);
-        for (int i = 0; i < noX.length; i++) {
-            output2 += noX[i];
+        output += str.charAt(0);                    //add first x
+        for (int i = 0; i < noX.length; i++) {      // add the characters back
+            output += noX[i];
         }
-        output2 += str.charAt(str.length() - 1);
-        return output2;
+        output += str.charAt(str.length() - 1);  //add second x
+        return output;
     }
 
     /*
@@ -390,16 +406,15 @@ public class Exercises {
     public String altPairs(String str) {
         String output = "";
 
-        for (int i = 0; i < str.length(); i += 4) {
-            int back = i + 2;
+        for (int i = 0; i < str.length(); i += 4) {     //check every four characters
+            int back = i + 2;                           //dreaded out of bounds fix
             if (back > str.length()) {
                 back = str.length();
             }
 
-            output += str.substring(i, back);
-
-
+            output += str.substring(i, back);       //add the pairs
         }
+
         return output;
     }
 
@@ -412,10 +427,19 @@ public class Exercises {
      stringYak("yak123ya") → "123ya"
      */
     public String stringYak(String str) {
+        String output = "";
+//        String output = str.replace("yak", "");   // Easy Mode
 
-        String output = str.replace("yak", "");
-
+        for (int i = 0; i < str.length(); i++) {
+            if (i + 2 < str.length() && str.charAt(i) == 'y' && str.charAt(i + 2) == 'k') {   // if "y-k" skip the letters
+                i += 2;
+            } else {
+                output += str.charAt(i);  //add everything else
+            }
+        }
         return output;
+
+
     }
 
 }
