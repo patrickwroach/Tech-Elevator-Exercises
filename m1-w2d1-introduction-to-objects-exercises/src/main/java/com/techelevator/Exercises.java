@@ -46,6 +46,7 @@ public class Exercises {
      makeOutWord("[[]]", "word") → "[[word]]"
      */
     public String makeOutWord(String out, String word) {
+
         return (out.substring(0, 2) + word + out.substring(2, 4));
     }
 
@@ -259,7 +260,7 @@ public class Exercises {
         String output = "";
 
         for (int i = 0; i < n; i++) {
-            output += str;
+            output += str;7
         }
         return output;
     }
