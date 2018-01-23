@@ -260,7 +260,7 @@ public class Exercises {
         String output = "";
 
         for (int i = 0; i < n; i++) {
-            output += str;7
+            output += str;
         }
         return output;
     }
@@ -391,12 +391,12 @@ public class Exercises {
         String output = "";
 
         for (int i = 0; i < str.length(); i += 4) {
-            int end = i + 2;
-            if (end > str.length()) {
-                end = str.length();
+            int back = i + 2;
+            if (back > str.length()) {
+                back = str.length();
             }
 
-            output += str.substring(i, end);
+            output += str.substring(i, back);
 
 
         }
