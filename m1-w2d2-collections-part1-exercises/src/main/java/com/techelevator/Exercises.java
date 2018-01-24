@@ -53,7 +53,7 @@ public class Exercises {
 
         ArrayList<String> output = new ArrayList<String>();
 
-        for (String words : stringArray){
+        for (String words : stringArray) {
             if (words.length() != 4) {
                 output.add(words);
             }
@@ -77,7 +77,7 @@ public class Exercises {
         List<String> output = new ArrayList<>();
 
 
-        for (String words : stringList){
+        for (String words : stringList) {
             reverse.push(words);
         }
 
@@ -98,7 +98,7 @@ public class Exercises {
 
         List<Double> output = new ArrayList<>();
 
-        for (double nums : intArray){
+        for (double nums : intArray) {
             output.add((nums / 2));
         }
 
@@ -115,8 +115,8 @@ public class Exercises {
 
         int max = -1;
 
-        for (int nums : integerList){
-           max = Math.max(nums, max);
+        for (int nums : integerList) {
+            max = Math.max(nums, max);
         }
 
         return max;
@@ -132,7 +132,7 @@ public class Exercises {
 
         List<Integer> output = new ArrayList<>();
 
-        for (int nums : integerArray){
+        for (int nums : integerArray) {
             if (nums % 2 == 1) output.add(nums);
         }
 
@@ -172,14 +172,14 @@ public class Exercises {
 
         List<String> output = new ArrayList<>();
 
-		for (Integer nums : integerArray){
-			if (nums % 3 == 0 && nums % 5 == 0) output.add("FizzBuzz");
-			else if (nums % 3 == 0) output.add("Fizz");
-			else if (nums % 5 == 0) output.add("Buzz");
-			else {
-			    output.add(nums.toString());
+        for (Integer nums : integerArray) {
+            if (nums % 3 == 0 && nums % 5 == 0) output.add("FizzBuzz");
+            else if (nums % 3 == 0) output.add("Fizz");
+            else if (nums % 5 == 0) output.add("Buzz");
+            else {
+                output.add(nums.toString());
             }
-		}
+        }
         return output;
     }
 
@@ -209,7 +209,7 @@ public class Exercises {
      */
     public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
 
-        List<Integer> output = new ArrayList<Integer>();
+        List<Integer> output = new ArrayList<>();
         List<Integer> shortList = (listOne.size() <= listTwo.size()) ? listOne : listTwo;
         List<Integer> longList = (listOne.size() <= listTwo.size()) ? listTwo : listOne;
 
@@ -224,7 +224,6 @@ public class Exercises {
             output.add(longList.get(i));
         }
         return output;
-
     }
 
 
