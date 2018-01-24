@@ -37,8 +37,9 @@ public class Exercises {
      */
     public String animalGroupName(String animalName) {
 
-        String output = "";
+        String output = "unknown";
         Map<String, String> animals = new HashMap<>();
+
         animals.put("Rhino", "Crash");
         animals.put("Giraffe", "Tower");
         animals.put("Elephant", "Crash");
@@ -54,11 +55,9 @@ public class Exercises {
         for (String key : animals.keySet()) {
             if (key.equalsIgnoreCase(animalName)) {
                 output = (animals.get(key));
-                break;
-            } else {
-                output = ("unknown");
             }
         }
+
         return output;
     }
 
@@ -99,14 +98,9 @@ public class Exercises {
         for (String key : saleList.keySet()) {
             if (key.equalsIgnoreCase(itemNumber)) {
                 output = (saleList.get(key));
-                break;
-            } else {
-                output = 0.00;
             }
         }
         return output;
-
-
     }
 
     /*
@@ -126,8 +120,7 @@ public class Exercises {
 
         if (peterMoney > 0 && paulMoney < 1000) {
             paulMoney += peterMoney / 2;
-            int temp = peterMoney / 2;
-            peterMoney -= temp;
+            peterMoney -= (peterMoney / 2);
 
             peterPaul.put("Peter", peterMoney);
             peterPaul.put("Paul", paulMoney);
@@ -175,6 +168,7 @@ public class Exercises {
      * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
      */
     public Map<String, String> beginningAndEnding(String[] words) {
+
         Map<String, String> firstAndLast = new HashMap<>();
 
         for (String letters : words) {
@@ -196,6 +190,7 @@ public class Exercises {
      *
      */
     public Map<String, Integer> wordCount(String[] words) {
+
         Map<String, Integer> wordCount = new HashMap<>();
 
         for (String letters : words) {
@@ -205,8 +200,8 @@ public class Exercises {
                 int count = wordCount.get(letters);
                 wordCount.put(letters, ++count);
             }
-
         }
+
         return wordCount;
     }
 
@@ -222,6 +217,7 @@ public class Exercises {
      *
      */
     public Map<Integer, Integer> integerCount(int[] ints) {
+
         Map<Integer, Integer> intCount = new HashMap<>();
 
         for (int numbers : ints) {
@@ -233,6 +229,7 @@ public class Exercises {
             }
 
         }
+
         return intCount;
     }
 
@@ -315,7 +312,6 @@ public class Exercises {
             for (int i = 0; i < letters.length() - 2; i++) {
                 if (letters.substring(i, i + 2).equals(check)) count++;
             }
-
 
             wordCount.put(letters, count);
 
