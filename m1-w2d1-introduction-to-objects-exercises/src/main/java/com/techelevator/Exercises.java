@@ -296,7 +296,7 @@ public class Exercises {
 
         int count = 0;
 
-        for (int i = 0; i < str.length() - 1; i++) {
+        for (int i = 0; i < str.length()-1; i++) {
             if (str.substring(i, i + 2).equals("xx")) count++;
         }
 
