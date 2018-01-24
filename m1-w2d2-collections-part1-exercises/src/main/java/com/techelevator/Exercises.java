@@ -51,7 +51,7 @@ public class Exercises {
      */
     public List<String> no4LetterWords(String[] stringArray) {
 
-        ArrayList<String> output = new ArrayList<String>();
+        ArrayList<String> output = new ArrayList<>();
 
         for (String words : stringArray) {
             if (words.length() != 4) {
