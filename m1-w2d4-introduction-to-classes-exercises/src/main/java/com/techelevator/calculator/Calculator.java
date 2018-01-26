@@ -1,46 +1,4 @@
 package com.techelevator.calculator;
-
-
-public class Calculator {
-
-    private int currentValue;
-
-    public int getCurrentValue() {
-        return currentValue;
-    }
-
-    public void setCurrentValue(int currentValue) {
-        this.currentValue = currentValue;
-    }
-
-    public int add(int addend){
-       currentValue+=addend;
-       return currentValue;
-    }
-    public int multiply(int multiplier){
-        currentValue*=multiplier;
-        return currentValue;
-    }
-    public int subtract(int subtrahend){
-        currentValue-=subtrahend;
-        return currentValue;
-    }
-    public int power(int exponent){
-
-        for (int i =0; i < exponent -1; i++){
-            currentValue *= currentValue;
-        }
-
-        return currentValue;
-    }
-    public void reset(){
-
-        currentValue = 0;
-
-    }
-
-}
-
 //## *Difficult Exercises*
 //        ## Calculator
 //
@@ -71,3 +29,47 @@ public class Calculator {
 //        ### Constructor
 //
 //        The `Calculator` class uses the default constructor.
+
+public class Calculator {
+
+    private int currentValue;
+
+    public int getCurrentValue() {
+        return currentValue;
+    }
+
+    public void setCurrentValue(int currentValue) {
+        this.currentValue = currentValue;
+    }
+
+    public int add(int addend) {
+        currentValue += addend;
+        return currentValue;
+    }
+
+    public int multiply(int multiplier) {
+        currentValue *= multiplier;
+        return currentValue;
+    }
+
+    public int subtract(int subtrahend) {
+        currentValue -= subtrahend;
+        return currentValue;
+    }
+
+    public int power(int exponent) {
+
+        for (int i = 0; i < exponent - 1; i++) {
+            currentValue *= currentValue;
+        }
+
+        return currentValue;
+    }
+
+    public void reset() {
+
+        currentValue = 0;
+
+    }
+
+}

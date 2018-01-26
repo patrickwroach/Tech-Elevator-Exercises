@@ -1,26 +1,5 @@
 package com.techelevator.dog;
 
-public class Dog {
-
-	private boolean sleeping;
-
-    public boolean isSleeping() {
-        return sleeping;
-    }
-
-    public String makeSound(){
-        if (this.sleeping) return "Zzzzz...";
-        return "Woof!";
-    }
-    public void sleep(){
-        this.sleeping = true;
-
-    }
-    public void wakeUp(){
-        this.sleeping = false;
-    }
-}
-
 //# Dog
 //
 //        ### Data Members
@@ -46,3 +25,27 @@ public class Dog {
 //        ### Constructor
 //
 //        The `Dog` class uses the default constructor.
+
+public class Dog {
+
+    private boolean sleeping;
+
+    public boolean isSleeping() {
+        return sleeping;
+    }
+
+    public String makeSound() {
+        if (this.sleeping) return "Zzzzz...";
+        return "Woof!";
+    }
+
+    public void sleep() {
+        this.sleeping = true;
+
+    }
+
+    public void wakeUp() {
+        this.sleeping = false;
+    }
+}
+

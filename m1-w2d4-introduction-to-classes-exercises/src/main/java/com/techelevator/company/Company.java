@@ -1,9 +1,25 @@
 package com.techelevator.company;
 
+//| Attribute | Data Type | Get | Set | Description |
+//        |----------|-----------|-----|-----|-------------|
+//        | name | string | X | X | The company name. |
+//        | numberOfEmployees | int | X | X | The number of employees at the company. |
+//        | revenue | double | X | X | The annual revenue of the company. |
+//        | expenses | double | X | X | The annual expenses of the company. |
+//
+//        ### Methods
+//
+//public String getCompanySize()
+//public double getProfit()
+//
+//        **Notes**
+//        - `getCompanySize()` returns "small" if 50 or less employees, "medium" if between 51 and 250 employees, "large" if greater than 250 employees.
+//        - `getProfit()` returns the result of revenue - expenses.
+
 public class Company {
 
-	private String name;
-	private int numberOfEmployees;
+    private String name;
+    private int numberOfEmployees;
     private double revenue;
     private double expenses;
 
@@ -39,28 +55,13 @@ public class Company {
         this.expenses = expenses;
     }
 
-    public String getCompanySize(){
+    public String getCompanySize() {
         if (this.numberOfEmployees <= 50) return "small";
         if (this.numberOfEmployees <= 250) return "medium";
         return "large";
     }
 
-    public double getProfit(){
+    public double getProfit() {
         return this.revenue - this.expenses;
     }
 }
-//| Attribute | Data Type | Get | Set | Description |
-//        |----------|-----------|-----|-----|-------------|
-//        | name | string | X | X | The company name. |
-//        | numberOfEmployees | int | X | X | The number of employees at the company. |
-//        | revenue | double | X | X | The annual revenue of the company. |
-//        | expenses | double | X | X | The annual expenses of the company. |
-//
-//        ### Methods
-//
-//public String getCompanySize()
-//public double getProfit()
-//
-//        **Notes**
-//        - `getCompanySize()` returns "small" if 50 or less employees, "medium" if between 51 and 250 employees, "large" if greater than 250 employees.
-//        - `getProfit()` returns the result of revenue - expenses.

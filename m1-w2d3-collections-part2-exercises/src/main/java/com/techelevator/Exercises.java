@@ -140,10 +140,8 @@ public class Exercises {
      *
      */
     public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-
         int peterMoney = peterPaul.get("Peter");
         int paulMoney = peterPaul.get("Paul");
-
 
         if (peterMoney >= 5000 && paulMoney >= 10000) {
             int peterPaulPartnership = ((paulMoney + peterMoney) / 4);
@@ -190,18 +188,16 @@ public class Exercises {
      *
      */
     public Map<String, Integer> wordCount(String[] words) {
-
         Map<String, Integer> wordCount = new HashMap<>();
 
         for (String letters : words) {
-            if (!wordCount.containsKey(letters)) {
+            if (!wordCount.containsKey(letters))
                 wordCount.put(letters, 1);
-            } else {
+             else {
                 int count = wordCount.get(letters);
                 wordCount.put(letters, ++count);
             }
         }
-
         return wordCount;
     }
 
@@ -246,13 +242,11 @@ public class Exercises {
         Map<String, Boolean> wordCount = new HashMap<>();
 
         for (String letters : words) {
-
             if (!wordCount.containsKey(letters)) {
                 wordCount.put(letters, false);
             } else {
                 wordCount.put(letters, true);
             }
-
         }
         return wordCount;
     }

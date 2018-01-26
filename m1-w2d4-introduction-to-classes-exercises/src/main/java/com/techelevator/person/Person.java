@@ -1,8 +1,31 @@
 package com.techelevator.person;
 
+//## Person
+//
+//        ### Data Members
+//
+//        | Attribute | Data Type | Get | Set | Description |
+//        |----------|-----------|-----|-----|-------------|
+//        | firstName | String | X | X | The first name of the person.  |
+//        | lastName | String | X | X | The last name of the person. |
+//        | age | int | X | X | The age of the person. |
+//
+//        ### Methods
+//
+//public String getFullName()
+//public boolean isAdult()
+//
+//        **Notes**
+//        - `getFullName()` returns the `lastName` + ", " + `firstName`.
+//        - `isAdult()` returns `true` if the person is 18 or older.
+//
+//        ### Constructors
+//
+//        The `Person` class uses the default constructor.
+
 public class Person {
 
-	private String firstName;
+    private String firstName;
     private String lastName;
     private int age;
 
@@ -31,7 +54,7 @@ public class Person {
     }
 
     public String getFullName() {
-       return lastName + ", " + firstName;
+        return lastName + ", " + firstName;
     }
 
     public boolean isAdult() {
@@ -39,26 +62,3 @@ public class Person {
     }
 
 }
-
-//## Person
-//
-//        ### Data Members
-//
-//        | Attribute | Data Type | Get | Set | Description |
-//        |----------|-----------|-----|-----|-------------|
-//        | firstName | String | X | X | The first name of the person.  |
-//        | lastName | String | X | X | The last name of the person. |
-//        | age | int | X | X | The age of the person. |
-//
-//        ### Methods
-//
-//public String getFullName()
-//public boolean isAdult()
-//
-//        **Notes**
-//        - `getFullName()` returns the `lastName` + ", " + `firstName`.
-//        - `isAdult()` returns `true` if the person is 18 or older.
-//
-//        ### Constructors
-//
-//        The `Person` class uses the default constructor.
