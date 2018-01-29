@@ -42,15 +42,11 @@ public class FruitTree {
     }
 
     public boolean pickFruit(int numberOfPiecesToRemove) {
-        boolean isFruitPicked;
 
-        if (numberOfPiecesToRemove > piecesOfFruitLeft)
-            isFruitPicked = false;
-        else {
-            isFruitPicked = true;
+        if (numberOfPiecesToRemove <= piecesOfFruitLeft){
             piecesOfFruitLeft -= numberOfPiecesToRemove;
-        }
-
-        return isFruitPicked;
+            return true;
+    }
+       return false;
     }
 }
