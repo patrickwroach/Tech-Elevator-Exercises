@@ -88,10 +88,11 @@ public class Elevator {
      */
     public boolean GoUp(int desiredFloor)
     {
-        currentLevel = desiredFloor;
+        
 
-        if (desiredFloor > currentLevel && desiredFloor <= numberOfLevels && doorOpen)
+        if ((desiredFloor > currentLevel && desiredFloor <= numberOfLevels) && !doorOpen)
         {
+        	currentLevel = desiredFloor;
             return true;
         }
         else
@@ -107,9 +108,9 @@ public class Elevator {
      */
     public boolean GoDown(int desiredFloor)
     {
-        if (!doorOpen && desiredFloor < currentLevel && desiredFloor > 0)
+        if (!doorOpen && (desiredFloor < currentLevel && desiredFloor > 0))
         {
-            currentLevel -= desiredFloor;
+            currentLevel = desiredFloor;
             return true;
         }
 

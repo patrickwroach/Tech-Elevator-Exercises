@@ -33,7 +33,8 @@ public class Television {
      */
     public void TurnOn()
     {
-        isOn = true;                        
+        isOn = true;
+        currentVolume = 2;
     }
 
     /**
@@ -48,28 +49,25 @@ public class Television {
      * Changes the tv channel, but only if it is on. 
      * @param newChannel new channel to turn to
      */
-    public void ChangeChannel(int newChannel)
-    {
+    public void ChangeChannel(int newChannel) {
         if (isOn && newChannel > 3 && newChannel < 18)
-        {
-            selectedChannel = newChannel;
-        }
+        selectedChannel = newChannel;     
     }
 
     /**
      * Raises the volume. It won't raise it past 10 and the tv has to be on 
      */
-    public void RaiseVolume()
-    {
+    public void RaiseVolume() {
+    if (isOn && currentVolume <= 9)
         currentVolume++;
     }
 
     /**
      * Lowers the volume. It won't lower it below 0 and the tv has to be on 
      */
-    public void LowerVolume()
-    {
-        currentVolume--;
+    public void LowerVolume(){
+        if (isOn && currentVolume >= 1)
+            currentVolume--;
     }
 
 }

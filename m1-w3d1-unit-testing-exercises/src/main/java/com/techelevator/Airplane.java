@@ -8,6 +8,7 @@ public class Airplane {
     private int totalCoachSeats;
     private int bookedCoachSeats = 0;
 
+
     /**
      * Creates a new airplane 
      * @param totalFirstClassSeats Total number of first class seats that can be booked
@@ -39,7 +40,7 @@ public class Airplane {
      * @return availableFirstClassSeats
      */
     public int getAvailableFirstClassSeats() {
-        return bookedFirstClassSeats;
+        return totalFirstClassSeats - bookedFirstClassSeats;
     }
 
     /**
@@ -63,7 +64,7 @@ public class Airplane {
      * @return availableCoachSeats
      */
     public int getAvailableCoachSeats() {
-        return totalCoachSeats;
+        return totalCoachSeats - bookedCoachSeats;
     }
 
     /**
@@ -80,20 +81,21 @@ public class Airplane {
      * @param totalNumberOfSeats Total number of seats to reserve
      * @return True if reservation was successful, false otherwise
      */
-    public boolean Reserve(boolean firstClass, int totalNumberOfSeats) {       
+    public boolean reserve(boolean firstClass, int totalNumberOfSeats) {       
         if (firstClass) {
-            bookedFirstClassSeats += totalNumberOfSeats;
-            if (totalNumberOfSeats > getAvailableFirstClassSeats()) {
-                return false;
+            if (totalNumberOfSeats < getAvailableFirstClassSeats()) {
+            	bookedFirstClassSeats += totalNumberOfSeats;
+                return true;
             }
         }
         else {
-            bookedCoachSeats += totalNumberOfSeats;
-            if (totalNumberOfSeats > getAvailableCoachSeats()) {
-                return false;
+           
+            if (totalNumberOfSeats < getAvailableCoachSeats()) {
+            	 bookedCoachSeats += totalNumberOfSeats;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
 }
