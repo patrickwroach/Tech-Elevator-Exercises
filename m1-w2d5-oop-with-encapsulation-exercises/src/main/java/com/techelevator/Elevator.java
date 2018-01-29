@@ -72,6 +72,5 @@ public class Elevator {
     public void goDown(int desiredFloor) {
         if (!doorOpen && desiredFloor >= 1 && desiredFloor < currentFloor)
             currentFloor = desiredFloor;
-
     }
 }
