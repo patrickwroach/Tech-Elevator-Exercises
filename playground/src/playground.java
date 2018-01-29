@@ -3,8 +3,9 @@ public class playground {
     public static void main(String[] args) {
 
 
-        System.out.println(5000 * 3/4 );
-
+        double grade = 91;
+        double gradeTest = 91/ 100;
+        System.out.println(gradeTest);
 
 
     }

@@ -79,6 +79,6 @@ public class Employee {
     }
 
     public void raiseSalary(double percent) {
-        annualSalary+= (annualSalary * (percent/100));
+        annualSalary += (annualSalary * (percent / 100));
     }
 }

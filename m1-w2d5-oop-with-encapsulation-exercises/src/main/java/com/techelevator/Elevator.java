@@ -65,18 +65,13 @@ public class Elevator {
     }
 
     public void goUp(int desiredFloor) {
-        if (!doorOpen) {
-            if (desiredFloor <= numberOfFloors && desiredFloor > currentFloor) currentFloor = desiredFloor;
-
-        }
-
+        if (!doorOpen && desiredFloor <= numberOfFloors && desiredFloor > currentFloor)
+            currentFloor = desiredFloor;
     }
 
     public void goDown(int desiredFloor) {
-        if (!doorOpen) {
-            if (desiredFloor >=1 && desiredFloor < currentFloor) currentFloor = desiredFloor;
-
-        }
+        if (!doorOpen && desiredFloor >= 1 && desiredFloor < currentFloor)
+            currentFloor = desiredFloor;
 
     }
 }

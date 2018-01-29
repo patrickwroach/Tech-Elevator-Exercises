@@ -58,7 +58,7 @@ public class HomeworkAssignment {
     }
 
     public String getLetterGrade() {
-        int calculatedGrade = ((this.totalMarks * 100)/this.possibleMarks);
+        int calculatedGrade = ((totalMarks * 100) / possibleMarks);
 
         if (calculatedGrade >= 90) letterGrade = "A";
         else if (calculatedGrade >= 80) letterGrade = "B";

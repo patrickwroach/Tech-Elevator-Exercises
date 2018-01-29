@@ -44,7 +44,8 @@ public class FruitTree {
     public boolean pickFruit(int numberOfPiecesToRemove) {
         boolean isFruitPicked;
 
-        if (numberOfPiecesToRemove > piecesOfFruitLeft ) isFruitPicked = false;
+        if (numberOfPiecesToRemove > piecesOfFruitLeft)
+            isFruitPicked = false;
         else {
             isFruitPicked = true;
             piecesOfFruitLeft -= numberOfPiecesToRemove;
