@@ -62,7 +62,7 @@ public class ElevatorTest {
 	public void close_door_closes_door() {
 		//arrange
 		//act
-		elevator.CloseDoor();
+		elevator.closeDoor();
 		//assert
 		Assert.assertFalse("Door should be closed", elevator.isDoorOpen());
 	}
@@ -71,9 +71,9 @@ public class ElevatorTest {
 	public void go_to_12_floor_while_door_is_closed() {
 		//arrange
 		//act
-		elevator.CloseDoor();
+		elevator.closeDoor();
 		//assert
-		Assert.assertTrue("Elevator should go to 12th floor", elevator.GoUp(12));
+		Assert.assertTrue("Elevator should go to 12th floor", elevator.goUp(12));
 	}
 	
 	@Test
@@ -81,84 +81,84 @@ public class ElevatorTest {
 		//arrange
 		//act
 		//assert
-		Assert.assertFalse("Elevator should not be able to move while the door is open", elevator.GoUp(12));
+		Assert.assertFalse("Elevator should not be able to move while the door is open", elevator.goUp(12));
 	}
 	
 	@Test
 	public void go_to_14_floor_while_door_is_closed()  {
 		//arrange
 		//act
-		elevator.CloseDoor();
+		elevator.closeDoor();
 		//assert
-		Assert.assertFalse("Elevator can not go higher than the number of floors", elevator.GoUp(14));
+		Assert.assertFalse("Elevator can not go higher than the number of floors", elevator.goUp(14));
 	}
 	
 	@Test
 	public void go_to_floor_1_when_on_floor_1()  {
 		//arrange
 		//act
-		elevator.CloseDoor();
+		elevator.closeDoor();
 		//assert
-		Assert.assertFalse("Elevator can not move while door is open", elevator.GoUp(1));
+		Assert.assertFalse("Elevator can not move while door is open", elevator.goUp(1));
 	}
 	
 	@Test
 	public void go_to_5_from_12_floor_while_door_is_closed() {
 		//arrange
 		//act
-		elevator.CloseDoor();
-		elevator.GoUp(12);
+		elevator.closeDoor();
+		elevator.goUp(12);
 		//assert
-		Assert.assertTrue("Elevator should go to 5th floor", elevator.GoDown(5));
+		Assert.assertTrue("Elevator should go to 5th floor", elevator.goDown(5));
 	}
 	
 	@Test
 	public void go_to_5_from_12_floor_while_door_is_open() {
 		//arrange
 		//act
-		elevator.CloseDoor();
-		elevator.GoUp(12);
-		elevator.OpenDoor();
+		elevator.closeDoor();
+		elevator.goUp(12);
+		elevator.openDoor();
 		//assert
-		Assert.assertFalse("Elevator should not be able to move while the door is open", elevator.GoDown(5));
+		Assert.assertFalse("Elevator should not be able to move while the door is open", elevator.goDown(5));
 	}
 	
 	@Test
 	public void go_to_0_floor_while_door_is_closed()  {
 		//arrange
 		//act
-		elevator.CloseDoor();
-		elevator.GoUp(12);
+		elevator.closeDoor();
+		elevator.goUp(12);
 		//assert
-		Assert.assertFalse("Elevator can not go to 0th floor", elevator.GoDown(0));
+		Assert.assertFalse("Elevator can not go to 0th floor", elevator.goDown(0));
 	}
 	
 	@Test
 	public void go_down_to_same_floor_while_door_is_closed()  {
 		//arrange
 		//act
-		elevator.CloseDoor();
-		elevator.GoUp(12);
+		elevator.closeDoor();
+		elevator.goUp(12);
 		//assert
-		Assert.assertFalse("Elevator can not go to 0th floor", elevator.GoDown(12));
+		Assert.assertFalse("Elevator can not go to 0th floor", elevator.goDown(12));
 	}
 	
 	@Test
 	public void go_down_to_higher_level_floor_while_door_is_closed()  {
 		//arrange
 		//act
-		elevator.CloseDoor();
-		elevator.GoUp(5);
+		elevator.closeDoor();
+		elevator.goUp(5);
 		//assert
-		Assert.assertFalse("Elevator can not go to 0th floor", elevator.GoDown(12));
+		Assert.assertFalse("Elevator can not go to 0th floor", elevator.goDown(12));
 	}
 	
 	@Test
 	public void open_door() {
 		//arrange
 				//act
-				elevator.CloseDoor();
-				elevator.OpenDoor();
+				elevator.closeDoor();
+				elevator.openDoor();
 				//assert
 				Assert.assertTrue("Elevator doors should open", elevator.isDoorOpen());
 	}
