@@ -85,7 +85,6 @@ public class SmartPhone {
      * Answer the phone. OnCall will be set to true. Battery juice is free when you answer the phone 
      */
     public void answerPhone(){
-//        if (batteryCharge > 0)
     	onCall = true;
     }
 
@@ -93,7 +92,7 @@ public class SmartPhone {
      * Hangs up the phone. OnCall will be set to false. 
      */
     public void hangUp(){
-        onCall = !onCall;
+        onCall = false;
     }
 
     /**
