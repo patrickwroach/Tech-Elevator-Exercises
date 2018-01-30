@@ -2,14 +2,15 @@ package com.techelevator;
 
 public class Employee {
 
-	private int employeeId;
+    private int employeeId;
     private String firstName;
     private String lastName;
     private String department;
     private double annualSalary;
 
     /**
-     * Creates a new employee 
+     * Creates a new employee
+     *
      * @param employeeId
      * @param firstName
      * @param lastName
@@ -23,6 +24,7 @@ public class Employee {
 
     /**
      * Employee Id
+     *
      * @return employeeId
      */
     public int getEmployeeId() {
@@ -31,6 +33,7 @@ public class Employee {
 
     /**
      * Employee first name
+     *
      * @return firstname
      */
     public String FirstName() {
@@ -39,14 +42,16 @@ public class Employee {
 
     /**
      * Employee last name
+     *
      * @return lastName
      */
     public String LastName() {
-        return lastName;        
+        return lastName;
     }
 
     /**
-     * LastName, FirstName 
+     * LastName, FirstName
+     *
      * @return lastName, firstName
      */
     public String FullName() {
@@ -55,6 +60,7 @@ public class Employee {
 
     /**
      * Department
+     *
      * @return department
      */
     public String getDepartment() {
@@ -63,26 +69,29 @@ public class Employee {
 
     /**
      * Department
+     *
      * @param department
      */
     public void setDepartment(String department) {
-    	this.department = department;
-    }
-    
-    /**
-     * Annual Employee Salary 
-     * @return
-     */
-    public double getAnnualSalary() {
-        return annualSalary;        
+        this.department = department;
     }
 
     /**
-     * Provides the employee a percentage-based raise. Raise cannot be negative. 
+     * Annual Employee Salary
+     *
+     * @return
+     */
+    public double getAnnualSalary() {
+        return annualSalary;
+    }
+
+    /**
+     * Provides the employee a percentage-based raise. Raise cannot be negative.
+     *
      * @param percentage number-based percentage (where 1% = 1.0, 2% = 2.0)
      */
     public void RaiseSalary(double percentage) {
-        double raiseAmount = annualSalary * percentage/100;
+        double raiseAmount = annualSalary * percentage / 100;
         annualSalary += raiseAmount;
     }
 

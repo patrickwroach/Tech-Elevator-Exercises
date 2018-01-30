@@ -10,62 +10,61 @@ public class Television {
      * Current on/off status of the tv
      */
     public boolean IsOn() {
-        return isOn;        
+        return isOn;
     }
 
     /**
      * Current selected channel number for the tv. Channels are 3 to 18.
      */
     public int getSelectedChannel() {
-        return selectedChannel;            
+        return selectedChannel;
     }
 
 
     /**
-     * Current volume level for the tv. Volume level ranges from 0 to 10. 
+     * Current volume level for the tv. Volume level ranges from 0 to 10.
      */
     public int getCurrentVolume() {
-        return currentVolume;            
+        return currentVolume;
     }
 
     /**
-     * Turns the tv on. Also resets the volume level to 2 
+     * Turns the tv on. Also resets the volume level to 2
      */
-    public void TurnOn()
-    {
+    public void TurnOn() {
         isOn = true;
         currentVolume = 2;
     }
 
     /**
-     * Tuns the tv off. 
+     * Tuns the tv off.
      */
-    public void TurnOff()
-    {
+    public void TurnOff() {
         isOn = false;
     }
 
     /**
-     * Changes the tv channel, but only if it is on. 
+     * Changes the tv channel, but only if it is on.
+     *
      * @param newChannel new channel to turn to
      */
     public void ChangeChannel(int newChannel) {
         if (isOn && newChannel > 3 && newChannel < 18)
-        selectedChannel = newChannel;     
+            selectedChannel = newChannel;
     }
 
     /**
-     * Raises the volume. It won't raise it past 10 and the tv has to be on 
+     * Raises the volume. It won't raise it past 10 and the tv has to be on
      */
     public void RaiseVolume() {
-    if (isOn && currentVolume <= 9)
-        currentVolume++;
+        if (isOn && currentVolume <= 9)
+            currentVolume++;
     }
 
     /**
-     * Lowers the volume. It won't lower it below 0 and the tv has to be on 
+     * Lowers the volume. It won't lower it below 0 and the tv has to be on
      */
-    public void LowerVolume(){
+    public void LowerVolume() {
         if (isOn && currentVolume >= 1)
             currentVolume--;
     }

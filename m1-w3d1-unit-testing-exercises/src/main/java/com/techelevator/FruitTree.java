@@ -2,12 +2,13 @@ package com.techelevator;
 
 public class FruitTree {
 
-	private String typeOfFruit;
+    private String typeOfFruit;
     private int piecesOfFruitLeft;
 
     /**
-     * Creates a new fruit tree. 
-     * @param typeOfFruit type of fruit the tree holds
+     * Creates a new fruit tree.
+     *
+     * @param typeOfFruit           type of fruit the tree holds
      * @param startingPiecesOfFruit number of fruit pieces to start on the tree
      */
     public FruitTree(String typeOfFruit, int startingPiecesOfFruit) {
@@ -16,7 +17,8 @@ public class FruitTree {
     }
 
     /**
-     * Type of fruit on the tree 
+     * Type of fruit on the tree
+     *
      * @return typeOfFruit
      */
     public String getTypeOfFruit() {
@@ -24,7 +26,8 @@ public class FruitTree {
     }
 
     /**
-     * Number of fruit pieces remaining 
+     * Number of fruit pieces remaining
+     *
      * @return piecesOfFruitLeft
      */
     public int getPiecesOfFruitLeft() {
@@ -32,16 +35,17 @@ public class FruitTree {
     }
 
     /**
-     * Picks fruit off of the tree and reduces the number of remaining pieces. 
+     * Picks fruit off of the tree and reduces the number of remaining pieces.
+     *
      * @param numberOfPieces number of fruit pieces to remove
      * @return True if there is enough fruit to pick, false if not.
      */
-    public boolean pickFruit(int numberOfPieces){
-            if (numberOfPieces <= piecesOfFruitLeft){
-                piecesOfFruitLeft -= numberOfPieces;
-                return true;
+    public boolean pickFruit(int numberOfPieces) {
+        if (numberOfPieces <= piecesOfFruitLeft) {
+            piecesOfFruitLeft -= numberOfPieces;
+            return true;
         }
-           return false;
-        }
+        return false;
     }
+}
 

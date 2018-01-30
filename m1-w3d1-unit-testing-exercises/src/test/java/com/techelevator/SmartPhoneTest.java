@@ -129,7 +129,7 @@ public class SmartPhoneTest {
 		//Arrange
 		//Act
 		//Assert
-		Assert.assertFalse("Phone should have 100% battery", cell.call("555-555-5556", 125));
+		Assert.assertFalse("Phone does not have enough power to make that call", cell.call("555-555-5556", 125));
 		
 	}	
 	
@@ -139,7 +139,7 @@ public class SmartPhoneTest {
 		//Act
 		cell.call("555-555-5556",40);
 		//Assert
-		Assert.assertTrue("Phone should have 100% battery", cell.call("555-555-5556", 60));
+		Assert.assertTrue("Phone should have enough power to make the call", cell.call("555-555-5556", 60));
 		
 	}	
 	
