@@ -12,12 +12,12 @@ import org.junit.Test;
 
 public class FruitTreeTest {
 	private FruitTree tree;
+	
 	@Before
 	public void setup() {
 		tree = new FruitTree("Apple", 20);
 	}
-	
-	
+		
 	@Test
 	public void get_type_of_fruit() {
 		//arrange
@@ -34,6 +34,7 @@ public class FruitTreeTest {
 		Assert.assertEquals("Tree should have 20 pieces of fruit", 20, tree.getPiecesOfFruitLeft());
 	}
 	
+	@Test
 	public void get_pieces_of_fruit() {
 		//arrange
 		//act
@@ -42,6 +43,7 @@ public class FruitTreeTest {
 		Assert.assertEquals("Tree should have 15 pieces of fruit left", 15, tree.getPiecesOfFruitLeft());
 	}
 	
+	@Test
 	public void get_pieces_of_fruit_too_many_fruit() {
 		//arrange
 		//act
