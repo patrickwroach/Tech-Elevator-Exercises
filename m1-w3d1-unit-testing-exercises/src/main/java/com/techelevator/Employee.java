@@ -20,6 +20,7 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.annualSalary = salary;
+        this.employeeId = employeeId;
     }
 
     /**

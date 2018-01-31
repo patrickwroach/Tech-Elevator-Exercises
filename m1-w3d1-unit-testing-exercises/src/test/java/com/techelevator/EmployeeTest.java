@@ -27,10 +27,9 @@ public class EmployeeTest {
 	public void get_employee_id() {
 		//arrange
 		//act
-		int id = person.getEmployeeId();
 		//assert
 //		Assert.assertEquals("Should be 100", person.getEmployeeId() == 100);
-		Assert.assertEquals("Should be 100", 100, id);
+		Assert.assertEquals("Should be 100", 100, person.getEmployeeId());
 }
 	@Test
 	public void get_employee_first_name() {
