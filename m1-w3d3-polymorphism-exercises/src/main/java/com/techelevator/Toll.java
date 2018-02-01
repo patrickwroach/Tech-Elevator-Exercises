@@ -4,7 +4,7 @@ import java.util.Random;
 public class Toll {
 
     public static void main(String[] args) {
-        Vehicle[] vehicles = new Vehicle[]{new Car(), new CarWithTrailer(), new TruckWithFourAxles(), new TruckWithSixAxles(), new TruckWithEightAxles(), new Tank()};
+        Vehicle[] vehicles = new Vehicle[]{new Car(true), new Car(false), new Tank(), new Truck(4), new Truck (6), new Truck (8)};
 
 
         int totalDistance = 0;
@@ -18,14 +18,21 @@ public class Toll {
             randomValueArray[i] = randomValue;
         }
 
+
+        System.out.println("");
+        System.out.println(String.format("%-20s %-10s %15s", "Vehicle", "Distance Traveled", "Toll $"));
+        System.out.println("---------------------------------------------------------");
         for (int i = 0; i < vehicles.length; i ++ ) {
-            String output = String.format("%s %d $%.2f", vehicles[i].getName(), randomValueArray[i], vehicles[i].calculateToll(randomValueArray[i]));
+            String output = String.format("%-20s %-10d %20.2f", vehicles[i].getName(), randomValueArray[i], vehicles[i].calculateToll(randomValueArray[i]));
             totalDistance += randomValueArray[i];
             totalRevenue += vehicles[i].calculateToll(randomValueArray[i]);
 
             System.out.println(output);
         }
-        System.out.println("Total Distance Traveled: " + totalDistance);
-        System.out.println("Total Revenue: " + totalRevenue);
+        System.out.println("---------------------------------------------------------");
+
+        System.out.println(String.format("%-10s %-10d", "Total Distance Traveled: ", totalDistance));
+        System.out.println(String.format("%-10s $%-10.2f", "Total Revenue: ", totalRevenue));
+
     }
 }

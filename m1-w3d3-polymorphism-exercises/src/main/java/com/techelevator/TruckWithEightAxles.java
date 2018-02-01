@@ -11,7 +11,7 @@ public class TruckWithEightAxles implements Vehicle{
     public double calculateToll(int distance) {
         double rate = 0.00;
 
-        rate = (distance * 48) / 1000;
+        rate = (double) (distance * 48) / 1000;
 
         return rate;
     }
