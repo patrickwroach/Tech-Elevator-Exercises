@@ -25,18 +25,19 @@ public class Postage {
         int distance = (Integer.parseInt(in.nextLine()));
 
 
-        DeliveryDriver[] rates = new DeliveryDriver[]{new PostalServiceFirstClass(), new PostalServiceSecondClass(), new PostalServiceThirdClass(), new FedEx(), new SPUFourDayGround(), new SPUTwoDayBusiness(), new SPUNextDay()};
+        DeliveryDriver[] rates = new DeliveryDriver[]{new PostalServiceFirstClass(), new PostalServiceSecondClass(),
+                new PostalServiceThirdClass(), new FedEx(), new SPUFourDayGround(), new SPUTwoDayBusiness(), new SPUNextDay()};
 
         System.out.println("");
         System.out.println("");
-        System.out.println(String.format("%-30s %20s", "Delivery Method", "$ cost"));
-        System.out.println("---------------------------------------------------------");
+        System.out.println(String.format("%-30s %8s", "Delivery Method", "cost"));
+        System.out.println("-----------------------------------------");
         for (DeliveryDriver companies : rates) {
-            String output = String.format("%-30s $%20.2f", companies.getName(), companies.calculateRate(distance, weight));
+            String output = String.format("%-30s $%7.2f", companies.getName(), companies.calculateRate(distance, weight));
 
             System.out.println(output);
         }
-        System.out.println("---------------------------------------------------------");
+        System.out.println("-----------------------------------------");
 
     }
 
