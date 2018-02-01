@@ -32,6 +32,7 @@ public class Postage {
         System.out.println("");
         System.out.println(String.format("%-30s %8s", "Delivery Method", "cost"));
         System.out.println("-----------------------------------------");
+
         for (DeliveryDriver companies : rates) {
             String output = String.format("%-30s $%7.2f", companies.getName(), companies.calculateRate(distance, weight));
 

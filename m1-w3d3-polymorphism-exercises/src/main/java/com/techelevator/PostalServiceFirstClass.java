@@ -2,6 +2,7 @@ package com.techelevator;
 
 
 
+
 public class PostalServiceFirstClass implements DeliveryDriver {
 	
 	public String name = "Postal Service (1st Class)";
@@ -38,10 +39,6 @@ public class PostalServiceFirstClass implements DeliveryDriver {
 		return rate;
 	}
 
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return this.name;
-	}
+
 
 }

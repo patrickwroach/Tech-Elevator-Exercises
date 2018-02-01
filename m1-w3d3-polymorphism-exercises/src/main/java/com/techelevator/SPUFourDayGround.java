@@ -20,10 +20,6 @@ public class SPUFourDayGround implements DeliveryDriver {
 		return rate;
 	}
 	
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return this.name;
-	}
+
 
 }

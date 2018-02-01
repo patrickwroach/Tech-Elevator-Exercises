@@ -33,10 +33,4 @@ public String name = "Postal Service (3rd Class)";
 		return rate;
 	}
 	
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return this.name;
-	}
-	
 }
