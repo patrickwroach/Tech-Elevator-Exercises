@@ -11,7 +11,7 @@ public String name = "Postal Service (3rd Class)";
 	
 	@Override
 	public double calculateRate(int distance, double weight) {
-		int perMileRate = 0;
+		double perMileRate = 0;
 		
 //		if (weight <= 2) perMileRate = .0020;
 //		else if (weight <= 8) perMileRate = .0022;
