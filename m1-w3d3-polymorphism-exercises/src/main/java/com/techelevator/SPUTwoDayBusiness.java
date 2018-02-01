@@ -14,8 +14,9 @@ package com.techelevator;
 		@Override
 		public double calculateRate(int distance, double weight) {
 			// TODO Auto-generated method stub
-			
-			double rate = (weight * 0.050) * distance;
+//			double rate = (weight * 0.050) * distance;
+
+			double rate = (((weight/ 16) * 5) * distance) / 100;
 					   
 			return rate;
 		}

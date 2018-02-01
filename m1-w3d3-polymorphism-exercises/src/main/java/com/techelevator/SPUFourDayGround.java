@@ -13,8 +13,9 @@ public class SPUFourDayGround implements DeliveryDriver {
 	@Override
 	public double calculateRate(int distance, double weight) {
 		// TODO Auto-generated method stub
-		
-		double rate = (weight * 0.0050) * distance;
+		//double rate = (weight * 0.0050) * distance;
+
+		double rate = (((weight/16) * 5) * distance / 1000);
 				   
 		return rate;
 	}
