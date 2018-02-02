@@ -9,23 +9,20 @@ public class Toll {
 
         int totalDistance = 0;
         double totalRevenue = 0;
+        Random rand = new Random();
 
-        int[]randomValueArray = new int[vehicles.length];
 
-        for (int i = 0; i < randomValueArray.length; i ++){
-            Random rand = new Random();
-            int randomValue = rand.nextInt((240 - 10) + 1) + 10; // (max - min) + 1 + min
-            randomValueArray[i] = randomValue;
-        }
+
 
 
         System.out.println("");
         System.out.println(String.format("%-20s %-15s %6s", "Vehicle", "Travel Distance", "Toll"));
         System.out.println("----------------------------------------------");
         for (int i = 0; i < vehicles.length; i ++ ) {
-            String output = String.format("%-20s %-15d $%6.2f", vehicles[i].getName(), randomValueArray[i], vehicles[i].calculateToll(randomValueArray[i]));
-            totalDistance += randomValueArray[i];
-            totalRevenue += vehicles[i].calculateToll(randomValueArray[i]);
+            int distance = rand.nextInt((240 - 10) + 1) + 10;
+            String output = String.format("%-20s %-15d $%6.2f", vehicles[i].getName(), distance, vehicles[i].calculateToll(distance));
+            totalDistance += distance;
+            totalRevenue += vehicles[i].calculateToll(distance);
 
             System.out.println(output);
         }
