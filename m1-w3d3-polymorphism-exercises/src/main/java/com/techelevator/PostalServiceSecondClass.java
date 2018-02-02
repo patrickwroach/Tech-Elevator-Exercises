@@ -15,14 +15,7 @@ public class PostalServiceSecondClass implements DeliveryDriver {
 	@Override
 	public double calculateRate(int distance, double weight) {
 		double perMileRate = 0;
-		
-//		if (weight <= 2) perMileRate = .0035;
-//		else if (weight <= 8) perMileRate = .0040;
-//		else if (weight <= 15) perMileRate = .0047;
-//		else if (weight <= 48) perMileRate = .0195;
-//		else if (weight <= 128) perMileRate = .0450;
-//		else perMileRate = .5;
-		
+
 		if (weight <= 2) perMileRate = 35;
 		else if (weight <= 8) perMileRate = 40;
 		else if (weight <= 15) perMileRate = 47;
