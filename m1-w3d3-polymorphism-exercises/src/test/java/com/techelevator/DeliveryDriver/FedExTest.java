@@ -1,10 +1,9 @@
-package com.techelevator;
+package com.techelevator.DeliveryDriver;
 
+import com.techelevator.DeliveryDriver.FedEx;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class FedExTest {
 

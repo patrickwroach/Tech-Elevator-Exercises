@@ -1,6 +1,4 @@
-package com.techelevator;
-
-import java.math.BigDecimal;
+package com.techelevator.DeliveryDriver;
 
 public class PostalServiceSecondClass implements DeliveryDriver {
 

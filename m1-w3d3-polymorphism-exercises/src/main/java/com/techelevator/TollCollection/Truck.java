@@ -1,4 +1,4 @@
-package com.techelevator;
+package com.techelevator.TollCollection;
 
 
 public class Truck implements Vehicle {

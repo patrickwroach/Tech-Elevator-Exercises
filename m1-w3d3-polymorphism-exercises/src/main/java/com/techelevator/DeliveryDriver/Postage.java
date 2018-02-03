@@ -1,17 +1,21 @@
-package com.techelevator;
+package com.techelevator.DeliveryDriver;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Postage {
 
     public static void main(String[] args) {
-
-        Scanner in = new Scanner(System.in);
-        System.out.print("Please enter the weight of the package? ");
-        int weight = (Integer.parseInt(in.nextLine()));
         String unit = "";
+        int distance = 0;
+        int weight = 0;
+        Scanner in = new Scanner(System.in);
+
+        do {
+            System.out.print("Please enter the weight of the package: ");
+            weight = (Integer.parseInt(in.nextLine()));
+
+        }
+        while (weight <= 0);
 
         do {
             System.out.print("(P)ounds or (O)unces? "); //pound or ounces only
@@ -21,9 +25,11 @@ public class Postage {
 
         if (unit.equals("p")) weight = convertPoundsToOunces(weight); //all classes are done in ounces
 
-        System.out.print("What distance will it be traveling to? ");
-        int distance = (Integer.parseInt(in.nextLine()));
-
+        do {
+            System.out.print("What distance will it be traveling to? ");
+            distance = (Integer.parseInt(in.nextLine()));
+        }
+        while (distance <= 0);
 
         DeliveryDriver[] rates = new DeliveryDriver[]{new PostalServiceFirstClass(), new PostalServiceSecondClass(),
                 new PostalServiceThirdClass(), new FedEx(), new SPUFourDayGround(), new SPUTwoDayBusiness(), new SPUNextDay()};

@@ -1,4 +1,4 @@
-package com.techelevator;
+package com.techelevator.TollCollection;
 
 public interface Vehicle {
     String getName();

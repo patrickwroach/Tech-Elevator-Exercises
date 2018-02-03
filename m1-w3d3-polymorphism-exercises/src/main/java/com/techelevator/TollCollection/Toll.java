@@ -1,4 +1,4 @@
-package com.techelevator;
+package com.techelevator.TollCollection;
 import java.util.Random;
 
 public class Toll {
