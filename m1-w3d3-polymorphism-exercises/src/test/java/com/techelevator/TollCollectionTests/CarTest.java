@@ -28,7 +28,7 @@ public class CarTest {
     @Test
     public void calculateToll() {
 
-        Assert.assertTrue("Should be 2.00", carWithTrailer.calculateToll(100) == 3.00);
+        Assert.assertTrue("Should be 3.00", carWithTrailer.calculateToll(100) == 3.00);
         Assert.assertTrue("Should be 2.00", carNoTrailer.calculateToll(100) == 2.00);
     }
 }

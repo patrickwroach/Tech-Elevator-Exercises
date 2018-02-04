@@ -18,12 +18,12 @@ public class Exercises {
 
         int[] output = new int[unique.size()];
 
-        for (int i = 0; i < unique.size(); i++){
+        for (int i = 0; i < unique.size(); i++) {
             output[i] = unique.get(i);
         }
         return output;
     }
-    
+
     /*
     CHALLENGE: Using array A and array B, return an array that is the intersection of both A and B.
     The intersection includes numbers that appear in both arrays.
@@ -36,19 +36,19 @@ public class Exercises {
         List<Integer> aList = new LinkedList<Integer>();
         List<Integer> intersection = new LinkedList<Integer>();
 
-        for(int nums: a){
+        for (int nums : a) {
             aList.add(nums);
         }
 
-        for (int nums : b){
-            if (aList.contains(nums)){
+        for (int nums : b) {
+            if (aList.contains(nums)) {
                 intersection.add(nums);
             }
         }
 
         int[] output = new int[intersection.size()];
 
-        for (int i = 0; i < intersection.size(); i ++){
+        for (int i = 0; i < intersection.size(); i++) {
             output[i] = intersection.get(i);
         }
         return output;
@@ -65,17 +65,17 @@ public class Exercises {
 
     public int[] arraySort(int[] nums) {
 
-      for (int i = 0; i < nums.length; i ++){
-          for (int j =0; j < nums.length -1; j++){
-              if (nums[j] > nums[j+1]){
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length - 1; j++) {
+                if (nums[j] > nums[j + 1]) {
 
-                  int tmp = nums[j];
-                  nums[j] = nums[j+1];
-                  nums[j+1] = tmp;
-              }
-          }
-      }
-      return nums;
+                    int tmp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = tmp;
+                }
+            }
+        }
+        return nums;
     }
 
     /*
@@ -92,7 +92,7 @@ public class Exercises {
 
         return Math.max(a, b);
     }
-    
+
     /*
     Given three ints, a b c, return true if one of b or c is "close" (differing from a by at most 1), 
     while the other is "far", differing from both other values by 2 or more.
@@ -115,7 +115,24 @@ public class Exercises {
     countClumps([1, 1, 1, 1, 1]) → 1
     */
     public int countClumps(int[] nums) {
-        return 0;
+        int count = 0;
+        boolean isClump = false;
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (isClump) {
+                if (nums[i] != nums[i + 1]) {
+                    isClump = false;
+                }
+            } else {
+                if (nums[i] == nums[i + 1]) {
+                    isClump = true;
+                    count++;
+                }
+            }
+
+        }
+
+        return count;
     }
 
     /*
@@ -127,20 +144,26 @@ public class Exercises {
     findPermutations("A") → {"A"}
     findPermutations("ABC") → {"ABC","ACB","BAC","BCA","CAB","CBA"}
     */
-    public List<String> findPermutations(String str)
-    {            
+    public List<String> findPermutations(String str) {
         return null;
     }
 
     /*
-    * Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value, followed by 
-    * the value plus 5, followed by the value minus 1. 
-    * Additionally the 271 counts even if the "1" differs by 2 or less from the correct value.
-    * has271([1, 2, 7, 1]) → true
-    * has271([1, 2, 8, 1]) → false
-    * has271([2, 7, 1]) → true     
-    */
+     * Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value, followed by
+     * the value plus 5, followed by the value minus 1.
+     * Additionally the 271 counts even if the "1" differs by 2 or less from the correct value.
+     * has271([1, 2, 7, 1]) → true
+     * has271([1, 2, 8, 1]) → false
+     * has271([2, 7, 1]) → true
+     */
     public boolean has271(int[] nums) {
+
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            if ((nums[i + 1] == nums[i] + 5) && (nums[i] - nums[i + 2]) <= 3 && (nums[i] - nums[i + 2]) > -1)
+                return true;
+
+        }
         return false;
     }
 
@@ -194,11 +217,11 @@ public class Exercises {
     }
 
     /*
-    * Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
-    * mixStart("mix snacks") → true
-    * mixStart("pix snacks") → true
-    * mixStart("piz snacks") → false        
-    */
+     * Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
+     * mixStart("mix snacks") → true
+     * mixStart("pix snacks") → true
+     * mixStart("piz snacks") → false
+     */
     public boolean mixStart(String str) {
         return false;
     }
@@ -212,60 +235,60 @@ public class Exercises {
     public boolean more14(int[] nums) {
         return false;
     }
-    
+
     /*
-    * Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in 
-    * the array. Return true if the array does not contain any triples.        
-    *
-    * noTriples([1, 1, 2, 2, 1]) → true
-    * noTriples([1, 1, 2, 2, 2, 1]) → false
-    * noTriples([1, 1, 1, 2, 2, 2, 1]) → false
-    */
+     * Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in
+     * the array. Return true if the array does not contain any triples.
+     *
+     * noTriples([1, 1, 2, 2, 1]) → true
+     * noTriples([1, 1, 2, 2, 2, 1]) → false
+     * noTriples([1, 1, 1, 2, 2, 2, 1]) → false
+     */
     public boolean noTriples(int[] nums) {
         return false;
     }
 
     /*
-    * Given a string, compute a new string by moving the first char to come after the next two chars, so "abc" yields "bca". 
-    * Repeat this process for each subsequent group of 3 chars, so "abcdef" yields "bcaefd". 
-    * Ignore any group of fewer than 3 chars at the end.
-    * oneTwo("abc") → "bca"
-    * oneTwo("tca") → "cat"
-    * oneTwo("tcagdo") → "catdog"
-    */
+     * Given a string, compute a new string by moving the first char to come after the next two chars, so "abc" yields "bca".
+     * Repeat this process for each subsequent group of 3 chars, so "abcdef" yields "bcaefd".
+     * Ignore any group of fewer than 3 chars at the end.
+     * oneTwo("abc") → "bca"
+     * oneTwo("tca") → "cat"
+     * oneTwo("tcagdo") → "catdog"
+     */
     public String oneTwo(String str) {
         return null;
     }
-    
+
     /*
-    * Given two strings, word and a separator sep, return a big string made of count occurrences 
-    * of the word, separated by the separator string.
-    * repeatSeparator("Word", "X", 3) → "WordXWordXWord"
-    * repeatSeparator("This", "And", 2) → "ThisAndThis"
-    * repeatSeparator("This", "And", 1) → "This"
-    */
+     * Given two strings, word and a separator sep, return a big string made of count occurrences
+     * of the word, separated by the separator string.
+     * repeatSeparator("Word", "X", 3) → "WordXWordXWord"
+     * repeatSeparator("This", "And", 2) → "ThisAndThis"
+     * repeatSeparator("This", "And", 1) → "This"
+     */
     public String repeatSeparator(String word, String sep, int count) {
         return null;
     }
 
     /*
-    * Return true if the given string contains between 1 and 3 'e' chars.
-    * ("Hello") → true
-    * ("Heelle") → true
-    * ("Heelele") → false
-    */
+     * Return true if the given string contains between 1 and 3 'e' chars.
+     * ("Hello") → true
+     * ("Heelle") → true
+     * ("Heelele") → false
+     */
     public boolean stringE(String str) {
         return false;
     }
-    
+
     /*
-    * Given 2 strings, a and b, return the number of the positions where they contain the same length 
-    * 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" 
-    * substrings appear in the same place in both strings.        * 
-    * stringMatch("xxcaazz", "xxbaaz") → 3
-    * stringMatch("abc", "abc") → 2
-    * stringMatch("abc", "axc") → 0  
-    */
+     * Given 2 strings, a and b, return the number of the positions where they contain the same length
+     * 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az"
+     * substrings appear in the same place in both strings.        *
+     * stringMatch("xxcaazz", "xxbaaz") → 3
+     * stringMatch("abc", "abc") → 2
+     * stringMatch("abc", "axc") → 0
+     */
     public int stringMatch(String a, String b) {
         return 0;
     }
@@ -282,13 +305,13 @@ public class Exercises {
     }
 
     /*
-    * Look for patterns like "zip" and "zap" in the string -- length-3, starting with 'z' and 
-    * ending with 'p'. Return a string where for all such words, the middle letter is gone. 
-    * "zipXzap" yields "zpXzp".
-    * zipZap("zipXzap") → "zpXzp"
-    * zipZap("zopzop") → "zpzp"
-    * zipZap("zzzopzop") → "zzzpzp"
-    */
+     * Look for patterns like "zip" and "zap" in the string -- length-3, starting with 'z' and
+     * ending with 'p'. Return a string where for all such words, the middle letter is gone.
+     * "zipXzap" yields "zpXzp".
+     * zipZap("zipXzap") → "zpXzp"
+     * zipZap("zopzop") → "zpzp"
+     * zipZap("zzzopzop") → "zzzpzp"
+     */
     public String zipZap(String str) {
         return null;
     }
