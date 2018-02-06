@@ -3,13 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="682bd8a6-57b3-4e8c-8348-d274ba49b30f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/m1-w2d1-introduction-to-objects-exercises/.idea/workspace.xml" afterPath="$PROJECT_DIR$/m1-w2d1-introduction-to-objects-exercises/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/m1-w2d1-introduction-to-objects-exercises/src/main/java/com/techelevator/Exercises.java" afterPath="$PROJECT_DIR$/m1-w2d1-introduction-to-objects-exercises/src/main/java/com/techelevator/Exercises.java" />
-      <change beforePath="$PROJECT_DIR$/m1-w2d1-introduction-to-objects-exercises/target/classes/com/techelevator/Exercises.class" afterPath="$PROJECT_DIR$/m1-w2d1-introduction-to-objects-exercises/target/classes/com/techelevator/Exercises.class" />
-      <change beforePath="$PROJECT_DIR$/m1-w2d3-collections-part2-exercises/src/main/java/com/techelevator/Exercises.java" afterPath="$PROJECT_DIR$/m1-w2d3-collections-part2-exercises/src/main/java/com/techelevator/Exercises.java" />
-      <change beforePath="$PROJECT_DIR$/playground/.idea/workspace.xml" afterPath="$PROJECT_DIR$/playground/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/playground/out/production/playground/playground.class" afterPath="$PROJECT_DIR$/playground/out/production/playground/playground.class" />
-      <change beforePath="$PROJECT_DIR$/playground/src/playground.java" afterPath="$PROJECT_DIR$/playground/src/playground.java" />
+      <change beforePath="$PROJECT_DIR$/m1-w3d3-polymorphism-exercises/.idea/workspace.xml" afterPath="$PROJECT_DIR$/m1-w3d3-polymorphism-exercises/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/.idea/workspace.xml" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/src/main/java/com/techelevator/KataRomanNumerals.java" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/src/main/java/com/techelevator/KataRomanNumerals.java" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/src/test/java/com/techelevator/KataRomanNumeralsTest.java" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/src/test/java/com/techelevator/KataRomanNumeralsTest.java" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/META-INF/MANIFEST.MF" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/META-INF/maven/com.techelevator/tdd-exercises/pom.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/META-INF/maven/com.techelevator/tdd-exercises/pom.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/com/techelevator/KataFizzBuzz.class" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/com/techelevator/KataFizzBuzz.class" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/com/techelevator/KataPotter.class" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/com/techelevator/KataPotter.class" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/com/techelevator/KataPrimeFactors.class" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/com/techelevator/KataPrimeFactors.class" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/classes/com/techelevator/KataRomanNumerals.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/test-classes/com/techelevator/KataFizzBuzzTest.class" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/test-classes/com/techelevator/KataFizzBuzzTest.class" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/test-classes/com/techelevator/KataPotterTest.class" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/test-classes/com/techelevator/KataPotterTest.class" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/test-classes/com/techelevator/KataPrimeFactorsTest.class" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/test-classes/com/techelevator/KataPrimeFactorsTest.class" />
+      <change beforePath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/test-classes/com/techelevator/KataRomanNumeralsTest.class" afterPath="$PROJECT_DIR$/m1-w4d1-tdd-exercises/target/test-classes/com/techelevator/KataRomanNumeralsTest.class" />
+      <change beforePath="$PROJECT_DIR$/sandbox/src/sandbox/sanbox.java" afterPath="$PROJECT_DIR$/sandbox/src/sandbox/sanbox.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,12 +29,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Exercises.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Exercises.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/m1-w1d3-expressions-and-control-flow-exercises/com/techelevator/Exercises.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="306">
               <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sanbox.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sandbox/src/sandbox/sanbox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,6 +59,13 @@
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/sandbox/src/sandbox/sanbox.java" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -77,47 +105,81 @@
             <path>
               <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
               <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="m1-w1d3-expressions-and-control-flow-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="m1-w4d1-tdd-exercises" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
               <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="m1-w1d3-expressions-and-control-flow-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name=".settings" type="462c0819:PsiDirectoryNode" />
+              <item name="m1-w4d1-tdd-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
               <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="m1-w1d3-expressions-and-control-flow-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="m1-w4d1-tdd-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
               <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="m1-w1d3-expressions-and-control-flow-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="m1-w4d1-tdd-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="m1-w4d1-tdd-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="m1-w4d1-tdd-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
               <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="m1-w1d3-expressions-and-control-flow-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="m1-w4d1-tdd-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="techelevator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
               <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="m1-w1d3-expressions-and-control-flow-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brandondewitt-java-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brandondewitt-java-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,14 +300,16 @@
       <workItem from="1516738041944" duration="24000" />
       <workItem from="1516807955031" duration="15000" />
       <workItem from="1516813236983" duration="17000" />
+      <workItem from="1517877936446" duration="76000" />
+      <workItem from="1517878215694" duration="20000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127000" />
+    <option name="totallyTimeSpent" value="223000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="824" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -259,7 +323,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26037195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25989583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -288,25 +352,61 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/m1-w1d3-expressions-and-control-flow-exercises/com/techelevator/Exercises.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m1-w1d3-expressions-and-control-flow-exercises/com/techelevator/Exercises.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m1-w1d3-expressions-and-control-flow-exercises/com/techelevator/Exercises.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="306">
           <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/sandbox/sanbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m1-w1d3-expressions-and-control-flow-exercises/com/techelevator/Exercises.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m1-w1d3-expressions-and-control-flow-exercises/com/techelevator/Exercises.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m1-w1d3-expressions-and-control-flow-exercises/com/techelevator/Exercises.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m1-w1d3-expressions-and-control-flow-exercises/com/techelevator/Exercises.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/sandbox/sanbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
