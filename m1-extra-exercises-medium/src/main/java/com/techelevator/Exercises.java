@@ -22,6 +22,8 @@ public class Exercises {
             output[i] = unique.get(i);
         }
         return output;
+
+//        return new LinkedHashSet<Integer>(Arrays.asList(Arrays.stream(nums).boxed().toArray(Integer[]:: new))).stream().mapToInt(x->x).toArray();
     }
 
     /*
