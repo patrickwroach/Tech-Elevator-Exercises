@@ -3,23 +3,26 @@ package com.techelevator;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class QuizMaker {
 
+public class QuizMaker {
+    static int correctAnswers = 0;
+    static ArrayList<Questions> questionsList = new ArrayList<>();
 
     public static void main(String[] args) throws FileNotFoundException {
+
         //test_quiz.txt
         File inputFile = (getInputFileFromUser());
-        ArrayList<Questions> questionsList = new ArrayList<>();
 
 
-//		makeQuestions(inputFile);
+        makeQuestions(inputFile);
+        AskQuestion(questionsList);
+        printScore(correctAnswers);
 
+    }
 
-//	}
-//	private static void makeQuestions (File inputFile) throws FileNotFoundException {
+    private static void makeQuestions(File inputFile) throws FileNotFoundException {
 
         try (Scanner fileScanner = new Scanner(inputFile)) {
             while (fileScanner.hasNextLine()) {
@@ -37,50 +40,64 @@ public class QuizMaker {
 
                 for (int i = 1; i < eraseTheAnswer.length; i++) {
                     if (!eraseTheAnswer[i].equals(""))
-                    questions.setChoices(eraseTheAnswer[i]);
+                        questions.setChoices(eraseTheAnswer[i]);
                 }
 
                 questionsList.add(questions);
-
             }
         }
-
-        AskQuestion(questionsList);
-
-
     }
+
 
     private static void AskQuestion(ArrayList<Questions> questionsList) {
         Scanner in = new Scanner(System.in);
         int userAnswer = 0;
-        int score = 0;
-
+        String response;
 
         for (Questions questions : questionsList) {
+
             while (userAnswer < 1 || userAnswer > questions.choices.size()) {
                 System.out.println();
                 System.out.println(questions.getQuestion());
 
                 questions.getChoices();
-                String input = in.nextLine();
-                userAnswer = Integer.parseInt(input);
+                userAnswer = Integer.parseInt(in.nextLine());
 
 
-                if (userAnswer < 1 || userAnswer > questions.choices.size())
+                if (userAnswer < 1 || userAnswer > questions.choices.size()) {
+                    System.out.println("Your Answer : " + userAnswer);
                     System.out.println("Invalid Answer.");
-            }
-                if (userAnswer == questions.correctAnswer) {
-                    System.out.println("Correct!");
-                    score++;
-                    userAnswer = 0;
-                } else {
-                    System.out.println("Sorry, incorrect.");
-                    userAnswer = 0;
                 }
             }
-        System.out.println("You got " + score + " correct out of " + questionsList.size() + " questions.");
+            if (userAnswer == questions.getCorrectAnswer()) {
+                response = "Correct!";
+                correctAnswers++;
+            } else {
+                response = "Sorry, the correct answer was " + questions.choices.get(questions.getCorrectAnswer() - 1) + ".";
+            }
+            System.out.println("Your Answer : " + userAnswer);
+            System.out.println(response);
+            userAnswer = 0;
         }
+    }
 
+    private static void printScore(int correctAnswers) {
+        int score = (correctAnswers * 100 / questionsList.size() * 100) / 100;
+        String response = "";
+
+        if (score >= 90) response = "A, Great Job!";
+        else if (score >= 80) response = "B, Good Job!";
+        else if (score >= 70) response = "C, OK.";
+        else if (score >= 60) response = "D, Oh boy...";
+        else if (score >= 50) response = "F, Don't quit your day job.";
+
+
+        System.out.println();
+        System.out.println("You got " + correctAnswers + " correct out of " + questionsList.size() + " questions.");
+        System.out.println(score + "% " + response);
+
+        System.out.println();
+    }
 
 
     private static File getInputFileFromUser() {

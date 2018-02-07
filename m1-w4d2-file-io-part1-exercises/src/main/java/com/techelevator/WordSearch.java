@@ -40,7 +40,7 @@ public class WordSearch {
         int wordCount = 0;
 
         try (Scanner fileScanner = new Scanner(inputFile)) {
-            while (fileScanner.hasNextLine()) {
+            while (fileScanner.hasNextLine() && !fileScanner.nextLine().trim().isEmpty()) {
                 String line = (retainCase) ? fileScanner.nextLine() : fileScanner.nextLine().toLowerCase(); //Retains Case of stream or converts to lower case for comparision.
                 wordToSearch = (retainCase) ? wordToSearch : wordToSearch.toLowerCase();  //Retains Case of search term or converts to lower case for comparision.
                 lineCount++;
