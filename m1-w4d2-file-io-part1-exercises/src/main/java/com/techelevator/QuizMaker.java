@@ -11,10 +11,7 @@ public class QuizMaker {
     static ArrayList<Questions> questionsList = new ArrayList<>();
 
     public static void main(String[] args) throws FileNotFoundException {
-
-        //test_quiz.txt
         File inputFile = (getInputFileFromUser());
-
 
         makeQuestions(inputFile);
         AskQuestion(questionsList);
@@ -103,8 +100,8 @@ public class QuizMaker {
     private static File getInputFileFromUser() {
         Scanner userInput = new Scanner(System.in);
         System.out.print("Please enter path to input file: ");
-//		String path = userInput.nextLine();
-        String path = "test_quiz.txt";
+		String path = userInput.nextLine();
+//        String path = "test_quiz.txt";
 
         File inputFile = new File(path);
         if (inputFile.exists() == false) { // checks for the existence of a file
