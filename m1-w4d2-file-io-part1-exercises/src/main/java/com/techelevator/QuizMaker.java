@@ -30,9 +30,9 @@ public class QuizMaker {
                 questions.setQuestion(questionBuilder[0]);
 
                 for (int i = 1; i < questionBuilder.length; i++) {
-                    if (questionBuilder[i].contains("*")) {
+                    if (questionBuilder[i].contains("*")) {                 //Checks for correct answer
                         questions.setCorrectAnswer(i);
-                        questions.setChoices(questionBuilder[i].substring(0, questionBuilder[i].length()-1));
+                        questions.setChoices(questionBuilder[i].substring(0, questionBuilder[i].length()-1)); //remove * from word
                     }
                     else {
                         questions.setChoices(questionBuilder[i]);
