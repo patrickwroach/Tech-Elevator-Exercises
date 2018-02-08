@@ -25,19 +25,19 @@ public class QuizMaker {
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
                 String[] questionBuilder = line.split("[|]");
-                String[] eraseTheAnswer = line.split("[|*]");
                 Questions questions = new Questions();
 
                 questions.setQuestion(questionBuilder[0]);
 
                 for (int i = 1; i < questionBuilder.length; i++) {
-                    if (questionBuilder[i].contains("*"))
+                    if (questionBuilder[i].contains("*")) {
                         questions.setCorrectAnswer(i);
-                }
+                        questions.setChoices(questionBuilder[i].substring(0, questionBuilder[i].length()-1));
+                    }
+                    else {
+                        questions.setChoices(questionBuilder[i]);
+                    }
 
-                for (int i = 1; i < eraseTheAnswer.length; i++) {
-                    if (!eraseTheAnswer[i].equals(""))
-                        questions.setChoices(eraseTheAnswer[i]);
                 }
 
                 questionsList.add(questions);
