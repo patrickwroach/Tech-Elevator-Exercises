@@ -16,14 +16,25 @@ public static void main(String[] args) throws IOException {
 
 	for (int i = 1; i < 3; i++) {
 //		outputFileCreator.buildDummyFile("input.txt");
-		outputFileCreator.buildDummyFile("input" + i + ".txt");
+//		outputFileCreator.buildDummyFile("input" + i + ".txt");
 	}
+
+
+	//WHILE SCANNER HAS NEXT
+	//LOOP NUMBER OF FILES TO BUILD TIMES
+	//FOR INT < SPLIT EVERY USER INPUTTED AMOUNT OF LINES
+	//GET LINE
+	//PRINT LINE TO NEW FILE
 
 	String inputLineTest = InputFileChecker.readLineFromInputFile(inputFile);
 
-	outputFileCreator.setLineFromInputFile(inputLineTest);
+	for (int i = 0; i < 100; i++) {
+		inputLineTest = InputFileChecker.readLineFromInputFile(inputFile);
+		outputFileCreator.setLineFromInputFile(inputLineTest);
+		System.out.println(inputLineTest);
+//		outputFileCreator.writeLineToOutputFile(inputLineTest, outputFile);
+	}
 
-	outputFileCreator.writeLineToOutputFile("test", outputFile);
 //	int linePerFile;
 //
 //

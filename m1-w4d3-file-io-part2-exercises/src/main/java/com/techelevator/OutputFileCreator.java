@@ -16,7 +16,7 @@ public class OutputFileCreator {
     }
 
     public void writeLineToOutputFile(String inputLine, File inputFileAddress) throws FileNotFoundException{
-        try(PrintWriter writer = new PrintWriter(new File (inputFileAddress))){
+        try(PrintWriter writer = new PrintWriter(inputFileAddress)){
             writer.println(inputLine);
         }
     }
