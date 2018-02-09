@@ -22,7 +22,6 @@ java com.techelevator.FizzBuzz
 Develop an application that takes a significantly large text file and splits it into smaller file chunks.
 
 The program should accept 2 parameters
-
 * The name of the text file to be split
 * The maximum number of lines that should appear in each output file
 

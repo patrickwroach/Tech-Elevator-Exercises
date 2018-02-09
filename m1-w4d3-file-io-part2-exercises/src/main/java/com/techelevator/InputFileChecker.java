@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -9,9 +10,23 @@ public class InputFileChecker {
     private int totalLinesFromInputFile;
     private int linesPerOutputFile;
     private int numberOfFilesToBuild;
+    private String lineToGoToOutputFile;
 
+    public String getLineToGoToOutputFile() {
+        return lineToGoToOutputFile;
+    }
 
-    public int getTotalLinesFromInputFile(File inputFile) throws IOException {
+    public static String readLineFromInputFile(File inputFile) throws FileNotFoundException {
+        String line = "";
+        try (Scanner fileScanner = new Scanner(inputFile)) {
+            while (fileScanner.hasNextLine()) {
+                line = fileScanner.nextLine();
+            }
+            return line;
+        }
+    }
+
+    public int getTotalLineCountFromInputFile(File inputFile) throws IOException {
 
         try(Scanner fileScanner = new Scanner(inputFile)) {
             while(fileScanner.hasNextLine()) {
