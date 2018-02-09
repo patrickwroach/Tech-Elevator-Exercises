@@ -8,7 +8,6 @@ public class Questions {
     int correctAnswer;
 
 
-
     public Questions() {
         this.choices = choices;
         this.correctAnswer = correctAnswer;

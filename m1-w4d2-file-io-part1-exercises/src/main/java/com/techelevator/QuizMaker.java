@@ -86,7 +86,7 @@ public class QuizMaker {
         else if (score >= 80) response = "B, Good Job!";
         else if (score >= 70) response = "C, OK.";
         else if (score >= 60) response = "D, Oh boy...";
-        else if (score >= 50) response = "F, Don't quit your day job.";
+        else response = "F, Don't quit your day job.";
 
 
         System.out.println();
