@@ -10,40 +10,14 @@ public class OutputFileCreator {
     private int totalLinesFromInputFile;
     private int numberOfLinesForLastFile;
     private int numberOfFilesToBuild;
-    private int linesToSplit;
-    private String inputFile;
     private String outputFileName;
 
-    public OutputFileCreator(String inputFile, int linesToSplit) throws IOException {
-        this.linesToSplit = linesToSplit;
-        this.inputFile = inputFile;
-        this.outputFileName = parseUserInputForOutputFile(inputFile);
-        this.totalLinesFromInputFile = totalLineCountFromInputFile(inputFile);
-        this.numberOfLinesForLastFile = totalLinesFromInputFile % linesToSplit;
+    public OutputFileCreator() {
+
     }
 
-    public int getTotalLinesFromInputFile() {
-        return totalLinesFromInputFile;
-    }
-
-    public int getNumberOfLinesForLastFile() {
-        return numberOfLinesForLastFile;
-    }
-
-    public int getLinesToSplit() {
-        return linesToSplit;
-    }
-
-    public String getInputFile() {
-        return inputFile;
-    }
-
-    public String getOutputFileName() {
-        return outputFileName;
-    }
-
-    public int totalLineCountFromInputFile(String inputFile) throws IOException {
-
+    public int getTotalLineCountFromInputFile(File inputFile) throws IOException {
+        totalLinesFromInputFile = 0;
         try (Scanner fileScanner = new Scanner(inputFile)) {
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
@@ -54,38 +28,46 @@ public class OutputFileCreator {
     }
 
 
-    public int getNumberOfFilesToBuild() {
+    public int getNumberOfLinesForLastFile(int totalLinesFromInputFile, int linesPerOutputFile) {
+        numberOfLinesForLastFile = totalLinesFromInputFile % linesPerOutputFile;
 
-        numberOfFilesToBuild = totalLinesFromInputFile / linesToSplit;
-        totalLinesFromInputFile %= linesToSplit;
+        return numberOfLinesForLastFile;
+    }
+
+
+    public int getNumberOfFilesToBuild(int linesPerOutputFile) {
+
+        numberOfFilesToBuild = totalLinesFromInputFile / linesPerOutputFile;
+        totalLinesFromInputFile %= linesPerOutputFile;
         if (totalLinesFromInputFile > 0)
             numberOfFilesToBuild++;
 
         return numberOfFilesToBuild;
     }
 
-    public void buildFiles() throws FileNotFoundException {
+    public void buildFiles(File inputFile, int linesToSplit) throws FileNotFoundException {
         String line;
 
         try (Scanner fileScanner = new Scanner(inputFile)) {
             int i = 0;
             for (; i < numberOfFilesToBuild - 1; i++) {
                 try (PrintWriter writer = new PrintWriter(outputFileName + "-" + (i + 1) + ".txt")) {
-                    for (int j = 0; j < linesToSplit; j++) {
+                    for (int j = 0; j < linesToSplit; j++) { //lines to Split
 
                         line = fileScanner.nextLine();
                         writer.println(line);
 
                     }
+                    System.out.println("Writing file: " + outputFileName + "-" + (i + 1) + ".txt");
                 }
             }
-            try (PrintWriter writer = new PrintWriter(outputFileName + "-" + (i+1) + ".txt")) {
+            try (PrintWriter writer = new PrintWriter(outputFileName + "-" + (++i) + ".txt")) {
                 for (int j = 0; j < numberOfLinesForLastFile; j++) {
-
                     line = fileScanner.nextLine();
                     writer.println(line);
 
                 }
+                System.out.println("Writing file: " + outputFileName + "-" + (i) + ".txt");
             }
         }
     }
@@ -98,7 +80,6 @@ public class OutputFileCreator {
                 writer.println(i);
             }
         }
-        System.out.println("FizzBuzz written.");
     }
 
     public String parseUserInputForOutputFile(String filename) {

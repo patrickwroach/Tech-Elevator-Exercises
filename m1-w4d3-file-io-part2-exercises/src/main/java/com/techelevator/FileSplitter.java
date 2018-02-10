@@ -1,45 +1,33 @@
 package com.techelevator;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class FileSplitter {
 	public static void main(String[] args) throws IOException {
-		int linesToSplit = 100;
-		int totalLinesFromFile = 0;
-		int totalFileToBuild = 0;
+
+		String fileName = args[0];
+		int linesToSplit = Integer.parseInt(args[1]);
+		File inputFile = new File(fileName);
 
 
 
-		Scanner in = new Scanner(System.in);
-		File inputFile = new File("input.txt");
-		File outputFile = new File("input1.txt");
-
-		String fileName = "input.txt";
 
 
+		OutputFileCreator outputFileCreator = new OutputFileCreator();
+		outputFileCreator.buildDummyFile(fileName); 
+		System.out.println("Dummy file written and populated at " + new File(fileName).getAbsolutePath());
+		outputFileCreator.parseUserInputForOutputFile(fileName);
 
-		OutputFileCreator outputFileCreator = new OutputFileCreator(fileName, 100);
-		outputFileCreator.buildDummyFile(fileName);
-		outputFileCreator.buildFiles();
+		System.out.println("");
+		System.out.println("Lines from input file: " + outputFileCreator.getTotalLineCountFromInputFile(new File(fileName)));
+		System.out.println("Lines per output file: " + linesToSplit);
+		System.out.println("Total output files to build: " + outputFileCreator.getNumberOfFilesToBuild(linesToSplit));
+		System.out.println("Lines for last line of input file: " + outputFileCreator.getNumberOfLinesForLastFile(outputFileCreator.getTotalLineCountFromInputFile(new File(fileName)),linesToSplit));
+		System.out.println("");
+		outputFileCreator.buildFiles(inputFile, linesToSplit);
 
-		System.out.println("Number of File to Build:" + outputFileCreator.getNumberOfFilesToBuild());
-		System.out.println("Lines to Split:" + outputFileCreator.getLinesToSplit());
-		System.out.println("Lines for Last File: " + getNumberOfLinesForLastFile());
-
-		outputFileCreator.buildDummyFile(fileName);
-//
-//		totalLinesFromFile = inputFileChecker.getTotalLineCountFromInputFile(inputFile);
-//		int lastLoopCount = inputFileChecker.getNumberOfLoopsForLastFile(totalLinesFromFile, 100);
-//		System.out.println("Total Lines: " + totalLinesFromFile);
-//		totalFileToBuild = inputFileChecker.getNumberOfFilesToBuild(totalLinesFromFile, 100);
-//		System.out.println("Total Files to Build: " + totalFileToBuild);
-//		System.out.println("Last Loop Count" + lastLoopCount);
-//
-//
-//		inputFileChecker.readLineFromInputFile(inputFile, totalFileToBuild, linesToSplit, lastLoopCount);
 
 	}
 }
