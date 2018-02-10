@@ -1,6 +1,5 @@
 package com.techelevator;
 
-<<<<<<< Updated upstream
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -114,13 +113,4 @@ public class QuizMaker {
         }
         return inputFile;
     }
-=======
-public class QuizMaker {
-
-	public static void main(String[] args) {
-		
-
-	}
-
->>>>>>> Stashed changes
 }
