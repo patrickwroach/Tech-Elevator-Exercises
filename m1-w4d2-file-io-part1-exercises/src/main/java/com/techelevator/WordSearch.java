@@ -8,7 +8,7 @@ public class WordSearch {
 
     private static String wordToSearch = "";
     private static boolean retainCase = true;
-
+//alices_adventures_in_wonderland.txt
     public static void main(String[] args) throws FileNotFoundException {
 
         File inputFile = getInputFileFromUser();
@@ -40,12 +40,13 @@ public class WordSearch {
         int wordCount = 0;
 
         try (Scanner fileScanner = new Scanner(inputFile)) {
-            while (fileScanner.hasNextLine() && !fileScanner.nextLine().trim().isEmpty()) {
-                String line = (retainCase) ? fileScanner.nextLine() : fileScanner.nextLine().toLowerCase(); //Retains Case of stream or converts to lower case for comparision.
+            while (fileScanner.hasNextLine()) {
+                String line = fileScanner.nextLine();
+                String compareLine = (retainCase) ? line : line.toLowerCase(); //Retains Case of stream or converts to lower case for comparision.
                 wordToSearch = (retainCase) ? wordToSearch : wordToSearch.toLowerCase();  //Retains Case of search term or converts to lower case for comparision.
                 lineCount++;
 
-                if (line.contains(wordToSearch)) {
+                if (compareLine.contains(wordToSearch)) {
                     System.out.println(lineCount + ")" + " " + line);
                     wordCount++;
                 }
