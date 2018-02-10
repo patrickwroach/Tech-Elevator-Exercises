@@ -16,15 +16,33 @@ public class InputFileChecker {
         return lineToGoToOutputFile;
     }
 
-    public static String readLineFromInputFile(File inputFile) throws FileNotFoundException {
+    public void readLineFromInputFile(File inputFile, int filesToBuild, int linesToSplit, int linesToSplitOnEnd) throws FileNotFoundException {
         String line = "";
         try (Scanner fileScanner = new Scanner(inputFile)) {
-            while (fileScanner.hasNextLine()) {
-                line = fileScanner.nextLine();
+
+            for (int i = 0; i < filesToBuild - 1; i++) {
+                try (PrintWriter writer = new PrintWriter("input" + (i + 1) + ".txt")) {
+                    for (int j = 0; j < linesToSplit; j++) {
+
+                        line = fileScanner.nextLine();
+                        writer.println(line);
+
+                    }
+                }
             }
-            return line;
-        }
-    }
+                    try (PrintWriter writer = new PrintWriter("input" + (4) + ".txt")) {
+                        for (int j = 0; j < linesToSplitOnEnd; j++) {
+
+                            line = fileScanner.nextLine();
+                            writer.println(line);
+
+                        }
+                    }
+                }
+            }
+
+
+
 
     public int getTotalLineCountFromInputFile(File inputFile) throws IOException {
 
@@ -38,6 +56,13 @@ public class InputFileChecker {
     }
 
 
+    public int getNumberOfLastLoop(int totalLinesFromInputFile, int linesPerOutputFile) {
+              totalLinesFromInputFile %= linesPerOutputFile;
+
+
+
+        return totalLinesFromInputFile;
+    }
 
     public int getNumberOfFilesToBuild(int totalLinesFromInputFile, int linesPerOutputFile) {
         int numberOfFilesToBuild = 0;

@@ -40,7 +40,7 @@ public class OutputFileCreator {
 
         try (PrintWriter writer = new PrintWriter(f)) {
 
-            for (int i = 1; i <= 300; i++) {
+            for (int i = 1; i <= 305; i++) {
 
                 writer.println(i);
 
