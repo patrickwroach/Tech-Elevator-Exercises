@@ -8,38 +8,9 @@ import java.util.Scanner;
 
 public class InputFileChecker {
     private int totalLinesFromInputFile;
-    private int linesPerOutputFile;
     private int numberOfFilesToBuild;
-    private String lineToGoToOutputFile;
-
-    public String getLineToGoToOutputFile() {
-        return lineToGoToOutputFile;
-    }
-
-    public void readLineFromInputFile(File inputFile, int filesToBuild, int linesToSplit, int linesToSplitOnEnd) throws FileNotFoundException {
-        String line = "";
-        try (Scanner fileScanner = new Scanner(inputFile)) {
-
-            for (int i = 0; i < filesToBuild - 1; i++) {
-                try (PrintWriter writer = new PrintWriter("input" + (i + 1) + ".txt")) {
-                    for (int j = 0; j < linesToSplit; j++) {
-
-                        line = fileScanner.nextLine();
-                        writer.println(line);
-
-                    }
-                }
-            }
-                    try (PrintWriter writer = new PrintWriter("input" + (4) + ".txt")) {
-                        for (int j = 0; j < linesToSplitOnEnd; j++) {
-
-                            line = fileScanner.nextLine();
-                            writer.println(line);
-
-                        }
-                    }
-                }
-            }
+    private int linesPerOutputFile;
+    private int numberOfLoopsForLastFile;
 
 
 
@@ -56,22 +27,18 @@ public class InputFileChecker {
     }
 
 
-    public int getNumberOfLastLoop(int totalLinesFromInputFile, int linesPerOutputFile) {
-              totalLinesFromInputFile %= linesPerOutputFile;
+    public int getNumberOfLoopsForLastFile(int totalLinesFromInputFile, int linesPerOutputFile) {
+        numberOfLoopsForLastFile = totalLinesFromInputFile % linesPerOutputFile;
 
-
-
-        return totalLinesFromInputFile;
+        return numberOfLoopsForLastFile;
     }
 
-    public int getNumberOfFilesToBuild(int totalLinesFromInputFile, int linesPerOutputFile) {
-        int numberOfFilesToBuild = 0;
+    public int getNumberOfFilesToBuild(int linesPerOutputFile) {
 
         numberOfFilesToBuild = totalLinesFromInputFile / linesPerOutputFile;
         totalLinesFromInputFile %= linesPerOutputFile;
         if (totalLinesFromInputFile > 0)
             numberOfFilesToBuild++;
-
 
         return numberOfFilesToBuild;
     }

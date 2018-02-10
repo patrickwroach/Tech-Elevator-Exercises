@@ -7,45 +7,106 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class OutputFileCreator {
-    private String lineFromInputFile;
-    String inputFileAddress;
+    private int totalLinesFromInputFile;
+    private int numberOfLinesForLastFile;
+    private int numberOfFilesToBuild;
+    private int linesToSplit;
+    private String inputFile;
+    private String outputFileName;
 
-
-    public void setLineFromInputFile(String lineFromInputFile) {
-        this.lineFromInputFile = lineFromInputFile;
+    public OutputFileCreator(String inputFile, int linesToSplit) throws IOException {
+        this.linesToSplit = linesToSplit;
+        this.inputFile = inputFile;
+        this.outputFileName = parseUserInputForOutputFile(inputFile);
+        this.totalLinesFromInputFile = totalLineCountFromInputFile(inputFile);
+        this.numberOfLinesForLastFile = totalLinesFromInputFile % linesToSplit;
     }
 
-    public void writeLineToOutputFile(String inputLine, File inputFileAddress) throws FileNotFoundException{
-        try(PrintWriter writer = new PrintWriter(inputFileAddress)){
-            writer.println(inputLine);
+    public int getTotalLinesFromInputFile() {
+        return totalLinesFromInputFile;
+    }
+
+    public int getNumberOfLinesForLastFile() {
+        return numberOfLinesForLastFile;
+    }
+
+    public int getLinesToSplit() {
+        return linesToSplit;
+    }
+
+    public String getInputFile() {
+        return inputFile;
+    }
+
+    public String getOutputFileName() {
+        return outputFileName;
+    }
+
+    public int totalLineCountFromInputFile(String inputFile) throws IOException {
+
+        try (Scanner fileScanner = new Scanner(inputFile)) {
+            while (fileScanner.hasNextLine()) {
+                String line = fileScanner.nextLine();
+                totalLinesFromInputFile++;
+            }
+        }
+        return totalLinesFromInputFile;
+    }
+
+
+    public int getNumberOfFilesToBuild() {
+
+        numberOfFilesToBuild = totalLinesFromInputFile / linesToSplit;
+        totalLinesFromInputFile %= linesToSplit;
+        if (totalLinesFromInputFile > 0)
+            numberOfFilesToBuild++;
+
+        return numberOfFilesToBuild;
+    }
+
+    public void buildFiles() throws FileNotFoundException {
+        String line;
+
+        try (Scanner fileScanner = new Scanner(inputFile)) {
+            int i = 0;
+            for (; i < numberOfFilesToBuild - 1; i++) {
+                try (PrintWriter writer = new PrintWriter(outputFileName + "-" + (i + 1) + ".txt")) {
+                    for (int j = 0; j < linesToSplit; j++) {
+
+                        line = fileScanner.nextLine();
+                        writer.println(line);
+
+                    }
+                }
+            }
+            try (PrintWriter writer = new PrintWriter(outputFileName + "-" + (i+1) + ".txt")) {
+                for (int j = 0; j < numberOfLinesForLastFile; j++) {
+
+                    line = fileScanner.nextLine();
+                    writer.println(line);
+
+                }
+            }
         }
     }
 
-    public void buildFile(String pathname) throws IOException {
-        File f = new File("input.txt");
 
-        try (PrintWriter writer = new PrintWriter(f)) {
+    public void buildDummyFile(String inputFile) throws IOException {
 
-            for (int i = 1; i <= 300; i++) {
-
+        try (PrintWriter writer = new PrintWriter(inputFile)) {
+            for (int i = 1; i <= 345; i++) {
                 writer.println(i);
-
             }
         }
         System.out.println("FizzBuzz written.");
     }
 
-    public void buildDummyFile(String pathname) throws IOException {
-        File f = new File(pathname);
+    public String parseUserInputForOutputFile(String filename) {
+        String[] fileNameSplitter = filename.split(".txt");
 
-        try (PrintWriter writer = new PrintWriter(f)) {
+        outputFileName = filename.substring(0, filename.length() - 4);
+        return outputFileName;
 
-            for (int i = 1; i <= 305; i++) {
 
-                writer.println(i);
-
-            }
-        }
-        System.out.println("FizzBuzz written.");
     }
 }
