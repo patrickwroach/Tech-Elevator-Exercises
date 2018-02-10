@@ -20,7 +20,7 @@ public class OutputFileCreator {
         totalLinesFromInputFile = 0;
         try (Scanner fileScanner = new Scanner(inputFile)) {
             while (fileScanner.hasNextLine()) {
-                String line = fileScanner.nextLine();
+                fileScanner.nextLine();
                 totalLinesFromInputFile++;
             }
         }
@@ -50,33 +50,27 @@ public class OutputFileCreator {
 
         try (Scanner fileScanner = new Scanner(inputFile)) {
             int i = 0;
-            for (; i < numberOfFilesToBuild - 1; i++) {
+            for (; i < numberOfFilesToBuild; i++) {
                 try (PrintWriter writer = new PrintWriter(outputFileName + "-" + (i + 1) + ".txt")) {
-                    for (int j = 0; j < linesToSplit; j++) { //lines to Split
-
-                        line = fileScanner.nextLine();
-                        writer.println(line);
+                    for (int j = 0; j < linesToSplit; j++) {
+                        if (!fileScanner.hasNextLine()) break;
+                        else {
+                            line = fileScanner.nextLine();
+                            writer.println(line);
+                        }
 
                     }
                     System.out.println("Writing file: " + outputFileName + "-" + (i + 1) + ".txt");
                 }
             }
-            try (PrintWriter writer = new PrintWriter(outputFileName + "-" + (++i) + ".txt")) {
-                for (int j = 0; j < numberOfLinesForLastFile; j++) {
-                    line = fileScanner.nextLine();
-                    writer.println(line);
-
-                }
-                System.out.println("Writing file: " + outputFileName + "-" + (i) + ".txt");
-            }
         }
     }
 
 
-    public void buildDummyFile(String inputFile) throws IOException {
+    public void buildDummyFile(String inputFile, int lines) throws IOException {
 
         try (PrintWriter writer = new PrintWriter(inputFile)) {
-            for (int i = 1; i <= 345; i++) {
+            for (int i = 1; i <= lines; i++) {
                 writer.println(i);
             }
         }

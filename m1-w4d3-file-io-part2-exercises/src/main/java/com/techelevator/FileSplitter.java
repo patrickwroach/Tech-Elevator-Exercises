@@ -11,12 +11,9 @@ public class FileSplitter {
 		int linesToSplit = Integer.parseInt(args[1]);
 		File inputFile = new File(fileName);
 
-
-
-
-
 		OutputFileCreator outputFileCreator = new OutputFileCreator();
-		outputFileCreator.buildDummyFile(fileName); 
+		outputFileCreator.buildDummyFile(fileName, 345);
+
 		System.out.println("Dummy file written and populated at " + new File(fileName).getAbsolutePath());
 		outputFileCreator.parseUserInputForOutputFile(fileName);
 
