@@ -6,15 +6,15 @@ import java.util.Scanner;
 
 public class FileSplitter {
 	public static void main(String[] args) throws IOException {
-
 		String fileName = args[0];
 		int linesToSplit = Integer.parseInt(args[1]);
+		int dummyLineCount = 345;
 		File inputFile = new File(fileName);
 
 		OutputFileCreator outputFileCreator = new OutputFileCreator();
-		outputFileCreator.buildDummyFile(fileName, 345);
+		outputFileCreator.buildDummyFile(fileName, dummyLineCount);
 
-		System.out.println("Dummy file written and populated at " + new File(fileName).getAbsolutePath());
+		System.out.println("Dummy file written and populated with " + dummyLineCount + " lines of code at " + new File(fileName).getAbsolutePath());
 		outputFileCreator.parseUserInputForOutputFile(fileName);
 
 		System.out.println("");
