@@ -1,0 +1,53 @@
+Path path = Paths.get("test.txt");
+Charset charset = StandardCharsets.UTF_8;
+
+String content = new String(Files.readAllBytes(path), charset);
+content = content.replaceAll("foo", "bar");
+Files.write(path, content.getBytes(charset));
+
+technical skills, professional summary
+
+
+   private int fileLineCount;
+    private int fileArraySize;
+    private int lineTotalInInput;
+    private int linesPerFile;
+
+    
+    public void setFileLineCount(int fileLineCount) {
+        this.fileLineCount = fileLineCount;
+    }
+
+    public int getFileLineCount() {
+        return fileLineCount;
+    }
+
+    public int getFileArraySize() {
+        return this.fileArraySize;
+    }
+
+    public int setLineTotalInInput(File inputFile) throws IOException {
+
+        try(Scanner fileScanner = new Scanner(inputFile)) {
+            while(fileScanner.hasNextLine()) {
+                String line = fileScanner.nextLine();
+                lineTotalInInput ++;
+            }
+
+            return this.lineTotalInInput;
+        }
+
+    }
+
+    public int setFileArraySize(int lineTotalInInput) {
+        int output = 0;
+
+        output = lineTotalInInput / linesPerFile;
+        fileLineCount %= fileLineCount;
+        if (fileLineCount > 0)
+            fileArraySize++;
+
+         this.fileArraySize = fileArraySize;
+         return fileArraySize;
+    }
+
