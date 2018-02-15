@@ -129,8 +129,8 @@ LIMIT 10;
 SELECT store.store_id, address.address, COUNT (rental.rental_id) AS total_rentals, round(AVG(payment.amount),2)  AS avgsales, SUM(payment.amount) AS totalsales
 FROM store
 JOIN address ON store.address_id = address.address_id
-JOIN customer ON customer.store_id = store.store_id
-JOIN rental ON rental.customer_id = customer.customer_id
+JOIN inventory ON inventory.store_id = store.store_id
+JOIN rental ON rental.inventory_id = inventory.inventory_id
 JOIN payment ON rental.rental_id = payment.rental_id
 GROUP BY store.store_id, address.address
 ORDER BY store.store_id ASC;
