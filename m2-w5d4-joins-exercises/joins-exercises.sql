@@ -50,6 +50,15 @@
 
 -- 17. The top five film categories by number of rentals 
 -- (#1 should be “Sports” with 1179 rentals and #5 should be “Family” with 1096 rentals)
+select category.name, count(rental.rental_id) as rental_count
+FROM film
+JOIN inventory ON film.film_id = inventory.film_id
+JOIN rental ON inventory.inventory_id = rental.inventory_id
+JOIN film_category ON film.film_id = film_category.film_id
+JOIN category ON film_category.category_id = category.category_id
+GROUP BY category.name
+ORDER BY rental_count DESC
+LIMIT 5
 
 -- 18. The top five Action film titles by number of rentals 
 -- (#1 should have 30 rentals and #5 should have 28 rentals)

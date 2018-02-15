@@ -2,6 +2,7 @@ package com.techelevator;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.*;
 
 public class Exercises {
 
@@ -12,7 +13,7 @@ public class Exercises {
     arrayDeduplication([1, 1, 1]) → [1]
     */
     public int[] arrayDeduplication(int[] nums) {
-        return null;
+    	return new LinkedHashSet<Integer>(Arrays.asList(Arrays.stream(nums).boxed().toArray( Integer[]::new ))).stream().mapToInt(x->x).toArray();
     }
     
     /*

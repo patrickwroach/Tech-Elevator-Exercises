@@ -5,6 +5,7 @@
 --   The value immediately after the problem statement is the expected number of rows that should be returned by the query.
 
 -- 1. The name and population of all cities in Ontario, Canada (27 rows)
+SELECT name, population FROM CITY WHERE district = 'Ontario' AND countrycode = 'CAN';
 
 -- 2. The name and population of all cities in Montana (1 row)
 
