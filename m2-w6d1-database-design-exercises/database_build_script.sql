@@ -1,9 +1,10 @@
 CREATE database w6d1_database_design_exercises;
 
-DROP TABLE department;
-DROP TABLE employee;
-DROP TABLE project;
-DROP TABLE employee_project;
+--DROP TABLE employee_project;
+--DROP TABLE project;
+--DROP TABLE employee;
+--DROP TABLE department;
+
 
 CREATE TABLE employee
 (
