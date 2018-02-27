@@ -1,23 +1,31 @@
 html {
-  font: 0px Courier;
-  color: white;
+    font: 0px Courier;
+    color: white;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    height: 100%;
 }
 
 * {
 
 
+
 }
 .layer {
-    display: flex;
- flex-wrap: wrap;
-    justify-content: center;
+    /*display: inline-block;*/
+
 }
 .div {
+    display: inline-grid;
 
 }
 
 .box {
-
+    position: absolute;
+    display: inline-block;
     font: 96px Courier;
     color: white;
     height: 120px;
@@ -26,13 +34,18 @@ html {
 }
 
 .box.odd {
-  background: #ee3e64;
+    background: #ee3e64;
 
 }
 
 .box.even {
-  background: #44accf;
+    background: #44accf;
 
+}
+
+#box_1{
+    top:120px;
+    left:120PX;
 }
 
 
