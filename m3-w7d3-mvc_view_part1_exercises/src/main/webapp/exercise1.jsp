@@ -24,7 +24,8 @@
 		</style>
 	</head>
 	<body>
-		<h1>Exercise 1 - FizzBuzz</h1>
+		<h1 class="${param.cssClass}">Exercise 1 - FizzBuzz</h1>
+		
 		<ul>
 			<%--
 				Add a list item (i.e. <li>) containing each of the numbers from 1 to 100.
