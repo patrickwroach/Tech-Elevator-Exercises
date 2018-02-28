@@ -37,6 +37,7 @@
             <c:when test="${numbers % 3 == 0 && numbers % 5 == 0}">
                 <li class="fizzbuzz">FizzBuzz!</li>
             </c:when>
+
             <c:when test="${numbers % 3 == 0}">
                 <li class="fizz">Fizz!</li>
             </c:when>
@@ -44,9 +45,11 @@
             <c:when test="${numbers % 5 == 0}">
                 <li class="buzz">Buzz!</li>
             </c:when>
+
             <c:otherwise>
                 <li>${numbers}</li>
             </c:otherwise>
+
         </c:choose>
 
     </c:forEach>

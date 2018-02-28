@@ -7,20 +7,34 @@
 		<style>
 			li {
 				list-style-type: none;
-			}
+
+}
 		</style>
 	</head>
 	<body>
 		<h1>Exercise 3 - Echo</h1>
-		<c: choose>
-		<c:when test="${empty param.name}">
-			<c:set var="word" value="Test" />
-		</c:when>
-			<c:otherwise>
-				<c:set> var ="word" value = "${param.word}"</c:set>
-			</c:otherwise>
-		</c:>
+
+
 		<ul>
+            <c:choose>
+
+                <c:when test="${empty param.word}">
+                    <c:set var="word" value="Hello" />
+                </c:when>
+                <c:otherwise>
+                    <c:set var="word" value="${param.word}" />
+
+                </c:otherwise>
+            </c:choose>
+
+
+            <c:set var="word" value="${param.word}"/>
+            <c:set var="fsize" value="150"/>
+
+            <c:forEach var="count" begin="1" end="${param.count}">
+                <li style="font-size:${fsize}px">${word}</li>
+                <c:set var="fsize" value="${fsize-10}"/>
+            </c:forEach>
 		<%--
 			Given two query string parameters, "word" and "count":
 			

@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
 		<title>Exercise 2 - Fibonacci 25</title>
 		<style>
 			li {
@@ -13,11 +14,17 @@
 	<body>
 		<h1>Exercise 2 - Fibonacci 25</h1>
 		<ul>
-			<%--
-				Add a list item (i.e. <li>) for each of the first 25 numbers in the Fibonacci sequence
-				
-				See exercise2-fibonacci.png for example output
-			 --%>
+			<c:set var="fib1" value="1"/>
+			<c:set var="fib2" value="1"/>
+
+			<c:forEach begin="1" end="25" var="numbers">
+				<c:set var="temp" value="${fib1}"/>
+				<c:set var="fib1" value="${fib1 + fib2}"/>
+				<c:set var="fib2" value="${temp}"/>
+
+			<li>${fib2}</li>
+
+			</c:forEach>
 		</ul>
 	</body>
 </html>
