@@ -9,15 +9,6 @@ body {
     height: 100%;
 }
 
-* {
-
-
-
-}
-.layer {
-    /*display: inline-block;*/
-
-}
 .div {
     display: inline-grid;
 
@@ -42,10 +33,49 @@ body {
     background: #44accf;
 
 }
+#box_0{
+    top:0px;
+    left:0px;
+}
 
 #box_1{
     top:120px;
-    left:120PX;
+    left:120px;
 }
+
+#box_2{
+    top:240px;
+    left:240px;
+}
+
+#box_3{
+    top:360px;
+    left:360px;
+}
+#box_4{
+    top:480px;
+    left:480px;
+}
+#box_5{
+    top:600px;
+    left:480px;
+}
+#box_6{
+    top:720px;
+    left:360px;
+}
+#box_7{
+    top:840px;
+    left:240px;
+}
+#box_8{
+    top:960px;
+    left:120px;
+}
+#box_9{
+    top:1080px;
+    left:0px;
+}
+
 
 
