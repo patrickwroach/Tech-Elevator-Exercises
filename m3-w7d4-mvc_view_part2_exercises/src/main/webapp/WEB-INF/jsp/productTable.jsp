@@ -22,21 +22,25 @@
     <section id="main-content">
     <h1>Toy Department</h1>
         <tr>
+            <td>Name</td>
         <c:forEach var="product" items="${productList}">
                 <td><c:out value="${product.name}"/></td>
         </c:forEach>
             </tr>
         <tr>
+            <td>Manufacturer</td>
         <c:forEach var="product" items="${productList}">
             <td><c:out value="${product.manufacturer}"/></td>
         </c:forEach>
             </tr>
         <tr>
+            <td>Price</td>
         <c:forEach var="product" items="${productList}">
             <td><c:out value="${product.price}"/></td>
         </c:forEach>
             </tr>
         <tr>
+            <td>Weight</td>
         <c:forEach var="product" items="${productList}">
             <td><c:out value="${product.weightInLbs}"/></td>
         </c:forEach>
