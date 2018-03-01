@@ -40,11 +40,11 @@
 
 
             <c:set var="word" value="${param.word}"/>
-            <c:set var="fsize" value="150"/>
+            <c:set var="fontSize" value="${param.count}"/>
 
             <c:forEach var="count" begin="1" end="${param.count}">
-                <li style="font-size:${fsize}px">${word}</li>
-                <c:set var="fsize" value="${fsize-10}"/>
+                <li style="font-size:${fontSize}px">${word}</li>
+                <c:set var="fontSize" value="${fontSize-1}"/>
             </c:forEach>
 		</ul>
 		
