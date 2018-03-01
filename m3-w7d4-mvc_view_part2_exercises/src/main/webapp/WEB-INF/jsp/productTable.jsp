@@ -20,9 +20,48 @@
         
     </nav>
     <section id="main-content">
+    <h1>Toy Department</h1>
+        <tr>
+        <c:forEach var="product" items="${productList}">
+                <td><c:out value="${product.name}"/></td>
+        </c:forEach>
+            </tr>
+        <tr>
+        <c:forEach var="product" items="${productList}">
+            <td><c:out value="${product.manufacturer}"/></td>
+        </c:forEach>
+            </tr>
+        <tr>
+        <c:forEach var="product" items="${productList}">
+            <td><c:out value="${product.price}"/></td>
+        </c:forEach>
+            </tr>
+        <tr>
+        <c:forEach var="product" items="${productList}">
+            <td><c:out value="${product.weightInLbs}"/></td>
+        </c:forEach>
+            </tr>
 
-       
 
     </section>
 </body>
 </html>
+
+<%-- <c:forEach var="product" items="${productList}">
+        <tr>
+        <td><c:out value="${product.name}"/></td>
+        </tr>
+
+        <tr>
+            <td><c:out value="${product.manufacturer}"/></td>
+            </tr>
+        <tr>
+
+            <td><c:out value="${product.price}"/></td>
+
+            </tr>
+        <tr>
+
+            <td><c:out value="${product.weightInLbs}"/></td>
+            </tr>
+        </c:forEach>--%>
