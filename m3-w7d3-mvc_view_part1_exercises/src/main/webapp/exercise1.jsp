@@ -1,3 +1,20 @@
+<%--<c: forEach begin="1" end="100" var="numbers">
+    <c:when test="${numbers %3 == 0}">
+        <li> Fizz</li>
+    </c:when>
+</c:>
+<%--
+    Add a list item (i.e. <li>) containing each of the numbers from 1 to 100.
+
+    if the number is divisible by 3, show "Fizz!" instead and style the item using the "fizz" class
+
+    if the number is divisible by 5, show "Buzz!" instead and style the item using the "buzz" class
+
+    if the number is divisible by both 3 and 5, show "FizzBuzz!" instead  and style the item using the "fizzbuzz" class
+
+    see exercise1-fizzbuzz.png for example output
+ --%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -55,23 +72,6 @@
     </c:forEach>
 
 </ul>
-
-<%--<c: forEach begin="1" end="100" var="numbers">
-    <c:when test="${numbers %3 == 0}">
-        <li> Fizz</li>
-    </c:when>
-</c:>
-<%--
-    Add a list item (i.e. <li>) containing each of the numbers from 1 to 100.
-
-    if the number is divisible by 3, show "Fizz!" instead and style the item using the "fizz" class
-
-    if the number is divisible by 5, show "Buzz!" instead and style the item using the "buzz" class
-
-    if the number is divisible by both 3 and 5, show "FizzBuzz!" instead  and style the item using the "fizzbuzz" class
-
-    see exercise1-fizzbuzz.png for example output
- --%>
 
 </body>
 </html>
