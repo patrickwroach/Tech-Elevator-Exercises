@@ -1,0 +1,20 @@
+html {
+  font: 96px Courier;
+  color: white;
+}
+p {
+  font: 36px Helvetica;
+  color: black;
+}
+.box {
+  padding: 60px 30px 60px 50px;
+  width: 100px;
+}
+.box.odd {
+  background: #ee3e64;
+}
+.box.even {
+  background: #44accf;
+}
+
+

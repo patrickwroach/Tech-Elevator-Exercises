@@ -1,0 +1,38 @@
+html {
+  font: 0px Courier;
+  color: white;
+}
+
+* {
+
+
+}
+.layer {
+    display: flex;
+ flex-wrap: wrap;
+    justify-content: center;
+}
+.div {
+
+}
+
+.box {
+
+    font: 96px Courier;
+    color: white;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+}
+
+.box.odd {
+  background: #ee3e64;
+
+}
+
+.box.even {
+  background: #44accf;
+
+}
+
+
