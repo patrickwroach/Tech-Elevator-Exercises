@@ -2,7 +2,7 @@ body {
 	width: 100%;
 	background-color: #212121;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-		sans-serif;
+	sans-serif;
 }
 
 body, header, nav {
@@ -56,3 +56,36 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
+
+table {
+	display: inline-block;
+	margin: 50px auto;
+	Border-collapse: collapse;
+}
+
+#name {
+	width: 50px;
+}
+
+td {
+	width: 200px;
+}
+
+.gray {
+	background-color: #cacaca;
+}
+
+.green {
+	background-color: #cddc53;
+}
+
+.best-seller{
+	color: red;
+}
+
+.price {
+	color: #871328;
+	font-size: 130%;
+}
+
+
