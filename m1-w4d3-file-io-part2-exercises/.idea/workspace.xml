@@ -12,7 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileSplitter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileSplitter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/FileSplitter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -22,7 +22,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutputFileCreator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OutputFileCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/OutputFileCreator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="749">
