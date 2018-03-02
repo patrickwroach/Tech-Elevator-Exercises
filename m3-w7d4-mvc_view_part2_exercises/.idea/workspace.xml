@@ -39,8 +39,8 @@
           <file leaf-file-name="productTable.jsp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productTable.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+                <state relative-caret-position="-493">
+                  <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -103,8 +103,8 @@
           <file leaf-file-name="site.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/css/site.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="70" column="17" lean-forward="false" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+                <state relative-caret-position="353">
+                  <caret line="85" column="9" lean-forward="false" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -127,8 +127,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productTable.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/site.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productTable.jsp" />
       </list>
     </option>
   </component>
@@ -469,12 +469,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519950329801</updated>
-      <workItem from="1519950330962" duration="8133000" />
+      <workItem from="1519950330962" duration="10269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8133000" />
+    <option name="totallyTimeSpent" value="10269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -589,8 +589,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/productTable.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="-493">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding />
         </state>
       </provider>

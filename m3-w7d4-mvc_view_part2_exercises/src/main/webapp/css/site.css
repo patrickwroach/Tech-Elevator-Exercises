@@ -83,6 +83,10 @@ td {
 	color: red;
 }
 
+.category{
+	font-weight: bold;
+}
+
 .price {
 	color: #871328;
 	font-size: 130%;

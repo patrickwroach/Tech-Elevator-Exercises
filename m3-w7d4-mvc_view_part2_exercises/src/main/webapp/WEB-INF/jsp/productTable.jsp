@@ -34,7 +34,7 @@
             <c:forEach var="product" items="${productList}">
                 <c:choose>
                     <c:when test="${product.topSeller == true}">
-                        <td class = best-seller><c:out value="BEST SELLER!"/></td>
+                        <td class=best-seller><c:out value="BEST SELLER!"/></td>
                     </c:when>
                     <c:otherwise>
                         <td></td>
@@ -43,43 +43,43 @@
             </c:forEach>
         </tr>
         <tr>
-            <td>Name</td>
+            <td class="category">Name</td>
             <c:forEach var="product" items="${productList}">
                 <td class="gray"><c:out value="${product.name}"/></td>
             </c:forEach>
         </tr>
         <tr>
-            <td>Rating</td>
+            <td class="category">Rating</td>
 
             <c:forEach var="product" items="${productList}">
                 <c:set var="Rating" value="${product.averageRating}"/>
                 <fmt:formatNumber var="parsedRating" type="number" value="${Rating}" maxFractionDigits="0"/>
 
-                <td><img src="img/${parsedRating}-star.png" height="20%"/></td>
+                <td><img src="img/${parsedRating}-star.png" height="15%"/></td>
             </c:forEach>
 
         </tr>
         <tr>
-            <td>Mfr</td>
+            <td class="category">Mfr</td>
             <c:forEach var="product" items="${productList}">
-                <td class = "gray"><c:out value="${product.manufacturer}"/></td>
+                <td class="gray"><c:out value="${product.manufacturer}"/></td>
             </c:forEach>
         </tr>
         <tr>
-            <td>Price</td>
+            <td class="category">Price</td>
 
             <c:forEach var="product" items="${productList}">
 
                 <c:set var="Amount" value="${product.price}"/>
-                <td class = price><fmt:formatNumber value="${Amount}" type="currency"/></td>
+                <td class=price><fmt:formatNumber value="${Amount}" type="currency"/></td>
 
             </c:forEach>
         </tr>
         <tr>
-            <td>Wt. (in lbs)</td>
+            <td class="category">Wt. (in lbs)</td>
             <c:forEach var="product" items="${productList}">
                 <c:set var="Weight" value="${product.weightInLbs}"/>
-                <td class = "gray"><fmt:formatNumber value="${Weight}" maxFractionDigits="0"/></td>
+                <td class="gray"><fmt:formatNumber value="${Weight}" maxFractionDigits="0"/></td>
             </c:forEach>
         </tr>
 
