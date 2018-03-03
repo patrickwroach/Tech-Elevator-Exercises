@@ -22,44 +22,59 @@
 </nav>
 <section id="main-content">
     <h1>Toy Department</h1>
-    <div class="allTiles">
-        <c:forEach var="product" items="${productList}">
-            <div class="card">
-                <div class="container">
-                <img class ="imageHead" src="img/${product.imageName}" height="25%"/>
-                <p><c:out value="${product.name}"/>
-                    <c:choose>
-                        <c:when test="${product.topSeller == true}">
-                            <c:out value="BEST SELLER!"/>
-                        </c:when>
-                        <c:otherwise>
-                        </c:otherwise>
-                    </c:choose>
-                </p>
-                <p><c:out value="by ${product.manufacturer}"/></p>
-                <p class=best-seller>
+    <c:forEach var="product" items="${productList}">
+
+        <div class="card">
+            <img src="img/${product.imageName}" style="max-height: 140px"/>
+            <div class="container">
+                <div>
+                    <div style="display:inline-block; text-align: left"><h4 style="
+                            margin-top: 0px;
+                            margin-bottom: 0px;">
+                            ${product.name}</h4>
+                    </div>
+                    <div class=best-seller style="display:inline-block; text-align: right">
+                        <c:choose>
+                            <c:when test="${product.topSeller == true}">
+                                <c:out value="BEST SELLER!"/>
+                            </c:when>
+                            <c:otherwise>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+                </div>
+                <div>
+                    <c:out value="by ${product.manufacturer}"/>
+                </div>
+                <div class=outofstock>
                     <c:choose>
                         <c:when test="${product.remainingStock < 5}">
                             <c:out value="Only ${product.remainingStock} left!"/>
                         </c:when>
                         <c:otherwise>
+                            <c:out value=""/>
                         </c:otherwise>
                     </c:choose>
-                </p>
-                <c:set var="Amount" value="${product.price}"/>
-                <p class=price><fmt:formatNumber value="${Amount}" type="currency"/></p>
-                <c:set var="Weight" value="${product.weightInLbs}"/>
-                <p><fmt:formatNumber value="${Weight}" maxFractionDigits="0"/></p>
-                <p>
+                </div>
+                <div class=price>
+                    <c:set var="Amount" value="${product.price}"/>
+                    <fmt:formatNumber value="${Amount}" type="currency"/>
+                </div>
+                <div>
+                    <c:set var="Weight" value="${product.weightInLbs}"/>
+                    Weight <fmt:formatNumber value="${Weight}" maxFractionDigits="0"/> lbs.
+                </div>
+                <div>
                     <c:set var="Rating" value="${product.averageRating}"/>
                     <fmt:formatNumber var="parsedRating" type="number" value="${Rating}" maxFractionDigits="0"/>
-                    <img class = "rating" src="img/${parsedRating}-star.png"/>
-                </p>
+
+                    <img src="img/${parsedRating}-star.png" width="80%"/>
+
+                </div>
 
             </div>
-            </div>
-        </c:forEach>
-    </div>
+        </div>
+    </c:forEach>
 </section>
 </body>
 </html>
