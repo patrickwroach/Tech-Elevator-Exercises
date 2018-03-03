@@ -3,29 +3,32 @@
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width"/>
-    <title>Product Tiles View</title>
-    <link rel="stylesheet" href="css/site.css"/>
-</head>
-<body>
-<header>
-    <h1>MVC Exercises - Views Part 2: Models</h1>
-</header>
-<nav>
-    <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-    </ul>
+<%--<html>--%>
+<%--<head>--%>
+    <%--<meta name="viewport" content="width=device-width"/>--%>
+    <%--<title>Product Tiles View</title>--%>
+    <%--<link rel="stylesheet" href="css/site.css"/>--%>
+<%--</head>--%>
+<%--<body>--%>
+<%--<header>--%>
+    <%--<h1>MVC Exercises - Views Part 2: Models</h1>--%>
+<%--</header>--%>
+<%--<nav>--%>
+    <%--<ul>--%>
+        <%--<li><a href="#">Link 1</a></li>--%>
+        <%--<li><a href="#">Link 2</a></li>--%>
+    <%--</ul>--%>
 
-</nav>
+<%--</nav>--%>
+
+<c:import url="/WEB-INF/jsp/header.jsp"></c:import>
+
 <section id="main-content">
     <h1>Toy Department</h1>
     <c:forEach var="product" items="${productList}">
 
         <div class="card">
-            <img src="img/${product.imageName}" style="max-height: 140px"/>
+            <img src="img/${product.imageName}" style="max-height: 150px"/>
             <div class="container">
                 <div>
                     <div style="display:inline-block; text-align: left"><h4 style="
@@ -70,7 +73,7 @@
                     <c:set var="Rating" value="${product.averageRating}"/>
                     <fmt:formatNumber var="parsedRating" type="number" value="${Rating}" maxFractionDigits="0"/>
 
-                    <img src="img/${parsedRating}-star.png" width="80%"/>
+                    <img src="img/${parsedRating}-star.png" width="50%"/>
 
                 </div>
 
@@ -78,5 +81,6 @@
         </div>
     </c:forEach>
 </section>
-</body>
-</html>
+<c:import url="/WEB-INF/jsp/footer.jsp"></c:import>
+<%--</body>--%>
+<%--</html>--%>
