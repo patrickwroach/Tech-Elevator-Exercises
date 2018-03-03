@@ -46,16 +46,18 @@
                 <div>
                     <c:out value="by ${product.manufacturer}"/>
                 </div>
-                <div class=outofstock>
-                    <c:choose>
-                        <c:when test="${product.remainingStock < 5}">
+                <c:choose>
+                    <c:when test="${product.remainingStock < 5}">
+                        <div class=outofstock>
                             <c:out value="Only ${product.remainingStock} left!"/>
-                        </c:when>
-                        <c:otherwise>
-                            <c:out value=""/>
-                        </c:otherwise>
-                    </c:choose>
-                </div>
+                        </div>
+                    </c:when>
+                    <c:otherwise>
+                        <div class="instock">
+                            <c:out value="Only ${product.remainingStock} left!"/>
+                        </div>
+                    </c:otherwise>
+                </c:choose>
                 <div class=price>
                     <c:set var="Amount" value="${product.price}"/>
                     <fmt:formatNumber value="${Amount}" type="currency"/>

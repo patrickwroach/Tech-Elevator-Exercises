@@ -101,6 +101,20 @@ td {
 
 }
 
+.list {
+    /* Add shadows to create the "card" effect */
+
+
+    display: inline-block;
+
+    width: 250px;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+
+
+
+}
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -131,6 +145,7 @@ td {
 
 .best-seller{
     color: red;
+    font-size: smaller;
 }
 
 .category{
@@ -143,6 +158,9 @@ td {
 }
 
 .outofstock {
-    color: #21b4e7;
-    font-size: 130%;
+     color: #21b4e7;
+ }
+
+.instock {
+    color: #ffffff;
 }
