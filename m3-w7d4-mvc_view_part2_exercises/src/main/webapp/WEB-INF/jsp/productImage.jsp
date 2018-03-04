@@ -2,5 +2,5 @@
 
 <div>
 
-    <img src="img/${product.imageName}" style="position: absolute; left: 150px;"/>
+    <img src="img/${product.imageName}"/>
 </div>

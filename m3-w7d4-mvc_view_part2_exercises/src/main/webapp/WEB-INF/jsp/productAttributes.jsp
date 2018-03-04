@@ -4,12 +4,12 @@
 <!DOCTYPE html>
 
 
-<div>
+<div style="align-items: left">
 <c:set var="productId" value="${param.productId}"/>
 
 
     <div style="display:inline-block; text-align: left"><h2 style="
-                            margin-top: 0px;
+                            margin-top: 50px;
                             margin-bottom: 0px;">
         ${product.name}</h2>
     </div>
@@ -48,6 +48,6 @@
     </div>
     <div>
         <c:set var="Weight" value="${product.weightInLbs}"/>
-        Weight <fmt:formatNumber value="${Weight}" maxFractionDigits="0"/> lbs.
+        <b>Weight</b> <fmt:formatNumber value="${Weight}" maxFractionDigits="0"/> lbs.
     </div>
 </div>

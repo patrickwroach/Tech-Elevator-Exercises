@@ -170,6 +170,11 @@ td {
 }
 
 .attribute-and-description{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 30px;
 
 }
 

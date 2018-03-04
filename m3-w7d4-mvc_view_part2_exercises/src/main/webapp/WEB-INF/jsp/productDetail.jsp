@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <c:import url="/WEB-INF/jsp/header.jsp"></c:import>
-<section id="productAttributes">
+<section id="productAttributes" style="display: flex; text-align: left;">
 <c:import url="/WEB-INF/jsp/productImage.jsp"></c:import>
 <div class = "attribute-and-description">
 <c:import url="/WEB-INF/jsp/productAttributes.jsp"></c:import>
