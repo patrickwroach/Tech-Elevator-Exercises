@@ -3,13 +3,12 @@
 <!DOCTYPE html>
 
 <c:import url="/WEB-INF/jsp/header.jsp"></c:import>
-<div>
+<section id="productAttributes">
 <c:import url="/WEB-INF/jsp/productImage.jsp"></c:import>
-</div>
-<div>
+<div class = "attribute-and-description">
 <c:import url="/WEB-INF/jsp/productAttributes.jsp"></c:import>
-</div>
-<div>
+
 <c:import url="/WEB-INF/jsp/productDescription.jsp"></c:import>
 </div>
+</section>
 <c:import url="/WEB-INF/jsp/footer.jsp"></c:import>

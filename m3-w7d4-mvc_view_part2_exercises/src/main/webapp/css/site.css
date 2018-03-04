@@ -107,7 +107,7 @@ td {
 
     display: inline-block;
 
-    width: 250px;
+    width: 400px;
     background-color: #ffffff;
     margin-bottom: 50px;
 
@@ -163,4 +163,21 @@ td {
 
 .instock {
     color: #ffffff;
+}
+
+.detail-view{
+
+}
+
+.attribute-and-description{
+
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;
+    background-color: #b5b5ad;
+    height: 1px;
 }

@@ -5,36 +5,36 @@
 
 <%--<html>--%>
 <%--<head>--%>
-    <%--<meta name="viewport" content="width=device-width"/>--%>
-    <%--<title>Product List View</title>--%>
-    <%--<link rel="stylesheet" href="css/site.css"/>--%>
+<%--<meta name="viewport" content="width=device-width"/>--%>
+<%--<title>Product List View</title>--%>
+<%--<link rel="stylesheet" href="css/site.css"/>--%>
 <%--</head>--%>
 <%--<body>--%>
 <%--<header>--%>
-    <%--<h1>MVC Exercises - Views Part 2: Models</h1>--%>
+<%--<h1>MVC Exercises - Views Part 2: Models</h1>--%>
 <%--</header>--%>
 <%--<nav>--%>
-    <%--<ul>--%>
-        <%--<li><a href="#">Link 1</a></li>--%>
-        <%--<li><a href="#">Link 2</a></li>--%>
-    <%--</ul>--%>
+<%--<ul>--%>
+<%--<li><a href="#">Link 1</a></li>--%>
+<%--<li><a href="#">Link 2</a></li>--%>
+<%--</ul>--%>
 
 <%--</nav>--%>
 
 <c:import url="/WEB-INF/jsp/header.jsp"></c:import>
-<section id="main-content">
-    <h1>Toy Department</h1>
+<section id="main-content" style="display: flex; flex-direction: column; align-items: left">
+    <h1 style="align-self: center">Toy Department</h1>
     <c:forEach var="product" items="${productList}">
-        <div style="position: relative">
+        <div style="display: flex" ; margin-bottom: 50px;>
 
-            <img src="img/${product.imageName}" style="max-height: 180px"/>
-            <div class="list">
-                <div style="display:inline-block; text-align: left"><h4 style="
+            <img src="img/${product.imageName}"/>
+            <div class="list" style="text-align: left; margin-left: 20px; margin-top: 40px">
+                <div style="display:inline-block; text-align: left"><h1 style="
                             margin-top: 0px;
                             margin-bottom: 0px;">
-                        ${product.name}</h4>
+                        ${product.name}</h1>
                 </div>
-                <div class=best-seller style="display:inline-block; text-align: right">
+                <div class=best-seller style="display:inline-block; text-align: right; font-size: large;">
                     <c:choose>
                         <c:when test="${product.topSeller == true}">
                             <c:out value="BEST SELLER!"/>
@@ -44,9 +44,9 @@
                     </c:choose>
                 </div>
 
-                <div>
+                <h3 style="margin-top: 0px; margin-bottom: 0px; font-weight: normal">
                     <c:out value="by ${product.manufacturer}"/>
-                </div>
+                </h3>
                 <c:choose>
                     <c:when test="${product.remainingStock < 5}">
                         <div class=outofstock>
@@ -62,13 +62,13 @@
                 </div>
                 <div>
                     <c:set var="Weight" value="${product.weightInLbs}"/>
-                    Weight <fmt:formatNumber value="${Weight}" maxFractionDigits="0"/> lbs.
+                    <b>Weight</b> <fmt:formatNumber value="${Weight}" maxFractionDigits="0"/> lbs.
                 </div>
                 <div>
                     <c:set var="Rating" value="${product.averageRating}"/>
                     <fmt:formatNumber var="parsedRating" type="number" value="${Rating}" maxFractionDigits="0"/>
 
-                    <img src="img/${parsedRating}-star.png" width="80%"/>
+                    <img src="img/${parsedRating}-star.png" width="50%; margin-top: 10px"/>
 
                 </div>
 
