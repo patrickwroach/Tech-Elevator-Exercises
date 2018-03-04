@@ -25,7 +25,7 @@
 <section id="main-content">
     <h1>Toy Department</h1>
     <c:forEach var="product" items="${productList}">
-        <div style="display: flex">
+        <div style="position: relative">
 
             <img src="img/${product.imageName}" style="max-height: 180px"/>
             <div class="list">
