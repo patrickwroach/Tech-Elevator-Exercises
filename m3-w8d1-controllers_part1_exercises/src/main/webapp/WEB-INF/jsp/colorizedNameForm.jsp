@@ -6,29 +6,32 @@
     <title>Title</title>
 </head>
 <body>
-<c:url value="/orderedName" var="formAction"/>
+<c:url value="/colorizedName" var="formAction"/>
 
 
 <form method="GET" action="${formAction}">
     <label for="firstName">First Name: </label><br>
     <input type="text" id="firstName" name="firstName"/><br>
 
-
-    <label for="middleInitial">Middle Initial: </label><br>
-    <input type="text" id="middleInitial" name="middleInitial"/><br>
-
-
     <label for="lastName">Last Name: </label><br>
     <input type="text" id="lastName" name="lastName"/><br>
 
 
-    <input type="radio" name="nameOrder" value="1" checked> First MI Last<br>
-    <input type="radio" name="nameOrder" value="2"> First Last<br>
-    <input type="radio" name="nameOrder" value="3"> Last, First MI<br>
-    <input type="radio" name="nameOrder" value="4"> Last, First<br>
+    <h1>Choose Color </h1>
+    <label class="container">Red
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">Blue
+        <input type="checkbox">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">Green
+        <input type="checkbox">
+        <span class="checkmark"></span>
+    </label>
 
     <input type="submit" value="Submit"/>
 </form>
 </body>
 </html>
-

@@ -6,6 +6,7 @@
 		<title>Hello Spring MVC</title>
 	</head>
 	<body>
+
 		<h1>Hello, <c:out value="${param.name}" />!</h1>
 	</body>
 </html>
