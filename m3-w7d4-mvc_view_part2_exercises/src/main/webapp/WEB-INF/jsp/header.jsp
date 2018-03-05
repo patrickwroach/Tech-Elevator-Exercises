@@ -18,5 +18,4 @@
         <li><a href="productTable">Product Table</a></li>
         <li><a href="productTiles">Product Tiles</a></li>
     </ul>
-
 </nav>

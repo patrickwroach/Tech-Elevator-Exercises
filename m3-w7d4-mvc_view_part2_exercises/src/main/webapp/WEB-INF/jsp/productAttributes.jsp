@@ -4,13 +4,14 @@
 <!DOCTYPE html>
 
 
-<c:set var=""
+<div style="align-items: left">
 <c:set var="productId" value="${param.productId}"/>
-<section id="productAttributes">
-    <div style="display:inline-block; text-align: left"><h4 style="
-                            margin-top: 0px;
+
+
+    <div style="display:inline-block; text-align: left"><h2 style="
+                            margin-top: 50px;
                             margin-bottom: 0px;">
-        ${product.productId}</h4>
+        ${product.name}</h2>
     </div>
     <div class=best-seller style="display:inline-block; text-align: right">
         <c:choose>
@@ -34,20 +35,19 @@
         <c:otherwise>
         </c:otherwise>
     </c:choose>
-    <div class=price>
-        <c:set var="Amount" value="${product.price}"/>
-        <fmt:formatNumber value="${Amount}" type="currency"/>
-    </div>
-    <div>
-        <c:set var="Weight" value="${product.weightInLbs}"/>
-        Weight <fmt:formatNumber value="${Weight}" maxFractionDigits="0"/> lbs.
-    </div>
     <div>
         <c:set var="Rating" value="${product.averageRating}"/>
         <fmt:formatNumber var="parsedRating" type="number" value="${Rating}" maxFractionDigits="0"/>
 
-        <img src="img/${parsedRating}-star.png" width="80%"/>
+        <img src="img/${parsedRating}-star.png" width="125px"/>
 
     </div>
-
-</section>
+    <div class=price>
+        <c:set var="Amount" value="${product.price}"/>
+        Price: <fmt:formatNumber value="${Amount}" type="currency"/>
+    </div>
+    <div>
+        <c:set var="Weight" value="${product.weightInLbs}"/>
+        <b>Weight</b> <fmt:formatNumber value="${Weight}" maxFractionDigits="0"/> lbs.
+    </div>
+</div>

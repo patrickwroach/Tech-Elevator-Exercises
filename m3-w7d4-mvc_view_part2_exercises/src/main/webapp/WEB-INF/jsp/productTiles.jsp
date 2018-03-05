@@ -25,16 +25,26 @@
 
 <section id="main-content">
     <h1>Toy Department</h1>
+
+
+
+    <c:url value="/productDetail"
+           var="productDetailLink">
+           <c:param name="productId" value="${product.productId}"> </c:param>
+    </c:url>
+
+
+
     <c:forEach var="product" items="${productList}">
 
         <div class="card">
-            <img src="img/${product.imageName}" style="max-height: 150px"/>
+            <a href="${productDetailLink}${product.productId}"><img src="img/${product.imageName}" style="max-height: 150px"/></a>
             <div class="container">
                 <div>
-                    <div style="display:inline-block; text-align: left"><h4 style="
+                    <div style="display:inline-block; text-align: left"><a href="${productDetailLink}${product.productId}"><h4 style="
                             margin-top: 0px;
                             margin-bottom: 0px;">
-                            ${product.name}</h4>
+                            ${product.name}</h4></a>
                     </div>
                     <div class=best-seller style="display:inline-block; text-align: right">
                         <c:choose>
