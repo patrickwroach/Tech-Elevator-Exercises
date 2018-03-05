@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 
 
-
+<c:set var=""
 <c:set var="productId" value="${param.productId}"/>
 <section id="productAttributes">
     <div style="display:inline-block; text-align: left"><h4 style="
