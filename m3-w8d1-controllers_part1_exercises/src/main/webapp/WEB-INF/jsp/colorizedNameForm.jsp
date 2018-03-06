@@ -6,7 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-<c:url value="/colorizedName" var="formAction"/>
+<c:url value="/colorizedNameResult" var="formAction"/>
 
 
 <form method="GET" action="${formAction}">
@@ -18,17 +18,16 @@
 
 
     <h1>Choose Color </h1>
-    <label class="container">Red
-        <input type="checkbox" checked="checked">
-        <span class="checkmark"></span>
+    <label class="container">
+        <input type= "checkbox" name="red"  id="red" value="true" />Red<br>
     </label>
-    <label class="container">Blue
-        <input type="checkbox">
-        <span class="checkmark"></span>
+
+    <label class="container">
+        <input type= "checkbox" name="blue"  id="blue" value="true" />Blue<br>
     </label>
-    <label class="container">Green
-        <input type="checkbox">
-        <span class="checkmark"></span>
+
+    <label class="container">
+        <input type= "checkbox" name="green"  id="green" value="true" />Green<br>
     </label>
 
     <input type="submit" value="Submit"/>

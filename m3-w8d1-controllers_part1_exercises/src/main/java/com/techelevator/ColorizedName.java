@@ -5,18 +5,9 @@ public class ColorizedName {
 
     private String firstName;
     private String lastName;
-    private boolean isRed;
-    private boolean isBlue;
-    private boolean isGreen;
-
-
-    public ColorizedName(String firstName, String lastName, boolean isRed, boolean isBlue, boolean isGreen) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.isRed = isRed;
-        this.isBlue = isBlue;
-        this.isGreen = isGreen;
-    }
+    private boolean red;
+    private boolean blue;
+    private boolean green;
 
     public String getFirstName() {
         return firstName;
@@ -35,26 +26,26 @@ public class ColorizedName {
     }
 
     public boolean isRed() {
-        return isRed;
+        return red;
     }
 
     public void setRed(boolean red) {
-        isRed = red;
+        this.red = red;
     }
 
     public boolean isBlue() {
-        return isBlue;
+        return blue;
     }
 
     public void setBlue(boolean blue) {
-        isBlue = blue;
+        this.blue = blue;
     }
 
     public boolean isGreen() {
-        return isGreen;
+        return green;
     }
 
     public void setGreen(boolean green) {
-        isGreen = green;
+        this.green = green;
     }
 }
