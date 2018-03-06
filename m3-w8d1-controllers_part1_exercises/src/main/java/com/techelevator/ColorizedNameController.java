@@ -17,7 +17,7 @@ public class ColorizedNameController {
     }
 
     @RequestMapping(path="/colorizedNameResult", method=RequestMethod.GET)
-    public String generateResults(@ModelAttribute ColorizedName colorizedName, ModelMap model){
+    public String generateResults(ColorizedName colorizedName, ModelMap model){
         model.addAttribute("colorizedName", colorizedName);
         model.addAttribute("method", "GET");
         return "colorizedNameResult";

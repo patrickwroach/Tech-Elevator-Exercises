@@ -104,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColorizedNameController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ColorizedNameController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/ColorizedNameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="345">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FizzBuzz.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FizzBuzz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/FizzBuzz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="101" column="1" lean-forward="true" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
+            <state relative-caret-position="-1012">
+              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
               <folding>
                 <element signature="e#299#300#0" expanded="true" />
                 <element signature="e#330#331#0" expanded="true" />
@@ -166,8 +166,8 @@
       <file leaf-file-name="FizzBuzzController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/FizzBuzzController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-66">
-              <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+            <state relative-caret-position="248">
+              <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -212,9 +212,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fizzBuzzRevisitedResult.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/colorizedNameForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/techelevator/ColorizedName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/techelevator/ColorizedNameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/techelevator/FizzBuzzController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/techelevator/FizzBuzz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techelevator/ColorizedNameController.java" />
       </list>
     </option>
   </component>
@@ -531,12 +531,12 @@
       <updated>1520293095622</updated>
       <workItem from="1520293096803" duration="5886000" />
       <workItem from="1520299581550" duration="3431000" />
-      <workItem from="1520342750695" duration="12228000" />
+      <workItem from="1520342750695" duration="12856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21545000" />
+    <option name="totallyTimeSpent" value="22173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="824" extended-state="6" />
@@ -904,24 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/ColorizedNameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/FizzBuzzController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/colorizedNameForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -948,8 +930,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/FizzBuzz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="101" column="1" lean-forward="true" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
+        <state relative-caret-position="-1012">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding>
             <element signature="e#299#300#0" expanded="true" />
             <element signature="e#330#331#0" expanded="true" />
@@ -987,6 +969,24 @@
             <element signature="e#1680#1681#0" expanded="true" />
             <element signature="e#1726#1727#0" expanded="true" />
             <element signature="e#1779#1780#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/FizzBuzzController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techelevator/ColorizedNameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
