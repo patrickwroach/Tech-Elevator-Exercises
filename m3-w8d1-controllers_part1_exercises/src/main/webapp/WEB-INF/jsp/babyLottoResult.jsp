@@ -15,38 +15,36 @@
 </head>
 <body>
 
-<%--<c:forEach var="numbers" items="${babyLotto.ticket1}">--%>
-    <%--${numbers}--%>
-<%--</c:forEach>--%>
+
 
 <c:if test="${babyLotto.ticket1[3] == 20}" >
-    <br><div class=green> ${babyLotto.ticket1[0]},${babyLotto.ticket1[1]},${babyLotto.ticket1[2]}, ${babyLotto.ticket1[3]}</div>
+    <br><div class=green> ${babyLotto.ticket1[0]},${babyLotto.ticket1[1]},${babyLotto.ticket1[2]}</div>
 </c:if>
 
 <c:if test="${babyLotto.ticket1[3] == 10}" >
-    <br><div class=silver> ${babyLotto.ticket1[0]},${babyLotto.ticket1[1]},${babyLotto.ticket1[2]}, ${babyLotto.ticket1[3]}</div>
+    <br><div class=silver> ${babyLotto.ticket1[0]},${babyLotto.ticket1[1]},${babyLotto.ticket1[2]}</div>
 </c:if>
 
 <c:if test="${babyLotto.ticket1[3] == 0}" >
-    <br><div> ${babyLotto.ticket1[0]},${babyLotto.ticket1[1]},${babyLotto.ticket1[2]}, ${babyLotto.ticket1[3]}</div>
+    <br><div> ${babyLotto.ticket1[0]},${babyLotto.ticket1[1]},${babyLotto.ticket1[2]}</div>
 </c:if>
 
 
-<%--<c:forEach var="numbers" items="${babyLotto.ticket1}">--%>
-    <%--<c:out value="${babyLotto.numbers}"/></p>--%>
 
-<%--</c:forEach>--%>
-<%--<p>Divisible By: <c:out value="${fizzBuzz.divisor2}"/></p>--%>
-<%--<p>Divisible By Both: <c:out value="${fizzBuzz.divisor1}"/> <c:out value="${fizzBuzz.divisor2}"/></p>--%>
+<c:if test="${babyLotto.ticket1[3] == 20}" >
+    <br><div class=green> ${babyLotto.ticket1[0]},${babyLotto.ticket1[1]},${babyLotto.ticket1[2]}</div>
+</c:if>
 
-<%--<p>Alternative Fizz: <c:out value="${fizzBuzz.alternativeFizz}"/></p>--%>
-<%--<p>Alternative Buzz: <c:out value="${fizzBuzz.alternativeBuzz}"/></p>--%>
+<c:if test="${babyLotto.ticket1[3] == 10}" >
+    <br><div class=silver> ${babyLotto.ticket1[0]},${babyLotto.ticket1[1]},${babyLotto.ticket1[2]}</div>
+</c:if>
 
-<%--<p><c:out value="${fizzBuzz.number1}"/></p>--%>
-<%--<p><c:out value="${fizzBuzz.number2}"/></p>--%>
-<%--<p><c:out value="${fizzBuzz.number3}"/></p>--%>
-<%--<p><c:out value="${fizzBuzz.number4}"/></p>--%>
-<%--<p><c:out value="${fizzBuzz.number5}"/></p>--%>
+<c:if test="${babyLotto.ticket1[3] == 0}" >
+    <br><div> ${babyLotto.ticket1[0]},${babyLotto.ticket1[1]},${babyLotto.ticket1[2]}</div>
+</c:if>
+
+
+
 
 </body>
 </html>
