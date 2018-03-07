@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Controller //spring controller
+@Controller
 public class ColorizedNameController {
 
     @RequestMapping(path="/colorizedName", method=RequestMethod.GET)
@@ -17,8 +17,9 @@ public class ColorizedNameController {
     }
 
     @RequestMapping(path="/colorizedNameResult", method=RequestMethod.GET)
-    public String generateResults(@ModelAttribute ColorizedName colorizedParameters, ModelMap modelHolder){
-        modelHolder.put("colorizedName", colorizedParameters);
+    public String generateResults(ColorizedName colorizedName, ModelMap model){
+        model.addAttribute("colorizedName", colorizedName);
+        model.addAttribute("method", "GET");
         return "colorizedNameResult";
     }
 }
