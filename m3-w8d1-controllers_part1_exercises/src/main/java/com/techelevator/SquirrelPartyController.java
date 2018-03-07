@@ -16,16 +16,16 @@ public class SquirrelPartyController {
     }
 
 
-    @RequestMapping(path="/squirrelPartyResult", method=RequestMethod.GET)
-    public String generateResults(SquirrelParty squirrelParty, ModelMap model, int squirrelNumber, boolean weekend){
+    @RequestMapping(path = "/squirrelPartyResult", method = RequestMethod.GET)
+    public String generateResults(SquirrelParty squirrelParty, ModelMap model, int squirrelNumber, boolean weekend) {
         model.addAttribute("squirrelParty", squirrelParty);
         model.addAttribute("method", "GET");
 
-       if ( (weekend)&& (squirrelNumber >= 40)) {
-           squirrelParty.setSuccess(true);
-       }
+        if ((weekend) && (squirrelNumber >= 40)) {
+            squirrelParty.setSuccess(true);
+        }
 
-        if ( (!weekend)&& (squirrelNumber >= 40 && squirrelNumber <= 60) ) {
+        if ((!weekend) && (squirrelNumber >= 40 && squirrelNumber <= 60)) {
             squirrelParty.setSuccess(true);
         }
 

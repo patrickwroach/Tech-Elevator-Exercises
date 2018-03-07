@@ -10,6 +10,9 @@
 
 
 <form method="GET" action="${formAction}">
+
+    <img src="img/smoking-squirrel.png"></div>
+    <br>
     <label for="squirrelNumber">Number of Squirrels: </label><br>
     <input type="text" id="squirrelNumber" name="squirrelNumber"/><br>
 
