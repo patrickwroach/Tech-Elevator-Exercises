@@ -30,7 +30,7 @@ public class ReviewController {
     }
     @RequestMapping(path="/newReview", method=RequestMethod.GET)
     public String newReviewInput(ModelMap modelHolder) {
-        if(! modelHolder.containsAttribute("review")){
+        if(!modelHolder.containsAttribute("review")){
             modelHolder.put("review", new Review());
         }
 

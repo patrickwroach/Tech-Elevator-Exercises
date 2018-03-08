@@ -31,7 +31,7 @@
 
         <div>
             <form:label path="rating">Rating</form:label>
-            <form:input path="rating" placeholder="rating" type="number" />
+            <form:input path="rating" placeholder="rating" type="number" min="1" max="5"/>
         </div><br>
 
         <div>
