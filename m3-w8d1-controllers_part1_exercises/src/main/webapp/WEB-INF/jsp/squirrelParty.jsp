@@ -16,7 +16,7 @@
     <label for="squirrelNumber">Number of Squirrels: </label><br>
     <input type="text" id="squirrelNumber" name="squirrelNumber"/><br>
 
-
+<br>
 
     <label class="container">
         <input type= "checkbox" name="weekend"  id="weekend" value="true" />Is It A Weekend<br>
