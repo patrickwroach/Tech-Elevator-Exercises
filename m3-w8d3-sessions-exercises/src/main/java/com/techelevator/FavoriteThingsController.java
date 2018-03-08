@@ -10,14 +10,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.validation.Valid;
 
 @Controller
-
-@SessionAttributes({"favoriteColor, favoriteSeason, favoriteFood"})
+@SessionAttributes({"favoriteColor", "favoriteSeason", "favoriteFood"})
 public class FavoriteThingsController {
 
 
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String showPage1(Model modelHolder) {
+    public String showPage1() {
 
         return "page1";
     }
