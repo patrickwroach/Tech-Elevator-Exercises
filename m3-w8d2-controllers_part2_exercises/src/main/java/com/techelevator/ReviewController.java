@@ -36,6 +36,8 @@ public class ReviewController {
 
         return "newReview";
     }
+
+
     @RequestMapping(path="/newReview", method=RequestMethod.POST)
     public String newReviewInputSubmission(Review newReview)  {
 
