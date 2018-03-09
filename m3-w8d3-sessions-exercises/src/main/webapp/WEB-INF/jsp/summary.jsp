@@ -6,8 +6,8 @@
     <title>Title</title>
 </head>
 <body>
-Favorite Color: ${favoriteColor}
-Favorite Food: ${favoriteFood}
-Favorite Season: ${favoriteSeason}
+Favorite Color: ${favoriteThings.favoriteColor}
+Favorite Food: ${favoriteThings.favoriteFood}
+Favorite Season: ${favoriteThings.favoriteSeason}
 </body>
 </html>

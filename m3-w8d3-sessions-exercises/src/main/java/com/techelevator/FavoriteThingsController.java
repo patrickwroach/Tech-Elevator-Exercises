@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-@SessionAttributes({"favoriteColor", "favoriteSeason", "favoriteFood"})
+//@SessionAttributes({"favoriteColor", "favoriteSeason", "favoriteFood"})
+@SessionAttributes("favoriteThings")
 public class FavoriteThingsController {
 
 
@@ -19,10 +20,13 @@ public class FavoriteThingsController {
 
     @RequestMapping(path = "/page1", method = RequestMethod.POST)
     public String handlePage1Form(
-            @RequestParam String favoriteColor, ModelMap model) {
+            @RequestParam String favoriteColor, ModelMap model, FavoriteThings favoriteThings) {
 
 
-        model.addAttribute("favoriteColor", favoriteColor);
+        favoriteThings.setFavoriteColor(favoriteColor);
+
+        model.addAttribute("favoriteThings", favoriteThings);
+
         return "redirect:/page2";
 
 
@@ -37,8 +41,9 @@ public class FavoriteThingsController {
     public String handlePage2Form(
             @RequestParam String favoriteFood, ModelMap model) {
 
+        FavoriteThings favoriteThings = (FavoriteThings)model.get("favoriteThings");
+        favoriteThings.setFavoriteFood(favoriteFood);
 
-        model.addAttribute("favoriteFood", favoriteFood);
         return "redirect:/page3";
     }
 
@@ -51,29 +56,21 @@ public class FavoriteThingsController {
     public String handlePage3Form(
             @RequestParam String favoriteSeason, ModelMap model) {
 
+        FavoriteThings favoriteThings = (FavoriteThings)model.get("favoriteThings");
+        favoriteThings.setFavoriteSeason(favoriteSeason);
 
-        model.addAttribute("favoriteSeason", favoriteSeason);
+
         return "redirect:/summary";
     }
 
     @RequestMapping(path = "/summary", method = RequestMethod.GET)
     public String showSummary(ModelMap model) {
 
-        model.addAttribute("favoriteColor", model.get("favoriteColor"));
-        model.addAttribute("favoriteSeason", model.get("favoriteSeason"));
-        model.addAttribute("favoriteFood", model.get("favoriteFood"));
+        FavoriteThings favoriteThings = (FavoriteThings)model.get("favoriteThings");
+
 
         return "summary";
     }
-
-//    @RequestMapping(path = "/summary", method = RequestMethod.POST)
-//    public String handleSummary(
-//            @RequestParam String favoriteSeason, ModelMap model) {
-//
-//
-//        model.addAttribute("favoriteSeason", favoriteSeason);
-//        return "redirect:/summary";
-//    }
 
 
 }
