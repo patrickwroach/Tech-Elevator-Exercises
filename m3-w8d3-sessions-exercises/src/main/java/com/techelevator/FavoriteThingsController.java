@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-//@SessionAttributes({"favoriteColor", "favoriteSeason", "favoriteFood"})
 @SessionAttributes("favoriteThings")
 public class FavoriteThingsController {
 

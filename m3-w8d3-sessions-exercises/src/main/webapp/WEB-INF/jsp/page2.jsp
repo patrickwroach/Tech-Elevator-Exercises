@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<c:import url="/WEB-INF/jsp/header.jsp" />
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<c:import url="/WEB-INF/jsp/header.jsp"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <body>
@@ -13,7 +13,8 @@
         <input type="text" id="favoriteFood" name="favoriteFood" placeholder="enter favorite food"/>
 
 
-    </div><br>
+    </div>
+    <br>
 
     <div>
         <input style="color: white; background-color: blue;" type="submit" value="Next"/>
