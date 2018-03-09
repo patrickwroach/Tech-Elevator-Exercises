@@ -1,13 +1,14 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
+<c:import url="/WEB-INF/jsp/header.jsp" />
+
+
 <body>
-Favorite Color: ${favoriteThings.favoriteColor}
-Favorite Food: ${favoriteThings.favoriteFood}
-Favorite Season: ${favoriteThings.favoriteSeason}
+<div style="border-style: solid">
+<b>Favorite Color:</b> ${favoriteThings.favoriteColor}<br>
+<b>Favorite Food:</b> ${favoriteThings.favoriteFood}<br>
+<b>Favorite Season:</b> ${favoriteThings.favoriteSeason}<br>
+</div>
 </body>
 </html>

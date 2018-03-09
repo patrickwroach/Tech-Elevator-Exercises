@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 public class FavoriteThingsController {
 
 
-
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String showPage1() {
 
@@ -24,7 +23,6 @@ public class FavoriteThingsController {
 
 
         favoriteThings.setFavoriteColor(favoriteColor);
-
         model.addAttribute("favoriteThings", favoriteThings);
 
         return "redirect:/page2";
@@ -41,7 +39,7 @@ public class FavoriteThingsController {
     public String handlePage2Form(
             @RequestParam String favoriteFood, ModelMap model) {
 
-        FavoriteThings favoriteThings = (FavoriteThings)model.get("favoriteThings");
+        FavoriteThings favoriteThings = (FavoriteThings) model.get("favoriteThings");
         favoriteThings.setFavoriteFood(favoriteFood);
 
         return "redirect:/page3";
@@ -56,7 +54,7 @@ public class FavoriteThingsController {
     public String handlePage3Form(
             @RequestParam String favoriteSeason, ModelMap model) {
 
-        FavoriteThings favoriteThings = (FavoriteThings)model.get("favoriteThings");
+        FavoriteThings favoriteThings = (FavoriteThings) model.get("favoriteThings");
         favoriteThings.setFavoriteSeason(favoriteSeason);
 
 
@@ -66,7 +64,7 @@ public class FavoriteThingsController {
     @RequestMapping(path = "/summary", method = RequestMethod.GET)
     public String showSummary(ModelMap model) {
 
-        FavoriteThings favoriteThings = (FavoriteThings)model.get("favoriteThings");
+        FavoriteThings favoriteThings = (FavoriteThings) model.get("favoriteThings");
 
 
         return "summary";
