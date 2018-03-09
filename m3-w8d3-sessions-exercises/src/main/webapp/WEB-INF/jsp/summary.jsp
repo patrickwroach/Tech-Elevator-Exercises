@@ -5,7 +5,8 @@
 
 
 <body>
-<div style="border-style: solid">
+<div style="border-style: solid;padding: 10px;width: 500px;">
+    
 <b>Favorite Color:</b> ${favoriteThings.favoriteColor}<br>
 <b>Favorite Food:</b> ${favoriteThings.favoriteFood}<br>
 <b>Favorite Season:</b> ${favoriteThings.favoriteSeason}<br>
