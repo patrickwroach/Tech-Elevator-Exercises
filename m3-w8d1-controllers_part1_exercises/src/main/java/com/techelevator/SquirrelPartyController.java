@@ -26,8 +26,7 @@ public class SquirrelPartyController {
         }
 
         if ((!weekend) && (squirrelNumber >= 40 && squirrelNumber <= 60)) {
-            squirrelParty.setSuccess(true);
-        }
+            squirrelParty.setSuccess(true); }
 
         return "squirrelPartyResult";
     }

@@ -3,17 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <title>Squirrel Cigar Party</title>
-    <c:url value="/css/squirrel.css" var="cssHref" />
-    <link rel="stylesheet" href="${cssHref}">
+
 </head>
 
 <body>
 
 <header>
-
-    <h1>Squirrel Cigar Party For Dummies</h1>
+    <link rel="stylesheet" href="css/site.css"/>
+    <h1 class="centered">Squirrel Cigar Party For Dummies</h1>
     <img src="img/forDummies.png" class="centered"/><br>
 </header>
 
@@ -33,7 +31,7 @@
 
         <div>
             <form:label path="rating">Rating</form:label>
-            <form:input path="rating" placeholder="rating" type="number" />
+            <form:input path="rating" placeholder="rating" type="number" min="1" max="5"/>
         </div><br>
 
         <div>
