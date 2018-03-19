@@ -105,9 +105,7 @@ QUnit.test("Fizz Buzz", function (assert) {
 
 QUnit.test("Count Values", function (assert) {
 
-    assert.deepEqual(
-        { 1: 1, 99: 3, 43: 1, 2: 2, 55: 1, 78: 1, 2345: 1, 438: 1, 107: 1 },
-        countValues([1, 99, 43, 2, 55, 78, 99, 2345, 438, 2, 99, 107]));
+    assert.deepEqual(countValues([1, 99, 43, 2, 55, 78, 99, 2345, 438, 2, 99, 107]), {1: 1, 99: 3, 43: 1, 2: 2, 55: 1, 78: 1, 2345: 1, 438: 1, 107: 1});
     assert.deepEqual(countValues([]), {});
     assert.deepEqual(countValues([0]), { 0: 1 });
     assert.deepEqual(countValues([0, 20]), { 0: 1, 20: 1 });
@@ -121,6 +119,14 @@ QUnit.test("Reverse Array", function (assert) {
     assert.deepEqual(reverseArray([9]), [9]);
 
 });
+
+QUnit.test("Black Jack", function (assert) {
+
+    assert.deepEqual(blackJack(19, 21), 21);
+    assert.deepEqual(blackJack(21, 19), 21);
+    assert.deepEqual(blackJack(19, 22), 19);
+    assert.deepEqual(blackJack(22, 22), 0);
+    });
 
 
 

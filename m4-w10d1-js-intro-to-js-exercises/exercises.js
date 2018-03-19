@@ -222,7 +222,7 @@ function fizzBuzz(num){
 // 			107 : 1
 
 function countValues(arr){
-    var map = new Map();
+    var map = new Map(0, 0);
 
     for (var i = 0; i < arr.length; i++){
         var count = 0;
@@ -260,9 +260,9 @@ function reverseArray(arr){
 // 		blackjack(21, 19) → 21
 // 		blackjack(19, 22) → 19
 
-function blackjack(a, b){
+function blackJack(a, b){
     var a = (a <= 21) ? a : 0;
-    var b = (b <= 21) ? b : 0;
+    var b= (b <= 21) ? b : 0;
 
     return Math.max(a, b);
 }
