@@ -19,3 +19,6 @@ target
 
 # ignore visual studio code config file
 .vscode
+
+# ignore workspace xml
+.idea/workspace.xml
