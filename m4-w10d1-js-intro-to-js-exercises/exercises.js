@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 // 1. **SumDouble** Given two int values, return their sum. Unless the two values are the same, then return double their sum.
 
@@ -11,11 +12,21 @@
 //     return x + y;
 // }		
 
+=======
+﻿/*
+SumDoubleGiventwointvalues,returntheirsum.Unlessthetwovaluesarethesame,thenreturndoubletheirsum.
+sumDouble(1, 2) → 3 sumDouble(3, 2) → 5 sumDouble(2, 2) → 8
+function sumDouble(x, y) { // do logic here
+// return result; return x + y;
+}
+*/
+>>>>>>> f957bc577ddcd88e6a1a3ee7c4e4528f65d1c259
 function sumDouble(x, y) {
     sum = x + y;
     if (x === y) {
         return sum *= 2;
     }
+<<<<<<< HEAD
     return sum;
 }
 
@@ -312,3 +323,17 @@ function blackJack(a, b){
 // 		findNextSquare(114) → -1 // 114 is not a perfect square
 
 
+=======
+    console.log(sum);
+    return sum;
+}
+
+function lastDigit(x, y) {
+    var first = x.toString().split('').pop();
+    var second = y.toString().split('').pop();
+    if (first == second) {
+        return true;
+    }
+    return false;
+}
+>>>>>>> f957bc577ddcd88e6a1a3ee7c4e4528f65d1c259
