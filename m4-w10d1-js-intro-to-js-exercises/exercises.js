@@ -277,20 +277,30 @@ function blackJack(a, b){
 // 		iqTest("") → 0 // there are no numbers in the given set
 // 		iqTest("2 2 4 6") → 0 // all numbers are even, therefore there is no position of an odd number
 
-// function iqTest(arr){
-//     var output = 0;
-//     var evenCount = 0;
-//     var oddCount =0;
-//     var differentIndex = 0;
-//     if (arr.length < 3) return output;
+    function iqTest(arr){
+    
+        var evenCount = 0;
+        var oddCount =0;
+        var differentIndex = 0;
 
-//     for (var i = 0; i < 3; i++){
-//         if (arr[i] %2 == 0) evenCount++;
-//         if (arr[i] %2 == 1) oddCount++;
-//     }
-    
-    
-// }
+        if (arr.length < 3) return differentIndex;
+
+        for (var i = 0; i < 3; i++){
+            if (arr[i] %2 == 0) evenCount++;
+            if (arr[i] %2 == 1) oddCount++;
+        }
+        
+        var oddOrEvenCheck = (Math.max(evenCount, oddCount)) ? 0 : 1;
+
+        for (var j = 0; j < arr.length; j++){
+            if (arr[j] % 2 != oddOrEvenCheck) {
+            differentIndex = j + 1;
+            return differentIndex;
+        }
+
+        return differentIndex;
+        
+    }
 
 // 2. **TitleCase** Write a function that will convert a string into title case, given an optional list of exceptions (minor words). The list of minor words will be given as a string with each word separated by a space. Your function should ignore the case of the minor words string -- it should behave in the same way even if the case of the minor word string is changed.
 
