@@ -42,6 +42,7 @@ function turnOfTheCenturyPresidents() {
 //Locate each president serving at the end of the century and add the 'endOfCentury' class.
 function endOfTheCenturyPresidents() {
     $("#presidents").children("h2").prev().addClass("endOfCentury");
+    $("#presidents").children("h2").last().addClass("endOfCentury");
     
 }
 
