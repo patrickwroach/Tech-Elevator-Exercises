@@ -222,22 +222,38 @@ function fizzBuzz(num){
 // 			107 : 1
 
 function countValues(arr){
-    var map = new Map(0, 0);
+    var map = {};
 
     for (var i = 0; i < arr.length; i++){
         var count = 0;
-        for (var j = i; j < arr.length; j++){
+        var key = arr[i];
+        for (var j = 0; j < arr.length; j++){
             if (arr[i] == arr[j]) {
                 count++;
-                console.log("Variable: " + arr[i] + "Count: " + count);
             }
-            map.set(arr[i], count);
         }
+        map[arr[i]]= count; 
+
     
     }
     return map;
 
 }
+
+// function countValues(a) {
+//     var answer = {};
+//     for (var i = 0; i < a.length; i++) {
+//         var count = 0;
+//         var index = a[i];
+//         for (var j = 0; j < a.length; j++) {
+//             if (index == a[j]) {
+//                 count++;
+//             }
+//         }
+//         answer[index] = count;
+//     }
+//     return answer;
+// }
 
 // 15. **ReverseArray** Write an function that accepts an array of integer values, and display them in the reverse order they appeared in the array. One obvious solution is to simply loop through the integer array in reserve order, but see if you can come up with an alternative.
 
