@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿
+
 // 1. **SumDouble** Given two int values, return their sum. Unless the two values are the same, then return double their sum.
 
 // sumDouble(1, 2) → 3
@@ -12,21 +11,11 @@
 //     return x + y;
 // }		
 
-=======
-﻿/*
-SumDoubleGiventwointvalues,returntheirsum.Unlessthetwovaluesarethesame,thenreturndoubletheirsum.
-sumDouble(1, 2) → 3 sumDouble(3, 2) → 5 sumDouble(2, 2) → 8
-function sumDouble(x, y) { // do logic here
-// return result; return x + y;
-}
-*/
->>>>>>> f957bc577ddcd88e6a1a3ee7c4e4528f65d1c259
 function sumDouble(x, y) {
     sum = x + y;
     if (x === y) {
         return sum *= 2;
     }
-<<<<<<< HEAD
     return sum;
 }
 
@@ -251,20 +240,6 @@ function countValues(arr){
 
 }
 
-// function countValues(a) {
-//     var answer = {};
-//     for (var i = 0; i < a.length; i++) {
-//         var count = 0;
-//         var index = a[i];
-//         for (var j = 0; j < a.length; j++) {
-//             if (index == a[j]) {
-//                 count++;
-//             }
-//         }
-//         answer[index] = count;
-//     }
-//     return answer;
-// }
 
 // 15. **ReverseArray** Write an function that accepts an array of integer values, and display them in the reverse order they appeared in the array. One obvious solution is to simply loop through the integer array in reserve order, but see if you can come up with an alternative.
 
@@ -274,10 +249,8 @@ function countValues(arr){
 function reverseArray(arr){
     outputArray = [];
     if (arr.length == 0) return outputArray;
-    for (var i = 0; i <= arr.length; i++){
         while (arr.length > 0)
         outputArray.push(arr.pop());
-    }
     return outputArray;
 }
 
@@ -304,6 +277,21 @@ function blackJack(a, b){
 // 		iqTest("") → 0 // there are no numbers in the given set
 // 		iqTest("2 2 4 6") → 0 // all numbers are even, therefore there is no position of an odd number
 
+function iqTest(arr){
+    var output = 0;
+    var evenCount = 0;
+    var oddCount =0;
+    var differentIndex = 0;
+    if (arr.length < 3) return output;
+
+    for (var i = 0; i < 3; i++){
+        if (arr[i] %2 == 0) evenCount++;
+        if (arr[i] %2 == 1) oddCount++;
+    }
+    
+    
+}
+
 // 2. **TitleCase** Write a function that will convert a string into title case, given an optional list of exceptions (minor words). The list of minor words will be given as a string with each word separated by a space. Your function should ignore the case of the minor words string -- it should behave in the same way even if the case of the minor word string is changed.
 
 
@@ -323,17 +311,3 @@ function blackJack(a, b){
 // 		findNextSquare(114) → -1 // 114 is not a perfect square
 
 
-=======
-    console.log(sum);
-    return sum;
-}
-
-function lastDigit(x, y) {
-    var first = x.toString().split('').pop();
-    var second = y.toString().split('').pop();
-    if (first == second) {
-        return true;
-    }
-    return false;
-}
->>>>>>> f957bc577ddcd88e6a1a3ee7c4e4528f65d1c259
