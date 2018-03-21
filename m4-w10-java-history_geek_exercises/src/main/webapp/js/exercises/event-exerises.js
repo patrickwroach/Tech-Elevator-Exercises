@@ -18,11 +18,12 @@ $(document).ready(function () {
         }
     })
 
+    $("input[name=ShippingType]:radio").change(function() {
+        $("#shipping .price").html("$" + $(this).attr('data-cost'));
+        var shippingPrice = parseFloat($(this).attr('data-cost'));
+        var grandTotal = parseFloat($("#subtotal .price").html().replace("$", ""));
+        $("#grandtotal .price").html("$" + (shippingPrice + grandTotal).toFixed(2));
+    });
 
-    // var fNameField = $("#BillingAddress1");
-    // fNameField.on("blur", function (event) {
-    //     var blurredField = $(this);
-    //     blurredField.val(blurredField.val().toUpperCase());
-    // });
 });
 
