@@ -25,5 +25,17 @@ $(document).ready(function () {
         $("#grandtotal .price").html("$" + (shippingPrice + grandTotal).toFixed(2));
     });
 
+
+   $(document).on("keydown", function (event) {
+
+        if (event.key =="ArrowRight") {
+            $("#row_0_column_0").next().addClass("ship");
+
+            // $("#row_0").html().addClass("ship")
+            // alert($('gamerow.ship').index())
+        }
+
+    });
+
 });
 
