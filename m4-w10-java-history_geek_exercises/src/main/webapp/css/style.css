@@ -627,3 +627,7 @@ div#presidents-jquery ol li.incorrect {
     color: #C33333;
     font-weight: bold;
 }
+
+label.error{
+    color: red;
+}

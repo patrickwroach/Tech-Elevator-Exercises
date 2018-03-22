@@ -16,25 +16,48 @@ $(document).ready(function () {
             $("#ShippingState").val($("").val());
             $("#ShippingPostalCode").val($("").val());
         }
-    })
+    });
 
     $("input[name=ShippingType]:radio").change(function() {
-        $("#shipping .price").html("$" + $(this).attr('data-cost'));
+        $("#shipping").find(".price").html("$" + $(this).attr('data-cost'));
         var shippingPrice = parseFloat($(this).attr('data-cost'));
-        var grandTotal = parseFloat($("#subtotal .price").html().replace("$", ""));
-        $("#grandtotal .price").html("$" + (shippingPrice + grandTotal).toFixed(2));
+        var grandTotal = parseFloat($("#subtotal").find(".price").html().replace("$", ""));
+        $("#grandtotal").find(".price").html("$" + (shippingPrice + grandTotal).toFixed(2));
     });
 
 
-   $(document).on("keydown", function (event) {
+    $(document).on("keydown", function (event) {
+        switch(event.key){
+            case "ArrowRight":
+                $(".ship").next().addClass("ship");
+                $(".ship").prev().removeClass("ship");
+                break;
 
-        if (event.key =="ArrowRight") {
-            $("#row_0_column_0").next().addClass("ship");
+            case "ArrowLeft":
+                $(".ship").prev().addClass("ship");
+                $(".ship").next().removeClass("ship");
+                break;
 
-            // $("#row_0").html().addClass("ship")
-            // alert($('gamerow.ship').index())
+            case "ArrowDown":
+                var newLocation = $(".ship").index();
+                $(".ship").parent().next().children().eq(newLocation).addClass("ship");
+                $(".ship").parent().prev().children().removeClass("ship");
+                break;
+
+            case "ArrowUp":
+                var newLocation = $(".ship").index();
+                $(".ship").parent().prev().children().eq(newLocation).addClass("ship");
+                $(".ship").parent().next().children().removeClass("ship");
+                break;
+
+
         }
 
+    });
+
+    $(btnRestart).click(function(){
+        $(".ship").removeClass("ship");
+        $("#row_0_column_0").addClass("ship");
     });
 
 });

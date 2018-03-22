@@ -6,6 +6,7 @@
 <div id="errorSummary">
 	<h3>You have the following errors: </h3>
 	<ul id="errors"></ul>
+
 </div>
  
  <c:url var="formAction" value="/store/checkout" />
