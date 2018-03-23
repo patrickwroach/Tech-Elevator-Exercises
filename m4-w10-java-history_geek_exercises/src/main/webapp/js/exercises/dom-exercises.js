@@ -1,13 +1,21 @@
 ﻿/// <reference path="../jquery-3.1.1.js" />
 //Locate all <div> elements and add the 'president' class.
 function presentialDivs() {
+<<<<<<< HEAD
     $("#presidents").children("div").addClass("president");
 
+=======
+	$("#presidents").children("div").addClass("president");
+>>>>>>> bc29dee40e267003e577422b12ceac3023ddf052
 }
 
 //Locate George Washington and add the 'founding-father' class
 function georgeWashington() {
+<<<<<<< HEAD
 $("#george-washington").addClass("founding-father");
+=======
+	$("#george-washington").addClass("founding-father");
+>>>>>>> bc29dee40e267003e577422b12ceac3023ddf052
 }
 
 //Locate all Republican presidents and add the 'red' class.
