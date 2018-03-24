@@ -240,7 +240,6 @@ function countValues(arr){
 
 }
 
-
 // 15. **ReverseArray** Write an function that accepts an array of integer values, and display them in the reverse order they appeared in the array. One obvious solution is to simply loop through the integer array in reserve order, but see if you can come up with an alternative.
 
 // 		reverseArray([1, 99, 43, 2, 55, 78, 99, 2345, 438, 2, 99, 107]) → 
@@ -249,8 +248,10 @@ function countValues(arr){
 function reverseArray(arr){
     outputArray = [];
     if (arr.length == 0) return outputArray;
+    for (var i = 0; i <= arr.length; i++){
         while (arr.length > 0)
         outputArray.push(arr.pop());
+    }
     return outputArray;
 }
 
@@ -276,7 +277,6 @@ function blackJack(a, b){
 // 		iqTest("1 2 1 1") → 2 // second number is even, while the rest are odd
 // 		iqTest("") → 0 // there are no numbers in the given set
 // 		iqTest("2 2 4 6") → 0 // all numbers are even, therefore there is no position of an odd number
-
 
 // 2. **TitleCase** Write a function that will convert a string into title case, given an optional list of exceptions (minor words). The list of minor words will be given as a string with each word separated by a space. Your function should ignore the case of the minor words string -- it should behave in the same way even if the case of the minor word string is changed.
 
